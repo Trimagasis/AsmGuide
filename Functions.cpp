@@ -5,6 +5,7 @@ struct book* head, * curent, * tail;
 struct Teoria* headT, * tailT;
 struct Punct* headP1, * currentP1;
 
+
 std::ifstream& operator>>(std::ifstream& is, book* mass) //оператор чтения из файла
 {
 	is >> mass->block >> mass->a >> mass->b >> mass->c;
@@ -128,21 +129,27 @@ void InPunct() {
 	fsTeor.close(); //Закрываем файл
 }
 
+void checkbook(int& punct, bool& checkbookmark) {
+	book* current = head;
+	while (current != NULL) {
+		if (punct != current->block)
+			current = current->next;
+		else {
+			checkbookmark = true;
+			//std::cout << "соси хуй быдло ты ебаное блять";
+			//system("pause>>nul");
+			return;
+		}
+	}
+}
+
 //добавление закладки в файл
-void OFstream(std::string& directory, int& punct) {
+void OFstream(std::string& directory, int& punct, bool& checkbookmark) {
 	std::ofstream OFfile("Booklet", std::ios::app);
 	std::fstream Ffile("Booklet");
 	if (OFfile.is_open()) {
 		book* current = head;
-		while (current != NULL) {
-			if (punct != current->block)
-				current = current->next;
-			else {
-				std::cout << "соси хуй быдло ты ебаное блять";
-				system("pause>>nul");
-				return;
-			}
-		}
+		checkbook(punct, checkbookmark);
 		if (Ffile.peek() == EOF) {
 			OFfile << punct << " ";
 			OFfile << directory;
@@ -151,19 +158,19 @@ void OFstream(std::string& directory, int& punct) {
 			OFfile << "\n" << punct << " ";
 			OFfile << directory;
 		}
-		std::cout << "Вкладка успешно добавлена в закладки!";
+		//std::cout << "Вкладка успешно добавлена в закладки!";
 	}
-	else std::cout << "Ошибка добавления в закладки!";
+//	else std::cout << "Ошибка добавления в закладки!";
 	OFfile.close();
 	Ffile.close();
-	system("pause>>nul");
-	system("cls");
+	//system("pause>>nul");
+	//system("cls");
 }
 
 //ЧТЕНИЕ СПИСКА ЗАКЛАДОК ИЗ ФАЙЛА
-void InBookmark(int& n, book*& start) {
+void InBookmark() {
 	std::ifstream INfile("Booklet");
-	n = 0;
+	int n = 0;
 	if (INfile.is_open()) {
 		if (INfile.peek() == EOF) {
 			//std::cout << "Список закладок пуст!\n";
@@ -184,7 +191,7 @@ void InBookmark(int& n, book*& start) {
 		head->prev = 0;
 		tail->next = 0;
 		head->next = 0;
-		start = head;
+		//start = head;
 		for (int i = 1; i < n; i++) {
 			tail->next = new book;
 			tail->next->prev = tail;
@@ -382,7 +389,8 @@ void OutBookmark(int& n, book*& start, Punct*& currentP1) {
 	//}
 }
 //УДАЛЕНИЕ 1-ОЙ ЗАКЛАДКИ
-void DeleteBookmark(int& n) {
+void DeleteBookmark(int& punct) {
+	/*
 	int key = 0;
 	std::cout << "Введите номер удаляемого элемента: ";
 
@@ -398,16 +406,16 @@ void DeleteBookmark(int& n) {
 	if (key > n || key <= 0) {
 		std::cout << "Данный пункт отсутствует!";	system("pause>>nul"); return;
 	}
+	*/
 	book* q = 0;
 	book* del = tail;
 	q = head;
-	while (q != 0)
+	while (q != NULL)
 	{
-		for (int i = 1; i <= n; i++) {
-			if (key == i) break;
+		while (q != NULL) {
+			if (punct == q->block) break;
 			else q = q->next;
 		}
-		--n;
 		del = q;
 		if (del == head) {
 			head = del->next;
@@ -437,9 +445,9 @@ void DeleteBookmark(int& n) {
 			break;
 		}
 	}
-	std::cout << "Закладка №" << key << " успешно удалена!\n";
+	//std::cout << "Закладка №" << key << " успешно удалена!\n";
 	SaveFile();
-	system("pause>>nul");
+	//system("pause>>nul");
 }
 //СОРТИРОВКА ЗАКЛАДОК
 void SortBookmark(bool& sort, int& n, book*& start) {
@@ -448,7 +456,7 @@ void SortBookmark(bool& sort, int& n, book*& start) {
 		system("pause>>nul");
 		return;
 	}
-	InBookmark(n, start);
+	InBookmark();
 	if (head->next == NULL)
 	{
 		std::cout << "В списке всего 1 пункт. Что Вы собрались сортировать?...";
@@ -566,4 +574,9 @@ System::String^ Convert_char_to_String(char* ch) {
 	for (int i = 1; chr[i] != '\0'; i++)
 		str += wchar_t(ch);
 	return str;
+}
+
+void directorFy(std::string& directory,int& punct,std::string& preddirectory, int& predpunct) {
+	directory = preddirectory;
+	punct = predpunct;
 }

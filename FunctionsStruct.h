@@ -10,7 +10,6 @@
 
 const int len = 2600;  //кол-во символов
 
-
 struct book { //список закладок
 	int block = 0;
 	int a = 0;

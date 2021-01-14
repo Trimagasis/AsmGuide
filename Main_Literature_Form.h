@@ -36,6 +36,10 @@ namespace ProjectSprv {
 		}
 	private: System::Windows::Forms::MenuStrip^ menuStrip1;
 	protected:
+
+	protected:
+
+	protected:
 	private: System::Windows::Forms::ToolStripMenuItem^ íàçàäÂÌåíþToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ îòêðûòüÆóðíàëÑÒåîðèåéToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ toolStripMenuItem2;
@@ -65,6 +69,13 @@ namespace ProjectSprv {
 	private: System::Windows::Forms::ContextMenuStrip^ contextMenuStrip2;
 	private: System::Windows::Forms::RichTextBox^ richTextBox1;
 	private: System::Windows::Forms::GroupBox^ groupBox1;
+	private: System::Windows::Forms::PictureBox^ bookmarkImage;
+
+
+
+
+
+
 
 	private: System::ComponentModel::IContainer^ components;
 
@@ -85,6 +96,7 @@ namespace ProjectSprv {
 		void InitializeComponent(void)
 		{
 			this->components = (gcnew System::ComponentModel::Container());
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Main_Literature_Form::typeid));
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->îòêðûòüÆóðíàëÑÒåîðèåéToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->toolStripMenuItem2 = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -108,8 +120,10 @@ namespace ProjectSprv {
 			this->contextMenuStrip2 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
 			this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
+			this->bookmarkImage = (gcnew System::Windows::Forms::PictureBox());
 			this->menuStrip1->SuspendLayout();
 			this->groupBox1->SuspendLayout();
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bookmarkImage))->BeginInit();
 			this->SuspendLayout();
 			// 
 			// menuStrip1
@@ -121,7 +135,7 @@ namespace ProjectSprv {
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(809, 28);
+			this->menuStrip1->Size = System::Drawing::Size(866, 28);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -132,7 +146,7 @@ namespace ProjectSprv {
 					this->toolStripMenuItem3, this->toolStripMenuItem4, this->toolStripMenuItem5
 			});
 			this->îòêðûòüÆóðíàëÑÒåîðèåéToolStripMenuItem->Name = L"îòêðûòüÆóðíàëÑÒåîðèåéToolStripMenuItem";
-			this->îòêðûòüÆóðíàëÑÒåîðèåéToolStripMenuItem->Size = System::Drawing::Size(210, 26);
+			this->îòêðûòüÆóðíàëÑÒåîðèåéToolStripMenuItem->Size = System::Drawing::Size(210, 24);
 			this->îòêðûòüÆóðíàëÑÒåîðèåéToolStripMenuItem->Text = L"Îòêðûòü æóðíàë ñ òåîðèåé";
 			// 
 			// toolStripMenuItem2
@@ -258,7 +272,7 @@ namespace ProjectSprv {
 			// íàçàäÂÌåíþToolStripMenuItem
 			// 
 			this->íàçàäÂÌåíþToolStripMenuItem->Name = L"íàçàäÂÌåíþToolStripMenuItem";
-			this->íàçàäÂÌåíþToolStripMenuItem->Size = System::Drawing::Size(121, 26);
+			this->íàçàäÂÌåíþToolStripMenuItem->Size = System::Drawing::Size(121, 24);
 			this->íàçàäÂÌåíþToolStripMenuItem->Text = L"Íàçàä â ìåíþ";
 			this->íàçàäÂÌåíþToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::íàçàäÂÌåíþToolStripMenuItem_Click);
 			// 
@@ -279,33 +293,47 @@ namespace ProjectSprv {
 			this->richTextBox1->Location = System::Drawing::Point(15, 21);
 			this->richTextBox1->Name = L"richTextBox1";
 			this->richTextBox1->ReadOnly = true;
-			this->richTextBox1->Size = System::Drawing::Size(732, 379);
+			this->richTextBox1->Size = System::Drawing::Size(752, 478);
 			this->richTextBox1->TabIndex = 4;
 			this->richTextBox1->Text = L"";
+			this->richTextBox1->TextChanged += gcnew System::EventHandler(this, &Main_Literature_Form::richTextBox1_TextChanged);
 			// 
 			// groupBox1
 			// 
 			this->groupBox1->Controls->Add(this->richTextBox1);
 			this->groupBox1->Location = System::Drawing::Point(30, 31);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(767, 416);
+			this->groupBox1->Size = System::Drawing::Size(779, 519);
 			this->groupBox1->TabIndex = 5;
 			this->groupBox1->TabStop = false;
+			// 
+			// bookmarkImage
+			// 
+			this->bookmarkImage->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bookmarkImage.Image")));
+			this->bookmarkImage->Location = System::Drawing::Point(803, 31);
+			this->bookmarkImage->Name = L"bookmarkImage";
+			this->bookmarkImage->Size = System::Drawing::Size(56, 50);
+			this->bookmarkImage->TabIndex = 6;
+			this->bookmarkImage->TabStop = false;
+			this->bookmarkImage->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &Main_Literature_Form::bookmarkImage_MouseDown);
 			// 
 			// Main_Literature_Form
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(809, 562);
+			this->ClientSize = System::Drawing::Size(866, 562);
+			this->Controls->Add(this->bookmarkImage);
 			this->Controls->Add(this->menuStrip1);
 			this->Controls->Add(this->groupBox1);
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"Main_Literature_Form";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Îñíîâíîé òåîðåòè÷åñêèé ìàòåðèàë";
+			this->Load += gcnew System::EventHandler(this, &Main_Literature_Form::Main_Literature_Form_Load);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
 			this->groupBox1->ResumeLayout(false);
+			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bookmarkImage))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -316,5 +344,8 @@ namespace ProjectSprv {
 	private: System::Void item2_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void item3_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void item4_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void bookmarkImage_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e);
+	private: System::Void Main_Literature_Form_Load(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void richTextBox1_TextChanged(System::Object^ sender, System::EventArgs^ e);
 };
 }

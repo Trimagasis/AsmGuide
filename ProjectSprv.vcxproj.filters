@@ -57,4 +57,12 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Image Include="bookmarkAktiv.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+    <Image Include="bookmarkNoAktiv.png">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
+  </ItemGroup>
 </Project>
