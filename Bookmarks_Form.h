@@ -37,6 +37,10 @@ namespace ProjectSprv {
 	private: System::Windows::Forms::MenuStrip^ menuStrip1;
 	protected:
 	private: System::Windows::Forms::ToolStripMenuItem^ назадВМенюToolStripMenuItem;
+	private: System::Windows::Forms::Button^ buttonSort;
+	private: System::Windows::Forms::ListBox^ listBoxBookmark;
+	private: System::Windows::Forms::Button^ buttonRemove;
+	private: System::Windows::Forms::Button^ button1;
 
 	private:
 		/// <summary>
@@ -53,6 +57,10 @@ namespace ProjectSprv {
 		{
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->назадВМенюToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->buttonSort = (gcnew System::Windows::Forms::Button());
+			this->listBoxBookmark = (gcnew System::Windows::Forms::ListBox());
+			this->buttonRemove = (gcnew System::Windows::Forms::Button());
+			this->button1 = (gcnew System::Windows::Forms::Button());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -73,16 +81,57 @@ namespace ProjectSprv {
 			this->назадВМенюToolStripMenuItem->Text = L"Назад в меню";
 			this->назадВМенюToolStripMenuItem->Click += gcnew System::EventHandler(this, &Bookmarks_Form::назадВМенюToolStripMenuItem_Click);
 			// 
+			// buttonSort
+			// 
+			this->buttonSort->Location = System::Drawing::Point(538, 32);
+			this->buttonSort->Name = L"buttonSort";
+			this->buttonSort->Size = System::Drawing::Size(171, 58);
+			this->buttonSort->TabIndex = 1;
+			this->buttonSort->Text = L"Сортировка списка закладок";
+			this->buttonSort->UseVisualStyleBackColor = true;
+			// 
+			// listBoxBookmark
+			// 
+			this->listBoxBookmark->FormattingEnabled = true;
+			this->listBoxBookmark->ItemHeight = 16;
+			this->listBoxBookmark->Location = System::Drawing::Point(13, 32);
+			this->listBoxBookmark->Name = L"listBoxBookmark";
+			this->listBoxBookmark->Size = System::Drawing::Size(469, 468);
+			this->listBoxBookmark->TabIndex = 2;
+			// 
+			// buttonRemove
+			// 
+			this->buttonRemove->Location = System::Drawing::Point(538, 96);
+			this->buttonRemove->Name = L"buttonRemove";
+			this->buttonRemove->Size = System::Drawing::Size(171, 58);
+			this->buttonRemove->TabIndex = 3;
+			this->buttonRemove->Text = L"Удалить выбранную закладку";
+			this->buttonRemove->UseVisualStyleBackColor = true;
+			// 
+			// button1
+			// 
+			this->button1->Location = System::Drawing::Point(538, 160);
+			this->button1->Name = L"button1";
+			this->button1->Size = System::Drawing::Size(171, 58);
+			this->button1->TabIndex = 4;
+			this->button1->Text = L"Очистить список закладок";
+			this->button1->UseVisualStyleBackColor = true;
+			// 
 			// Bookmarks_Form
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(721, 519);
+			this->Controls->Add(this->button1);
+			this->Controls->Add(this->buttonRemove);
+			this->Controls->Add(this->listBoxBookmark);
+			this->Controls->Add(this->buttonSort);
 			this->Controls->Add(this->menuStrip1);
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"Bookmarks_Form";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Список закладок";
+			this->Load += gcnew System::EventHandler(this, &Bookmarks_Form::Bookmarks_Form_Load);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
@@ -91,5 +140,6 @@ namespace ProjectSprv {
 		}
 #pragma endregion
 	private: System::Void назадВМенюToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
-	};
+	private: System::Void Bookmarks_Form_Load(System::Object^ sender, System::EventArgs^ e);
+};
 }

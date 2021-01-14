@@ -17,6 +17,7 @@ void PodMenu_x_x_x(int& punct, Teoria*& tmp);	//ВЫЗОВ БЛОКА ТЕОРИИ
 void clearLib();	//очистка памяти от списка закладок при закрытии приложения
 void SaveFile();	//СОХРАНЕНИЕ СПИСКА ЗАКЛАДОК В ФАЙЛ
 void CleenBookmark();	//очистка списка закладок
+void OutFullBookmark(book*& start, Punct*& currentP1, bool& flag);
 void OutBookmark(int& n, book*& start, Punct*& currentP1);	//ВЫВОД ЗАКЛАДОК
 void DeleteBookmark(int& punct);	//УДАЛЕНИЕ 1-ОЙ ЗАКЛАДКИ
 void SortBookmark(bool& sort, int& n, book*& start);	//СОРТИРОВКА ЗАКЛАДОК

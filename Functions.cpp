@@ -342,7 +342,48 @@ void CleenBookmark() {
 	record.clear();
 	record.close();
 }
-//ÂÛÂÎÄ ÇÀÊËÀÄÎÊ
+
+//ÂÛÂÎÄ ÑÏÈÑÊÀ ÇÀÊËÀÄÎÊ
+void OutFullBookmark(book*& start, Punct*& currentP1, bool& flag) {
+	InBookmark();	//×ÒÅÍÈÅ ÑÏÈÑÊÀ ÇÀÊËÀÄÎÊ ÈÇ ÔÀÉËÀ
+	InPunct();		//×ÒÅÍÈÅ ÍÀÇÂÀÍÈÉ ÏÓÍÊÒÎÂ ÈÇ ÔÀÉËÀ
+	if (head == NULL) return;
+	else if (flag == false) {
+		start = head;
+		flag = true;
+	}
+	else if (start->next != NULL) start = start->next;
+	else {
+		flag = false;
+		return;
+	}
+
+	currentP1 = headP1;
+	int NumPunct = 1;
+	while (start->a != NumPunct)
+	{
+		currentP1 = currentP1->next;
+		NumPunct++;
+	}
+
+	NumPunct = 1;
+	while (start->b != NumPunct)
+	{
+		currentP1->p2.headP2 = currentP1->p2.headP2->next;
+		NumPunct++;
+	}
+	if (start->c != 0) {
+		NumPunct = 1;
+		while (start->c != NumPunct)
+		{
+			currentP1->p2.headP2->p3.headP3 = currentP1->p2.headP2->p3.headP3->next;
+			NumPunct++;
+		}
+	}
+	else currentP1->p2.headP2->p3.headP3 = NULL;
+}
+
+//ÂÛÂÎÄ ÎÄÍÎÉ ÇÀÊËÀÄÊÈ
 void OutBookmark(int& n, book*& start, Punct*& currentP1) {
 	//InBookmark(n, start);	//×ÒÅÍÈÅ ÑÏÈÑÊÀ ÇÀÊËÀÄÎÊ ÈÇ ÔÀÉËÀ
 	InPunct();
@@ -350,44 +391,45 @@ void OutBookmark(int& n, book*& start, Punct*& currentP1) {
 	//if (run == false) std::cout << "Ñïèñîê çàêëàäîê:\n";
 	//std::string strelka = " -->> ";
 	//for (int i = 0; i < n; i++) {
-			currentP1 = headP1;
-			//std::cout << i + 1 << ") ";
-			int NumPunct = 1;
-			while (start->a != NumPunct)
-			{
-				currentP1 = currentP1->next;
-				NumPunct++;
-			}
-			//std::cout << currentP1->p1 << strelka;
+	currentP1 = headP1;
+	//std::cout << i + 1 << ") ";
+	int NumPunct = 1;
+	while (start->a != NumPunct)
+	{
+		currentP1 = currentP1->next;
+		NumPunct++;
+	}
+	//std::cout << currentP1->p1 << strelka;
 
-			NumPunct = 1;
-			while (start->b != NumPunct)
-			{
-				currentP1->p2.headP2 = currentP1->p2.headP2->next;
-				NumPunct++;
-			}
-			if (start->c != 0) {
-				//std::cout << _currentP2->p2 << strelka;
-				NumPunct = 1;
-				while (start->c != NumPunct)
-				{
-					currentP1->p2.headP2->p3.headP3 = currentP1->p2.headP2->p3.headP3->next;
-					NumPunct++;
-				}
-				//std::cout << _currentP3->p3 << std::endl;
-			}
-			//else std::cout << _currentP2->p2 << std::endl;
-		/*
-		else if ((atoi(std::string({ (char)h }).c_str())) == i + 1) {
-			int punct = start->block;
-			std::string directory = "-";
-			Teoria* tmp = headT;
-			PodMenu_x_x_x(punct, tmp);
-			break;
-		}*/
-		//start = start->next;
-	//}
+	NumPunct = 1;
+	while (start->b != NumPunct)
+	{
+		currentP1->p2.headP2 = currentP1->p2.headP2->next;
+		NumPunct++;
+	}
+	if (start->c != 0) {
+		//std::cout << _currentP2->p2 << strelka;
+		NumPunct = 1;
+		while (start->c != NumPunct)
+		{
+			currentP1->p2.headP2->p3.headP3 = currentP1->p2.headP2->p3.headP3->next;
+			NumPunct++;
+		}
+		//std::cout << _currentP3->p3 << std::endl;
+	}
+	//else std::cout << _currentP2->p2 << std::endl;
+/*
+else if ((atoi(std::string({ (char)h }).c_str())) == i + 1) {
+	int punct = start->block;
+	std::string directory = "-";
+	Teoria* tmp = headT;
+	PodMenu_x_x_x(punct, tmp);
+	break;
+}*/
+//start = start->next;
+//}
 }
+
 //ÓÄÀËÅÍÈÅ 1-ÎÉ ÇÀÊËÀÄÊÈ
 void DeleteBookmark(int& punct) {
 	/*
