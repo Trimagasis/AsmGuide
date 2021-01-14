@@ -21,11 +21,13 @@ System::Void ProjectSprv::Bookmarks_Form::Bookmarks_Form_Load(System::Object^ se
     do
     {
         OutFullBookmark(start, currentP1, flag);
-        stroka = currentP1->p1 + ukazatel + currentP1->p2.headP2->p2;
-        if(currentP1->p2.headP2->p3.headP3->p3 != NULL)
-            stroka += ukazatel + currentP1->p2.headP2->p3.headP3->p3;
-        System::String^ clistr = gcnew System::String(stroka.c_str());;
-        listBoxBookmark->Items->Add(clistr);
+        if (flag == true) {
+            stroka = currentP1->p1 + ukazatel + currentP1->p2.headP2->p2;
+            if (currentP1->p2.headP2->p3.headP3->p3 != NULL)
+                stroka += ukazatel + currentP1->p2.headP2->p3.headP3->p3;
+            System::String^ clistr = gcnew System::String(stroka.c_str());
+            listBoxBookmark->Items->Add(clistr);
+        }
     } while (flag == true);
     return System::Void();
 }

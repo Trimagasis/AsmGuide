@@ -357,7 +357,6 @@ void OutFullBookmark(book*& start, Punct*& currentP1, bool& flag) {
 		flag = false;
 		return;
 	}
-
 	currentP1 = headP1;
 	int NumPunct = 1;
 	while (start->a != NumPunct)

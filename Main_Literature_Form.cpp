@@ -17,54 +17,59 @@ int punct = 0;
 int predpunct = 0;
 std::string preddirectory;
 
-System::Void ProjectSprv::Main_Literature_Form::item1_Click(System::Object^ sender, System::EventArgs^ e)
-{
+//Функция считывания теории в textbox и считывания адреса по пунктам в groupbox
+void Conclusion_Theory(book*&start, System::String^& clistr, System::String^& clistr2, int& predpunct) {
     Teoria* headT;
-    InTeor(headT);
-    predpunct = 1; 
+    InTeor(headT);              //считывание теории из файла
+
     Teoria* tmp = headT;
-    preddirectory = "1 1 1"; 
-    directorFy(directory, punct, preddirectory, predpunct);
-    PodMenu_x_x_x(punct, tmp);
-    System::String^ clistr = gcnew System::String(tmp->opredelenie, 0, len);
-    richTextBox1->Text = clistr;
+    directorFy(directory, punct, preddirectory, predpunct); //переводы
+    PodMenu_x_x_x(punct, tmp);              //поиск блока теории
+    std::string stroka, ukazatel = " -->> ";
+
+    clistr = gcnew System::String(tmp->opredelenie, 0, len);    //перевод строки из char* в String^
     int n = 0;
-    book* start = new book;
-    start->a = 1; start->b = 1; start->c = 1;
     Punct* currentP1;
     OutBookmark(n, start, currentP1);
-    clistr = gcnew System::String(currentP1->p1, 0, len);
-    groupBox1->Text = clistr;
-    clistr = gcnew System::String(currentP1->p2.headP2->p2, 0, len);
-    groupBox1->Text += " -->> " + clistr;
-    clistr = gcnew System::String(currentP1->p2.headP2->p3.headP3->p3, 0, len);
-    groupBox1->Text += " -->>" + clistr;
+
+    stroka = currentP1->p1 + ukazatel + currentP1->p2.headP2->p2;   //перевод char* в строку адрес по пунктам
+    if (currentP1->p2.headP2->p3.headP3->p3 != NULL)                //если существует подподпункт
+        stroka += ukazatel + currentP1->p2.headP2->p3.headP3->p3;
+    clistr2 = gcnew System::String(stroka.c_str());  //перевод из string в String^
+
+                                 //вывод адреса на groupbox
+}
+
+System::Void ProjectSprv::Main_Literature_Form::item1_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    predpunct = 1;
+    preddirectory = "1 1 1";
+    book* start = new book;
+    start->a = 1; start->b = 1; start->c = 1;
+    System::String^ clistr;
+    System::String^ clistr2;
+
+    Conclusion_Theory(start, clistr, clistr2, predpunct);
     
+    richTextBox1->Text = clistr;    //вывод текста теории
+    groupBox1->Text = clistr2;
+
     return System::Void();
 }
 
 System::Void ProjectSprv::Main_Literature_Form::item2_Click(System::Object^ sender, System::EventArgs^ e)
 {
-    Teoria* headT;
-    InTeor(headT);
     predpunct = 2;
-    Teoria* tmp = headT;
     preddirectory = "1 1 2";
-    directorFy(directory, punct, preddirectory, predpunct);
-    PodMenu_x_x_x(punct, tmp);
-    System::String^ clistr = gcnew System::String(tmp->opredelenie, 0, len);
-    richTextBox1->Text = clistr;
-    int n = 0;
     book* start = new book;
     start->a = 1; start->b = 1; start->c = 2;
-    Punct* currentP1;
-    OutBookmark(n, start, currentP1);
-    clistr = gcnew System::String(currentP1->p1, 0, len);
-    groupBox1->Text = clistr;
-    clistr = gcnew System::String(currentP1->p2.headP2->p2, 0, len);
-    groupBox1->Text += " -->> " + clistr;
-    clistr = gcnew System::String(currentP1->p2.headP2->p3.headP3->p3, 0, len);
-    groupBox1->Text += " -->>" + clistr;
+    System::String^ clistr;
+    System::String^ clistr2;
+
+    Conclusion_Theory(start, clistr, clistr2, predpunct);
+
+    richTextBox1->Text = clistr;    //вывод текста теории
+    groupBox1->Text = clistr2;
 
     return System::Void();
 }
@@ -82,18 +87,18 @@ System::Void ProjectSprv::Main_Literature_Form::item4_Click(System::Object^ send
 //добавление и удаление закладки по клику на флажок закладки
 System::Void ProjectSprv::Main_Literature_Form::bookmarkImage_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e)
 {
-    this->bookmarkImage->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-    bool checkbookmark = false;
-    InBookmark();
+    this->bookmarkImage->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage; //выравнивание картинки по размеру pictherbox
+    bool checkbookmark = false; //флаг проверки существования закладки
+    InBookmark();   //считывание закладок из файла
     if (punct != 0) {
-        checkbook(punct, checkbookmark);
+        checkbook(punct, checkbookmark);    //проверка на существование закладки
         if (checkbookmark == false) {
-            OFstream(directory, punct, checkbookmark);
-            bookmarkImage->Image = Image::FromFile("bookmarkAktiv.png");
+            OFstream(directory, punct, checkbookmark);  //добавление закладки в файл
+            bookmarkImage->Image = Image::FromFile("bookmarkAktiv.png");    //флажок = красный
         }
         else {
-            DeleteBookmark(punct);
-            bookmarkImage->Image = Image::FromFile("bookmarkNoAktiv.png");
+            DeleteBookmark(punct);  //удаление закладки из файла
+            bookmarkImage->Image = Image::FromFile("bookmarkNoAktiv.png");  //флажок = серый
         }
     }
     return System::Void();
