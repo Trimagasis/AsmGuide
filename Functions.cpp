@@ -687,6 +687,7 @@ void directorFy(int& punct,int& predpunct) {
 
 //ÏÎÈÑÊ ÏÓÍÊÒÀ ÁËÎÊÀ ÒÅÎÐÈÈ ÏÎ Å¨ ÀÄÐÅÑÓ a b c
 void SearchItem(book*& start, int& predpunct) {
+	if (headBlock == NULL) InPunct();
 	tmpBlock = headBlock;
 	while (tmpBlock->a != start->a || tmpBlock->b != start->b || tmpBlock->c != start->c) {
 		tmpBlock = tmpBlock->next;

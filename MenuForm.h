@@ -80,7 +80,7 @@ namespace ProjectSprv {
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(382, 28);
+			this->menuStrip1->Size = System::Drawing::Size(382, 30);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -154,7 +154,7 @@ namespace ProjectSprv {
 			this->MinimumSize = System::Drawing::Size(400, 600);
 			this->Name = L"MenuForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"Справочник v.0.1.1";
+			this->Text = L"Справочник v.0.1.2";
 			this->Load += gcnew System::EventHandler(this, &MenuForm::MenuForm_Load);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();

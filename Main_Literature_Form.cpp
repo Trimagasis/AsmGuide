@@ -120,8 +120,7 @@ System::Void ProjectSprv::Main_Literature_Form::Main_Literature_Form_Load(System
 
         //using namespace System::IO;
         //StreamReader^ sr1 = gcnew StreamReader("tempBkmrk.txt", System::Text::Encoding::Default);
-        std::string filename = "tempBkmrk.txt";
-        std::ifstream filestream(filename);
+        std::ifstream filestream("tempBkmrk.txt");
         std::string str, strNumPunct;
         if (filestream) {
             char tmp[100];
@@ -131,10 +130,11 @@ System::Void ProjectSprv::Main_Literature_Form::Main_Literature_Form_Load(System
                 int b;
                 for (int i = 0; i < str.size(); i++)
                     if (str[i] >= 48 && str[i] <= 57)
-                    {           
+                    {
                         strNumPunct += str[i];
                     }
             }
+            else strNumPunct = "111";
             filestream.close();
             
         }
@@ -154,8 +154,6 @@ System::Void ProjectSprv::Main_Literature_Form::Main_Literature_Form_Load(System
 
         richTextBox1->Text = clistr;    //вывод текста теории
         groupBox1->Text = clistr2;
-
-        return System::Void();
 
     return System::Void();
 }
