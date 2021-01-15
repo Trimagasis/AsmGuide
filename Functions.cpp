@@ -1,7 +1,7 @@
 #include "Functions.h"
 
 
-struct book* head, * curent, * tail;
+struct book* head = NULL, * curent, * tail;
 struct Teoria* headT, * tailT;
 struct Punct* headP1, * currentP1;
 struct Block* headBlock, *tmpBlock;
@@ -360,20 +360,6 @@ void Menu3(char& h, int& punct, std::string& directory) {
 	}
 }
 */
-//очистка памяти от списка закладок при закрытии приложения
-void clearLib()
-{
-	book* current;
-	book* tmp;
-	current = head;
-	while (current)
-	{
-		tmp = current->next;
-		delete current;
-		current = tmp;
-	}
-	head = NULL;
-}
 //СОХРАНЕНИЕ СПИСКА ЗАКЛАДОК В ФАЙЛ
 void SaveFile() {
 	std::ofstream record("Booklet", std::ios::out);
@@ -388,13 +374,34 @@ void SaveFile() {
 	else std::cout << "Ошибка открытия файла!\n";
 	record.close();
 }
+
+//очистка памяти от списка закладок при закрытии приложения
+void clearLib()
+{
+	book* current;
+	book* tmp;
+	current = head;
+	while (current)
+	{
+		tmp = current->next;
+		delete current;
+		current = tmp;
+	}
+	head = NULL;
+}
+
 //очистка списка закладок
-void CleenBookmark() {
+void CleenBookmark(bool & checkCleen) {
+	if (head == NULL) {
+		checkCleen = true;
+		return;
+	}
 	clearLib();
 	std::ofstream record("Booklet", std::ios::out);
 	record.clear();
 	record.close();
 }
+
 book* start;
 //ВЫВОД СПИСКА ЗАКЛАДОК
 void OutFullBookmark(Punct*& currentP1, bool& flag) {
@@ -554,21 +561,23 @@ void DeleteBookmark(int& punct) {
 	//system("pause>>nul");
 }
 //СОРТИРОВКА ЗАКЛАДОК
-void SortBookmark(bool& sort, int& n, book*& start) {
-	if (sort == true) {
-		std::cout << "Список закладок уже был отсортирован!";
-		system("pause>>nul");
-		return;
-	}
+void SortBookmark(bool& sort, bool & numberBookmarks) {
+	//if (sort == true) {
+		//std::cout << "Список закладок уже был отсортирован!";
+		//system("pause>>nul");
+		//return;
+	//}
 	InBookmark();
+	if (head == NULL) return;
 	if (head->next == NULL)
 	{
-		std::cout << "В списке всего 1 пункт. Что Вы собрались сортировать?...";
-		system("pause>>nul");
+		numberBookmarks = true;
+		//std::cout << "В списке всего 1 пункт. Что Вы собрались сортировать?...";
+		//system("pause>>nul");
 		return;
 	}
-
-	//СОРТИРОВКА ПО 1 СТОЛБЦУ
+	book* start;
+	//СОРТИРОВКА ПО БЛОКУ (punct)
 	book* tek;
 	start = head; //метод вставки
 	while (start && start->next) //цикл по отсортированной части
@@ -591,10 +600,10 @@ void SortBookmark(bool& sort, int& n, book*& start) {
 			start = tek;
 	}
 
-	std::cout << "Список закладок успешно отсортирован!";
+	//std::cout << "Список закладок успешно отсортирован!";
 	sort = true;
 	SaveFile();
-	system("pause>>nul");
+	//system("pause>>nul");
 }
 /*
 //СПИСОК ЗАКЛАДОК
@@ -672,13 +681,6 @@ void GlobalMenu() {
 	}
 }
 */
-System::String^ Convert_char_to_String(char* ch) {
-	char* chr = new char();
-	System::String^ str;
-	for (int i = 1; chr[i] != '\0'; i++)
-		str += wchar_t(ch);
-	return str;
-}
 
 //для передачи значения
 void directorFy(int& punct,int& predpunct) {

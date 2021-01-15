@@ -135,3 +135,40 @@ System::Void ProjectSprv::Bookmarks_Form::buttonRemove_Click(System::Object^ sen
 
     return System::Void();
 }
+
+System::Void ProjectSprv::Bookmarks_Form::buttonCleen_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    bool checkCleen = false;
+    CleenBookmark(checkCleen);    //вызов функции очистки списка закладок
+    if (checkCleen == false) {
+        Bookmarks_Form^ form2 = gcnew Bookmarks_Form();
+        this->Hide();
+        form2->Show();
+    }
+
+    return System::Void();
+}
+
+System::Void ProjectSprv::Bookmarks_Form::перейтиКСборникуТеорииToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    Main_Literature_Form^ form3 = gcnew Main_Literature_Form();
+    this->Hide();
+    form3->Show();
+
+    return System::Void();
+}
+
+System::Void ProjectSprv::Bookmarks_Form::buttonSort_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    bool sort = false;
+    bool numberBookmarks = false;
+    SortBookmark(sort, numberBookmarks);
+    if (numberBookmarks)
+        MessageBox::Show("В списки всего 1 пункт! Что вы собрались сортировать?..","Ошибка!");
+    else {
+        Bookmarks_Form^ form4 = gcnew Bookmarks_Form();
+        this->Hide();
+        form4->Show();
+    }
+    return System::Void();
+}

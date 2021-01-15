@@ -16,20 +16,12 @@ void PodMenu_x_x_x(int& punct, Teoria*& tmp);	//ВЫЗОВ БЛОКА ТЕОРИИ
 //void Menu3(char& h, int& punct, std::string& directory);
 void clearLib();	//очистка памяти от списка закладок при закрытии приложения
 void SaveFile();	//СОХРАНЕНИЕ СПИСКА ЗАКЛАДОК В ФАЙЛ
-void CleenBookmark();	//очистка списка закладок
+void CleenBookmark(bool& checkCleen);	//очистка списка закладок
 void OutFullBookmark(Punct*& currentP1, bool& flag);
 void OutBookmark(Punct*& currentP1, int& punct);	//ВЫВОД ОДНОЙ ЗАКЛАДКИ
 void DeleteBookmark(int& punct);	//УДАЛЕНИЕ 1-ОЙ ЗАКЛАДКИ
-void SortBookmark(bool& sort, int& n, book*& start);	//СОРТИРОВКА ЗАКЛАДОК
+void SortBookmark(bool& sort, bool& numberBookmarks);	//СОРТИРОВКА ЗАКЛАДОК
 //void Bookmark(char& h, int& n, std::string& directory, book*& start);	//СПИСОК ЗАКЛАДОК
 //void GlobalMenu();	//ГЛОБАЛЬНОЕ МЕНЮ
 void directorFy(int& punct, int& predpunct);
 void SearchItem(book*& stert, int& predpunct);
-
-/*std::string& Convert_String_to_string(String^ s, std::string& os); 
-String^ Convert_string_to_String(std::string& os, String^ s);
-std::string& Cinvert_String_to_string(String^ s);
-String^ Convert_string_to_String(std::string& os);*/
-System::String^ Convert_char_to_String(char* ch);
-/*
-char* Convert_String_to_char(System::String^ string);*/

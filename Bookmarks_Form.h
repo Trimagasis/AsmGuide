@@ -40,7 +40,9 @@ namespace ProjectSprv {
 	private: System::Windows::Forms::Button^ buttonSort;
 	private: System::Windows::Forms::ListBox^ listBoxBookmark;
 	private: System::Windows::Forms::Button^ buttonRemove;
-	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Button^ buttonCleen;
+	private: System::Windows::Forms::ToolStripMenuItem^ перейтиКСборникуТеорииToolStripMenuItem;
+
 
 	private:
 		/// <summary>
@@ -57,17 +59,21 @@ namespace ProjectSprv {
 		{
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->назадВМенюToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->перейтиКСборникуТеорииToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->buttonSort = (gcnew System::Windows::Forms::Button());
 			this->listBoxBookmark = (gcnew System::Windows::Forms::ListBox());
 			this->buttonRemove = (gcnew System::Windows::Forms::Button());
-			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->buttonCleen = (gcnew System::Windows::Forms::Button());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// menuStrip1
 			// 
 			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
-			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->назадВМенюToolStripMenuItem });
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+				this->назадВМенюToolStripMenuItem,
+					this->перейтиКСборникуТеорииToolStripMenuItem
+			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
 			this->menuStrip1->Size = System::Drawing::Size(721, 28);
@@ -81,6 +87,13 @@ namespace ProjectSprv {
 			this->назадВМенюToolStripMenuItem->Text = L"Назад в меню";
 			this->назадВМенюToolStripMenuItem->Click += gcnew System::EventHandler(this, &Bookmarks_Form::назадВМенюToolStripMenuItem_Click);
 			// 
+			// перейтиКСборникуТеорииToolStripMenuItem
+			// 
+			this->перейтиКСборникуТеорииToolStripMenuItem->Name = L"перейтиКСборникуТеорииToolStripMenuItem";
+			this->перейтиКСборникуТеорииToolStripMenuItem->Size = System::Drawing::Size(218, 24);
+			this->перейтиКСборникуТеорииToolStripMenuItem->Text = L"Перейти к сборнику теории";
+			this->перейтиКСборникуТеорииToolStripMenuItem->Click += gcnew System::EventHandler(this, &Bookmarks_Form::перейтиКСборникуТеорииToolStripMenuItem_Click);
+			// 
 			// buttonSort
 			// 
 			this->buttonSort->Location = System::Drawing::Point(538, 32);
@@ -89,6 +102,7 @@ namespace ProjectSprv {
 			this->buttonSort->TabIndex = 1;
 			this->buttonSort->Text = L"Сортировка списка закладок";
 			this->buttonSort->UseVisualStyleBackColor = true;
+			this->buttonSort->Click += gcnew System::EventHandler(this, &Bookmarks_Form::buttonSort_Click);
 			// 
 			// listBoxBookmark
 			// 
@@ -110,21 +124,22 @@ namespace ProjectSprv {
 			this->buttonRemove->UseVisualStyleBackColor = true;
 			this->buttonRemove->Click += gcnew System::EventHandler(this, &Bookmarks_Form::buttonRemove_Click);
 			// 
-			// button1
+			// buttonCleen
 			// 
-			this->button1->Location = System::Drawing::Point(538, 160);
-			this->button1->Name = L"button1";
-			this->button1->Size = System::Drawing::Size(171, 58);
-			this->button1->TabIndex = 4;
-			this->button1->Text = L"Очистить список закладок";
-			this->button1->UseVisualStyleBackColor = true;
+			this->buttonCleen->Location = System::Drawing::Point(538, 160);
+			this->buttonCleen->Name = L"buttonCleen";
+			this->buttonCleen->Size = System::Drawing::Size(171, 58);
+			this->buttonCleen->TabIndex = 4;
+			this->buttonCleen->Text = L"Очистить список закладок";
+			this->buttonCleen->UseVisualStyleBackColor = true;
+			this->buttonCleen->Click += gcnew System::EventHandler(this, &Bookmarks_Form::buttonCleen_Click);
 			// 
 			// Bookmarks_Form
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->ClientSize = System::Drawing::Size(721, 519);
-			this->Controls->Add(this->button1);
+			this->Controls->Add(this->buttonCleen);
 			this->Controls->Add(this->buttonRemove);
 			this->Controls->Add(this->listBoxBookmark);
 			this->Controls->Add(this->buttonSort);
@@ -145,5 +160,8 @@ namespace ProjectSprv {
 	private: System::Void Bookmarks_Form_Load(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void listBoxBookmark_MouseDoubleClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e);
 	private: System::Void buttonRemove_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void buttonCleen_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void перейтиКСборникуТеорииToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void buttonSort_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }
