@@ -68,3 +68,70 @@ System::Void ProjectSprv::Bookmarks_Form::listBoxBookmark_MouseDoubleClick(Syste
 
     return System::Void();
 }
+
+System::Void ProjectSprv::Bookmarks_Form::buttonRemove_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    if (listBoxBookmark->SelectedItem != nullptr)
+    {
+        std::string SelectItem;
+        System::String^ std = gcnew System::String(listBoxBookmark->SelectedItem->ToString());
+
+        using namespace Runtime::InteropServices;
+        const char* chars =
+            (const char*)(Marshal::StringToHGlobalAnsi(std)).ToPointer();
+        SelectItem = chars;
+        Marshal::FreeHGlobal(IntPtr((void*)chars));
+
+        std::ofstream filestream("tempBkmrk.txt", std::ios_base::trunc);
+        if (filestream) {
+            filestream << SelectItem;
+            filestream.close();
+            Main_Literature_Form^ form = gcnew Main_Literature_Form();
+
+            //выборка цифр из считанной строки
+            int punct, predpunct;
+            std::ifstream filestream("tempBkmrk.txt");
+            std::string str, strNumPunct;
+            if (filestream) {
+                char tmp[100];
+                filestream.getline(tmp, 100 - 1);
+                str = tmp;
+                if (str[0] != '\0') {
+                    int b;
+                    for (int i = 0; i < str.size(); i++)
+                        if (str[i] >= 48 && str[i] <= 57)
+                        {
+                            strNumPunct += str[i];
+                        }
+                }
+                else strNumPunct = "111";
+                filestream.close();
+
+            }
+            book* start = new book;
+            //переводы char to int
+            start->a = atoi(std::string({ (char)strNumPunct[0] }).c_str());
+            start->b = atoi(std::string({ (char)strNumPunct[1] }).c_str());;
+            if (atoi(std::string({ (char)strNumPunct[2] }).c_str()) != '\0')
+                start->c = atoi(std::string({ (char)strNumPunct[2] }).c_str());
+            else start->c = 0;
+
+            SearchItem(start, predpunct);   //поиск блока теории (punct) по адресу a b c
+
+            directorFy(punct, predpunct); //переводы
+
+            DeleteBookmark(punct);  //удаление закладки
+
+            Bookmarks_Form^ form1 = gcnew Bookmarks_Form();
+            this->Hide();
+            form1->Show();
+        }
+        else {
+            MessageBox::Show("Файл tempBkmrk.txt отсутствует!", "Ошибка!");
+            filestream.close();
+        }
+        //MessageBox::Show(listBoxBookmark->SelectedItem->ToString());
+    }
+
+    return System::Void();
+}

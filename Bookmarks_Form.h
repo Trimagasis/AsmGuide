@@ -108,6 +108,7 @@ namespace ProjectSprv {
 			this->buttonRemove->TabIndex = 3;
 			this->buttonRemove->Text = L"”далить выбранную закладку";
 			this->buttonRemove->UseVisualStyleBackColor = true;
+			this->buttonRemove->Click += gcnew System::EventHandler(this, &Bookmarks_Form::buttonRemove_Click);
 			// 
 			// button1
 			// 
@@ -143,5 +144,6 @@ namespace ProjectSprv {
 	private: System::Void назад¬ћенюToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void Bookmarks_Form_Load(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void listBoxBookmark_MouseDoubleClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e);
+	private: System::Void buttonRemove_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }
