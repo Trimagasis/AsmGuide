@@ -4,6 +4,7 @@
 #include "Main_Literature_Form.h"
 #include "Bookmarks_Form.h"
 #include "Add_Material_Form.h"
+#include "OutTheoryBookmark.h"
 
 #include "Functions.h"
 
@@ -71,6 +72,7 @@ System::Void ProjectSprv::MenuForm::AddMat_Click(System::Object^ sender, System:
 bool metka = false;
 System::Void ProjectSprv::MenuForm::MenuForm_Load(System::Object^ sender, System::EventArgs^ e)
 {
+	
 	/*
 	if (metka == false) {
 		InTeor();

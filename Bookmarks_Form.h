@@ -98,6 +98,7 @@ namespace ProjectSprv {
 			this->listBoxBookmark->Name = L"listBoxBookmark";
 			this->listBoxBookmark->Size = System::Drawing::Size(469, 468);
 			this->listBoxBookmark->TabIndex = 2;
+			this->listBoxBookmark->MouseDoubleClick += gcnew System::Windows::Forms::MouseEventHandler(this, &Bookmarks_Form::listBoxBookmark_MouseDoubleClick);
 			// 
 			// buttonRemove
 			// 
@@ -141,5 +142,6 @@ namespace ProjectSprv {
 #pragma endregion
 	private: System::Void Ì‡Á‡‰¬ÃÂÌ˛ToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void Bookmarks_Form_Load(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void listBoxBookmark_MouseDoubleClick(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e);
 };
 }

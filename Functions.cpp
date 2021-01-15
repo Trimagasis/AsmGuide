@@ -76,8 +76,8 @@ void InPunct() {
 	}
 	base.close();
 	headP1 = new Punct;
-	fsTeor.getline(headP1->buf, len - 1, '1');
-	fsTeor.getline(headP1->p1, len - 1, '1'); //—читываем строки в массив
+	fsTeor.getline(headP1->buf, len - 1, '@');
+	fsTeor.getline(headP1->p1, len - 1, '@'); //—читываем строки в массив
 	headP1->next = 0;
 
 	headP1->p2.headP2 = NULL;
@@ -89,7 +89,7 @@ void InPunct() {
 		if ((currentP1->buf[0]) == '1') {
 			currentP1->next = new Punct;
 			currentP1 = currentP1->next;
-			fsTeor.getline(currentP1->p1, len - 1, '1');
+			fsTeor.getline(currentP1->p1, len - 1, '@');
 
 			currentP1->p2.headP2 = NULL;
 		}
@@ -97,7 +97,7 @@ void InPunct() {
 			if (currentP1->p2.headP2 == NULL)
 			{
 				currentP1->p2.headP2 = new P2;
-				fsTeor.getline(currentP1->p2.headP2->p2, len - 1, '2');
+				fsTeor.getline(currentP1->p2.headP2->p2, len - 1, '@');
 
 				currentP1->p2.headP2->next = NULL;
 				currentP1->p2.headP2->p3.headP3 = NULL;
@@ -106,7 +106,7 @@ void InPunct() {
 			else {
 				currentP1->p2.currentP2->next = new P2;
 				currentP1->p2.currentP2 = currentP1->p2.currentP2->next;
-				fsTeor.getline(currentP1->p2.currentP2->p2, len - 1, '2');
+				fsTeor.getline(currentP1->p2.currentP2->p2, len - 1, '@');
 				currentP1->p2.currentP2->p3.headP3 = NULL;
 			}
 		}
@@ -114,7 +114,7 @@ void InPunct() {
 			if (currentP1->p2.currentP2->p3.headP3 == NULL)
 			{
 				currentP1->p2.currentP2->p3.headP3 = new P3;
-				fsTeor.getline(currentP1->p2.currentP2->p3.headP3->p3, len - 1, '3');
+				fsTeor.getline(currentP1->p2.currentP2->p3.headP3->p3, len - 1, '@');
 
 				currentP1->p2.currentP2->p3.headP3->next = NULL;
 				currentP1->p2.currentP2->p3.currentP3 = currentP1->p2.currentP2->p3.headP3;
@@ -122,7 +122,7 @@ void InPunct() {
 			else {
 				currentP1->p2.currentP2->p3.currentP3->next = new P3;
 				currentP1->p2.currentP2->p3.currentP3 = currentP1->p2.currentP2->p3.currentP3->next;
-				fsTeor.getline(currentP1->p2.currentP2->p3.currentP3->p3, len - 1, '3');
+				fsTeor.getline(currentP1->p2.currentP2->p3.currentP3->p3, len - 1, '@');
 			}
 		}
 	}
@@ -620,4 +620,8 @@ System::String^ Convert_char_to_String(char* ch) {
 void directorFy(std::string& directory,int& punct,std::string& preddirectory, int& predpunct) {
 	directory = preddirectory;
 	punct = predpunct;
+}
+
+void selItem(std::string& predSelectItem, std::string SelectItem) {
+	SelectItem = predSelectItem;
 }

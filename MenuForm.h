@@ -154,7 +154,7 @@ namespace ProjectSprv {
 			this->MinimumSize = System::Drawing::Size(400, 600);
 			this->Name = L"MenuForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"Справочник v.0.0.8";
+			this->Text = L"Справочник v.0.0.9";
 			this->Load += gcnew System::EventHandler(this, &MenuForm::MenuForm_Load);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
