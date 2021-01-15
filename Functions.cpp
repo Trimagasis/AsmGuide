@@ -174,6 +174,7 @@ void InPunct() {
 		tmpBlock = tmpBlock->next;
 		if (tmpBlock != NULL) filestream << "\n";
 	} while (tmpBlock != NULL);
+	filestream.close();
 	fsTeor.close(); //Çàêðûâàåì ôàéë
 }
 
@@ -679,6 +680,16 @@ System::String^ Convert_char_to_String(char* ch) {
 	return str;
 }
 
+//äëÿ ïåðåäà÷è çíà÷åíèÿ
 void directorFy(int& punct,int& predpunct) {
 	punct = predpunct;
+}
+
+//ÏÎÈÑÊ ÏÓÍÊÒÀ ÁËÎÊÀ ÒÅÎÐÈÈ ÏÎ Å¨ ÀÄÐÅÑÓ a b c
+void SearchItem(book*& start, int& predpunct) {
+	tmpBlock = headBlock;
+	while (tmpBlock->a != start->a || tmpBlock->b != start->b || tmpBlock->c != start->c) {
+		tmpBlock = tmpBlock->next;
+	}
+	predpunct = tmpBlock->block;
 }

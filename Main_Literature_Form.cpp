@@ -56,13 +56,31 @@ System::Void ProjectSprv::Main_Literature_Form::item1_Click(System::Object^ send
 
 System::Void ProjectSprv::Main_Literature_Form::item2_Click(System::Object^ sender, System::EventArgs^ e)
 {
-  
+    predpunct = 2;
+
+    System::String^ clistr;
+    System::String^ clistr2;
+
+    Conclusion_Theory(clistr, clistr2, predpunct);
+
+    richTextBox1->Text = clistr;    //вывод текста теории
+    groupBox1->Text = clistr2;
 
     return System::Void();
 }
 
 System::Void ProjectSprv::Main_Literature_Form::item3_Click(System::Object^ sender, System::EventArgs^ e)
 {
+    predpunct = 3;
+
+    System::String^ clistr;
+    System::String^ clistr2;
+
+    Conclusion_Theory(clistr, clistr2, predpunct);
+
+    richTextBox1->Text = clistr;    //вывод текста теории
+    groupBox1->Text = clistr2;
+
     return System::Void();
 }
 
@@ -121,11 +139,23 @@ System::Void ProjectSprv::Main_Literature_Form::Main_Literature_Form_Load(System
             
         }
         book* start = new book;
-        start->a = strNumPunct[0]; 
-        start->b = strNumPunct[1];
-        if(strNumPunct[2] != '\0')
-            start->c = strNumPunct[2];
+        start->a = atoi(std::string({ (char)strNumPunct[0] }).c_str());
+        start->b = atoi(std::string({ (char)strNumPunct[1] }).c_str());;
+        if(atoi(std::string({ (char)strNumPunct[2] }).c_str()) != '\0')
+            start->c = atoi(std::string({ (char)strNumPunct[2] }).c_str());
         else start->c = 0;
+
+        SearchItem(start, predpunct);
+
+        System::String^ clistr;
+        System::String^ clistr2;
+
+        Conclusion_Theory(clistr, clistr2, predpunct);
+
+        richTextBox1->Text = clistr;    //вывод текста теории
+        groupBox1->Text = clistr2;
+
+        return System::Void();
 
     return System::Void();
 }

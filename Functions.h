@@ -24,6 +24,7 @@ void SortBookmark(bool& sort, int& n, book*& start);	//ÑÎĞÒÈĞÎÂÊÀ ÇÀÊËÀÄÎÊ
 //void Bookmark(char& h, int& n, std::string& directory, book*& start);	//ÑÏÈÑÎÊ ÇÀÊËÀÄÎÊ
 //void GlobalMenu();	//ÃËÎÁÀËÜÍÎÅ ÌÅÍŞ
 void directorFy(int& punct, int& predpunct);
+void SearchItem(book*& stert, int& predpunct);
 
 /*std::string& Convert_String_to_string(String^ s, std::string& os); 
 String^ Convert_string_to_String(std::string& os, String^ s);
