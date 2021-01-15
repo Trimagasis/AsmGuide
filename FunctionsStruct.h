@@ -10,6 +10,7 @@
 
 const int len = 2600;  //кол-во символов
 
+
 struct book { //список закладок
 	int block = 0;
 	int a = 0;
@@ -30,6 +31,7 @@ struct Teoria	//структура хранения теоретического материала
 
 struct P3	//структура хранения имен подподпунктов
 {
+	int blockP3 = 0;
 	char p3[30] = { NULL };
 	struct P3* next;
 	struct P3* headP3, * currentP3;
@@ -37,6 +39,7 @@ struct P3	//структура хранения имен подподпунктов
 
 struct P2	//структура хранения имен подпунктов
 {
+	int blockP2 = 0;
 	char p2[30] = { NULL };
 	struct P3 p3;
 	struct P2* next;
@@ -52,3 +55,10 @@ struct Punct	//структура хранения имен пунктов
 };
 //struct Punct* headP1, * currentP1;
 
+struct Block {
+	int block = 0;
+	int a = 0;
+	int b = 0;
+	int c = 0;
+	struct Block* next;
+};

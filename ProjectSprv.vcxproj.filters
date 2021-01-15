@@ -33,9 +33,6 @@
     <ClCompile Include="Add_Material_Form.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="OutTheoryBookmark.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MenuForm.h">
@@ -57,9 +54,6 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="FunctionsStruct.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="OutTheoryBookmark.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

@@ -1,6 +1,8 @@
 #include "Main_Literature_Form.h"
 #include "MenuForm.h"
 #include "Functions.h"
+#include "Bookmarks_Form.h"
+
 
 
 System::Void ProjectSprv::Main_Literature_Form::назад¬ћенюToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
@@ -12,25 +14,22 @@ System::Void ProjectSprv::Main_Literature_Form::назад¬ћенюToolStripMenuItem_Clic
     //return System::Void();
 }
 
-std::string directory;
 int punct = 0;
 int predpunct = 0;
-std::string preddirectory;
 
 //‘ункци€ считывани€ теории в textbox и считывани€ адреса по пунктам в groupbox
-void Conclusion_Theory(book*&start, System::String^& clistr, System::String^& clistr2, int& predpunct) {
+void Conclusion_Theory(System::String^& clistr, System::String^& clistr2, int& predpunct) {
     Teoria* headT;
     InTeor(headT);              //считывание теории из файла
 
     Teoria* tmp = headT;
-    directorFy(directory, punct, preddirectory, predpunct); //переводы
+    directorFy(punct, predpunct); //переводы
     PodMenu_x_x_x(punct, tmp);              //поиск блока теории
     std::string stroka, ukazatel = " -->> ";
 
     clistr = gcnew System::String(tmp->opredelenie, 0, len);    //перевод строки из char* в String^
-    int n = 0;
     Punct* currentP1;
-    OutBookmark(n, start, currentP1);
+    OutBookmark(currentP1, punct);
 
     stroka = currentP1->p1 + ukazatel + currentP1->p2.headP2->p2;   //перевод char* в строку адрес по пунктам
     if (currentP1->p2.headP2->p3.headP3->p3 != NULL)                //если существует подподпункт
@@ -43,13 +42,11 @@ void Conclusion_Theory(book*&start, System::String^& clistr, System::String^& cl
 System::Void ProjectSprv::Main_Literature_Form::item1_Click(System::Object^ sender, System::EventArgs^ e)
 {
     predpunct = 1;
-    preddirectory = "1 1 1";
-    book* start = new book;
-    start->a = 1; start->b = 1; start->c = 1;
+
     System::String^ clistr;
     System::String^ clistr2;
 
-    Conclusion_Theory(start, clistr, clistr2, predpunct);
+    Conclusion_Theory(clistr, clistr2, predpunct);
     
     richTextBox1->Text = clistr;    //вывод текста теории
     groupBox1->Text = clistr2;
@@ -59,17 +56,7 @@ System::Void ProjectSprv::Main_Literature_Form::item1_Click(System::Object^ send
 
 System::Void ProjectSprv::Main_Literature_Form::item2_Click(System::Object^ sender, System::EventArgs^ e)
 {
-    predpunct = 2;
-    preddirectory = "1 1 2";
-    book* start = new book;
-    start->a = 1; start->b = 1; start->c = 2;
-    System::String^ clistr;
-    System::String^ clistr2;
-
-    Conclusion_Theory(start, clistr, clistr2, predpunct);
-
-    richTextBox1->Text = clistr;    //вывод текста теории
-    groupBox1->Text = clistr2;
+  
 
     return System::Void();
 }
@@ -93,7 +80,7 @@ System::Void ProjectSprv::Main_Literature_Form::bookmarkImage_MouseDown(System::
     if (punct != 0) {
         checkbook(punct, checkbookmark);    //проверка на существование закладки
         if (checkbookmark == false) {
-            OFstream(directory, punct, checkbookmark);  //добавление закладки в файл
+            OFstream(punct, checkbookmark);  //добавление закладки в файл
             bookmarkImage->Image = Image::FromFile("bookmarkAktiv.png");    //флажок = красный
         }
         else {
@@ -104,14 +91,45 @@ System::Void ProjectSprv::Main_Literature_Form::bookmarkImage_MouseDown(System::
     return System::Void();
 }
 
+
 //загрузка флажка закладки при открытии формы
 System::Void ProjectSprv::Main_Literature_Form::Main_Literature_Form_Load(System::Object^ sender, System::EventArgs^ e)
 {
     this->bookmarkImage->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
         bookmarkImage->Image = Image::FromFile("bookmarkNoAktiv.png");
 
+
+
+        //using namespace System::IO;
+        //StreamReader^ sr1 = gcnew StreamReader("tempBkmrk.txt", System::Text::Encoding::Default);
+        std::string filename = "tempBkmrk.txt";
+        std::ifstream filestream(filename);
+        std::string str, strNumPunct;
+        if (filestream) {
+            char tmp[100];
+            filestream.getline(tmp, 100 - 1);
+            str = tmp;
+            if (str[0] != '\0') {
+                int b;
+                for (int i = 0; i < str.size(); i++)
+                    if (str[i] >= 48 && str[i] <= 57)
+                    {           
+                        strNumPunct += str[i];
+                    }
+            }
+            filestream.close();
+            
+        }
+        book* start = new book;
+        start->a = strNumPunct[0]; 
+        start->b = strNumPunct[1];
+        if(strNumPunct[2] != '\0')
+            start->c = strNumPunct[2];
+        else start->c = 0;
+
     return System::Void();
 }
+
 
 //изменение состо€ни€ флажка закладки при изменении пол€ дл€ теории
 System::Void ProjectSprv::Main_Literature_Form::richTextBox1_TextChanged(System::Object^ sender, System::EventArgs^ e)
@@ -124,6 +142,15 @@ System::Void ProjectSprv::Main_Literature_Form::richTextBox1_TextChanged(System:
         bookmarkImage->Image = Image::FromFile("bookmarkAktiv.png");
     else
         bookmarkImage->Image = Image::FromFile("bookmarkNoAktiv.png");
+
+    return System::Void();
+}
+
+System::Void ProjectSprv::Main_Literature_Form::перейти —писку«акладокToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
+{
+    Bookmarks_Form^ form = gcnew Bookmarks_Form();  //—оздаем форму
+    this->Hide();   //«акрываем текущую форму
+    form->Show();   //ќткрываем новую
 
     return System::Void();
 }

@@ -127,7 +127,6 @@
     <ClCompile Include="Functions.cpp" />
     <ClCompile Include="Main_Literature_Form.cpp" />
     <ClCompile Include="MenuForm.cpp" />
-    <ClCompile Include="OutTheoryBookmark.cpp" />
     <ClCompile Include="Soft_Instructions_Form.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -143,9 +142,6 @@
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MenuForm.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
-    <ClInclude Include="OutTheoryBookmark.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Soft_Instructions_Form.h">
@@ -164,9 +160,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuForm.resx">
       <DependentUpon>MenuForm.h</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="OutTheoryBookmark.resx">
-      <DependentUpon>OutTheoryBookmark.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Soft_Instructions_Form.resx">
       <DependentUpon>Soft_Instructions_Form.h</DependentUpon>

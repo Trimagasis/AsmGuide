@@ -70,6 +70,7 @@ namespace ProjectSprv {
 	private: System::Windows::Forms::RichTextBox^ richTextBox1;
 	private: System::Windows::Forms::GroupBox^ groupBox1;
 	private: System::Windows::Forms::PictureBox^ bookmarkImage;
+	private: System::Windows::Forms::ToolStripMenuItem^ перейтиКСпискуЗакладокToolStripMenuItem;
 
 
 
@@ -121,6 +122,7 @@ namespace ProjectSprv {
 			this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->bookmarkImage = (gcnew System::Windows::Forms::PictureBox());
+			this->перейтиКСпискуЗакладокToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->groupBox1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bookmarkImage))->BeginInit();
@@ -129,9 +131,9 @@ namespace ProjectSprv {
 			// menuStrip1
 			// 
 			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
-			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
+			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(3) {
 				this->открытьЖурналСТеориейToolStripMenuItem,
-					this->назадВМенюToolStripMenuItem
+					this->назадВМенюToolStripMenuItem, this->перейтиКСпискуЗакладокToolStripMenuItem
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
@@ -317,6 +319,13 @@ namespace ProjectSprv {
 			this->bookmarkImage->TabStop = false;
 			this->bookmarkImage->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &Main_Literature_Form::bookmarkImage_MouseDown);
 			// 
+			// перейтиКСпискуЗакладокToolStripMenuItem
+			// 
+			this->перейтиКСпискуЗакладокToolStripMenuItem->Name = L"перейтиКСпискуЗакладокToolStripMenuItem";
+			this->перейтиКСпискуЗакладокToolStripMenuItem->Size = System::Drawing::Size(210, 24);
+			this->перейтиКСпискуЗакладокToolStripMenuItem->Text = L"Перейти к списку закладок";
+			this->перейтиКСпискуЗакладокToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::перейтиКСпискуЗакладокToolStripMenuItem_Click);
+			// 
 			// Main_Literature_Form
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
@@ -347,5 +356,6 @@ namespace ProjectSprv {
 	private: System::Void bookmarkImage_MouseDown(System::Object^ sender, System::Windows::Forms::MouseEventArgs^ e);
 	private: System::Void Main_Literature_Form_Load(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void richTextBox1_TextChanged(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void перейтиКСпискуЗакладокToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }

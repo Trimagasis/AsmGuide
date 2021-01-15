@@ -4,6 +4,7 @@
 struct book* head, * curent, * tail;
 struct Teoria* headT, * tailT;
 struct Punct* headP1, * currentP1;
+struct Block* headBlock, *tmpBlock;
 
 
 std::ifstream& operator>>(std::ifstream& is, book* mass) //îïåðàòîð ÷òåíèÿ èç ôàéëà
@@ -66,7 +67,7 @@ void InPunct() {
 	if (!fsTeor) return; //Åñëè îøèáêà îòêðûòèÿ ôàéëà, òî çàâåðøàåì ïðîãðàììó
 
 	char* strk = new char[1024];
-	int n = 0;
+	int n = 0, block = 1;
 	std::ifstream base("baseTeor.txt");
 	while (!base.eof())
 	{
@@ -78,10 +79,18 @@ void InPunct() {
 	headP1 = new Punct;
 	fsTeor.getline(headP1->buf, len - 1, '@');
 	fsTeor.getline(headP1->p1, len - 1, '@'); //Ñ÷èòûâàåì ñòðîêè â ìàññèâ
+	headBlock = new Block;
+	headBlock->block = block;
+	headBlock->a = 1;
+	headBlock->next = 0;
+	tmpBlock = headBlock;
+
 	headP1->next = 0;
 
 	headP1->p2.headP2 = NULL;
 	currentP1 = headP1;
+
+	int A = 1, B = 0, C = 0;
 	for (int r = 1; r < n; r++)
 	{
 		fsTeor.getline(currentP1->buf, len - 1, '@');
@@ -90,6 +99,14 @@ void InPunct() {
 			currentP1->next = new Punct;
 			currentP1 = currentP1->next;
 			fsTeor.getline(currentP1->p1, len - 1, '@');
+
+			tmpBlock->next = new Block;
+			tmpBlock = tmpBlock->next;
+			tmpBlock->next = NULL;
+			++block;
+			tmpBlock->block = block;
+			++A;
+			tmpBlock->a = A;
 
 			currentP1->p2.headP2 = NULL;
 		}
@@ -102,8 +119,19 @@ void InPunct() {
 				currentP1->p2.headP2->next = NULL;
 				currentP1->p2.headP2->p3.headP3 = NULL;
 				currentP1->p2.currentP2 = currentP1->p2.headP2;
+
+				B = 1;
+				tmpBlock->b = B;
 			}
 			else {
+				tmpBlock->next = new Block;
+				tmpBlock = tmpBlock->next;
+				tmpBlock->next = NULL;
+				++block; ++B;
+				tmpBlock->block = block;
+				tmpBlock->a = A;
+				tmpBlock->b = B;
+
 				currentP1->p2.currentP2->next = new P2;
 				currentP1->p2.currentP2 = currentP1->p2.currentP2->next;
 				fsTeor.getline(currentP1->p2.currentP2->p2, len - 1, '@');
@@ -113,6 +141,9 @@ void InPunct() {
 		else if ((currentP1->buf[0]) == '3') {
 			if (currentP1->p2.currentP2->p3.headP3 == NULL)
 			{
+				C = 1;
+				tmpBlock->c = C;
+
 				currentP1->p2.currentP2->p3.headP3 = new P3;
 				fsTeor.getline(currentP1->p2.currentP2->p3.headP3->p3, len - 1, '@');
 
@@ -120,12 +151,29 @@ void InPunct() {
 				currentP1->p2.currentP2->p3.currentP3 = currentP1->p2.currentP2->p3.headP3;
 			}
 			else {
+				tmpBlock->next = new Block;
+				tmpBlock = tmpBlock->next;
+				tmpBlock->next = NULL;
+				++block; ++C;
+				tmpBlock->block = block;
+				tmpBlock->a = A;
+				tmpBlock->b = B;
+				tmpBlock->c = C;
+
 				currentP1->p2.currentP2->p3.currentP3->next = new P3;
 				currentP1->p2.currentP2->p3.currentP3 = currentP1->p2.currentP2->p3.currentP3->next;
 				fsTeor.getline(currentP1->p2.currentP2->p3.currentP3->p3, len - 1, '@');
 			}
 		}
 	}
+	std::ofstream filestream("baseBlock.txt");
+	tmpBlock = headBlock;
+	do {		
+		filestream << std::to_string(tmpBlock->block) << " " << std::to_string(tmpBlock->a) 
+			<< " " << std::to_string(tmpBlock->b) << " " << std::to_string(tmpBlock->c);
+		tmpBlock = tmpBlock->next;
+		if (tmpBlock != NULL) filestream << "\n";
+	} while (tmpBlock != NULL);
 	fsTeor.close(); //Çàêðûâàåì ôàéë
 }
 
@@ -144,19 +192,23 @@ void checkbook(int& punct, bool& checkbookmark) {
 }
 
 //äîáàâëåíèå çàêëàäêè â ôàéë
-void OFstream(std::string& directory, int& punct, bool& checkbookmark) {
+void OFstream(int& punct, bool& checkbookmark) {
 	std::ofstream OFfile("Booklet", std::ios::app);
 	std::fstream Ffile("Booklet");
 	if (OFfile.is_open()) {
 		book* current = head;
 		checkbook(punct, checkbookmark);
+		tmpBlock = headBlock;
+		while (tmpBlock->block != punct) {
+			tmpBlock = tmpBlock->next;
+		}
 		if (Ffile.peek() == EOF) {
-			OFfile << punct << " ";
-			OFfile << directory;
+			OFfile << punct << " " << std::to_string(tmpBlock->a) << " " << std::to_string(tmpBlock->b) << " "
+				<< std::to_string(tmpBlock->c);
 		}
 		else {
-			OFfile << "\n" << punct << " ";
-			OFfile << directory;
+			OFfile << "\n" << punct << " " << std::to_string(tmpBlock->a) << " " << std::to_string(tmpBlock->b) << " "
+				<< std::to_string(tmpBlock->c);
 		}
 		//std::cout << "Âêëàäêà óñïåøíî äîáàâëåíà â çàêëàäêè!";
 	}
@@ -342,11 +394,13 @@ void CleenBookmark() {
 	record.clear();
 	record.close();
 }
-
+book* start;
 //ÂÛÂÎÄ ÑÏÈÑÊÀ ÇÀÊËÀÄÎÊ
-void OutFullBookmark(book*& start, Punct*& currentP1, bool& flag) {
+void OutFullBookmark(Punct*& currentP1, bool& flag) {
 	InBookmark();	//×ÒÅÍÈÅ ÑÏÈÑÊÀ ÇÀÊËÀÄÎÊ ÈÇ ÔÀÉËÀ
 	InPunct();		//×ÒÅÍÈÅ ÍÀÇÂÀÍÈÉ ÏÓÍÊÒÎÂ ÈÇ ÔÀÉËÀ
+	if(flag == false)
+		book* start = new book;
 	if (head == NULL) return;
 	else if (flag == false) {
 		start = head;
@@ -383,13 +437,21 @@ void OutFullBookmark(book*& start, Punct*& currentP1, bool& flag) {
 }
 
 //ÂÛÂÎÄ ÎÄÍÎÉ ÇÀÊËÀÄÊÈ
-void OutBookmark(int& n, book*& start, Punct*& currentP1) {
+void OutBookmark(Punct*& currentP1, int& punct) {
 	//InBookmark(n, start);	//×ÒÅÍÈÅ ÑÏÈÑÊÀ ÇÀÊËÀÄÎÊ ÈÇ ÔÀÉËÀ
 	InPunct();
 	//if (head == NULL) return;
 	//if (run == false) std::cout << "Ñïèñîê çàêëàäîê:\n";
 	//std::string strelka = " -->> ";
 	//for (int i = 0; i < n; i++) {
+	book* start = new book;
+	tmpBlock = headBlock;
+	while (tmpBlock->block != punct) {
+		tmpBlock = tmpBlock->next;
+	}
+	start->a = tmpBlock->a;
+	start->b = tmpBlock->b;
+	start->c = tmpBlock->c;
 	currentP1 = headP1;
 	//std::cout << i + 1 << ") ";
 	int NumPunct = 1;
@@ -617,11 +679,6 @@ System::String^ Convert_char_to_String(char* ch) {
 	return str;
 }
 
-void directorFy(std::string& directory,int& punct,std::string& preddirectory, int& predpunct) {
-	directory = preddirectory;
+void directorFy(int& punct,int& predpunct) {
 	punct = predpunct;
-}
-
-void selItem(std::string& predSelectItem, std::string SelectItem) {
-	SelectItem = predSelectItem;
 }
