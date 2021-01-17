@@ -117,12 +117,12 @@ namespace ProjectSprv {
 			this->toolStripMenuItem16 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->toolStripMenuItem17 = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->назадВМенюToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->перейтиКСпискуЗакладокToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->contextMenuStrip1 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
 			this->contextMenuStrip2 = (gcnew System::Windows::Forms::ContextMenuStrip(this->components));
 			this->richTextBox1 = (gcnew System::Windows::Forms::RichTextBox());
 			this->groupBox1 = (gcnew System::Windows::Forms::GroupBox());
 			this->bookmarkImage = (gcnew System::Windows::Forms::PictureBox());
-			this->перейтиКСпискуЗакладокToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->menuStrip1->SuspendLayout();
 			this->groupBox1->SuspendLayout();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->bookmarkImage))->BeginInit();
@@ -137,7 +137,7 @@ namespace ProjectSprv {
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(866, 28);
+			this->menuStrip1->Size = System::Drawing::Size(882, 30);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -148,7 +148,7 @@ namespace ProjectSprv {
 					this->toolStripMenuItem3, this->toolStripMenuItem4, this->toolStripMenuItem5
 			});
 			this->открытьЖурналСТеориейToolStripMenuItem->Name = L"открытьЖурналСТеориейToolStripMenuItem";
-			this->открытьЖурналСТеориейToolStripMenuItem->Size = System::Drawing::Size(210, 24);
+			this->открытьЖурналСТеориейToolStripMenuItem->Size = System::Drawing::Size(210, 26);
 			this->открытьЖурналСТеориейToolStripMenuItem->Text = L"Открыть журнал с теорией";
 			// 
 			// toolStripMenuItem2
@@ -274,9 +274,16 @@ namespace ProjectSprv {
 			// назадВМенюToolStripMenuItem
 			// 
 			this->назадВМенюToolStripMenuItem->Name = L"назадВМенюToolStripMenuItem";
-			this->назадВМенюToolStripMenuItem->Size = System::Drawing::Size(121, 24);
+			this->назадВМенюToolStripMenuItem->Size = System::Drawing::Size(121, 26);
 			this->назадВМенюToolStripMenuItem->Text = L"Назад в меню";
 			this->назадВМенюToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::назадВМенюToolStripMenuItem_Click);
+			// 
+			// перейтиКСпискуЗакладокToolStripMenuItem
+			// 
+			this->перейтиКСпискуЗакладокToolStripMenuItem->Name = L"перейтиКСпискуЗакладокToolStripMenuItem";
+			this->перейтиКСпискуЗакладокToolStripMenuItem->Size = System::Drawing::Size(210, 26);
+			this->перейтиКСпискуЗакладокToolStripMenuItem->Text = L"Перейти к списку закладок";
+			this->перейтиКСпискуЗакладокToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::перейтиКСпискуЗакладокToolStripMenuItem_Click);
 			// 
 			// contextMenuStrip1
 			// 
@@ -312,29 +319,25 @@ namespace ProjectSprv {
 			// bookmarkImage
 			// 
 			this->bookmarkImage->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bookmarkImage.Image")));
-			this->bookmarkImage->Location = System::Drawing::Point(803, 31);
+			this->bookmarkImage->Location = System::Drawing::Point(814, 31);
 			this->bookmarkImage->Name = L"bookmarkImage";
 			this->bookmarkImage->Size = System::Drawing::Size(56, 50);
 			this->bookmarkImage->TabIndex = 6;
 			this->bookmarkImage->TabStop = false;
 			this->bookmarkImage->MouseDown += gcnew System::Windows::Forms::MouseEventHandler(this, &Main_Literature_Form::bookmarkImage_MouseDown);
 			// 
-			// перейтиКСпискуЗакладокToolStripMenuItem
-			// 
-			this->перейтиКСпискуЗакладокToolStripMenuItem->Name = L"перейтиКСпискуЗакладокToolStripMenuItem";
-			this->перейтиКСпискуЗакладокToolStripMenuItem->Size = System::Drawing::Size(210, 24);
-			this->перейтиКСпискуЗакладокToolStripMenuItem->Text = L"Перейти к списку закладок";
-			this->перейтиКСпискуЗакладокToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::перейтиКСпискуЗакладокToolStripMenuItem_Click);
-			// 
 			// Main_Literature_Form
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(866, 562);
+			this->ClientSize = System::Drawing::Size(882, 553);
 			this->Controls->Add(this->bookmarkImage);
 			this->Controls->Add(this->menuStrip1);
 			this->Controls->Add(this->groupBox1);
 			this->MainMenuStrip = this->menuStrip1;
+			this->MaximizeBox = false;
+			this->MaximumSize = System::Drawing::Size(900, 600);
+			this->MinimumSize = System::Drawing::Size(900, 600);
 			this->Name = L"Main_Literature_Form";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Основной теоретический материал";

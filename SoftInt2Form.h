@@ -262,6 +262,9 @@ namespace ProjectSprv {
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->menuStrip1);
 			this->MainMenuStrip = this->menuStrip1;
+			this->MaximizeBox = false;
+			this->MaximumSize = System::Drawing::Size(800, 600);
+			this->MinimumSize = System::Drawing::Size(800, 600);
 			this->Name = L"SoftInt2Form";
 			this->Text = L"Туториал №2";
 			this->panel1->ResumeLayout(false);

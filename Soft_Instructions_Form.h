@@ -66,7 +66,7 @@ namespace ProjectSprv {
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->âûõîäÂÌåíşToolStripMenuItem });
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(382, 28);
+			this->menuStrip1->Size = System::Drawing::Size(402, 30);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -79,7 +79,7 @@ namespace ProjectSprv {
 			// 
 			// buttonSoftInt1
 			// 
-			this->buttonSoftInt1->Location = System::Drawing::Point(76, 160);
+			this->buttonSoftInt1->Location = System::Drawing::Point(80, 159);
 			this->buttonSoftInt1->Name = L"buttonSoftInt1";
 			this->buttonSoftInt1->Size = System::Drawing::Size(241, 91);
 			this->buttonSoftInt1->TabIndex = 1;
@@ -89,7 +89,7 @@ namespace ProjectSprv {
 			// 
 			// buttonSoftInt2
 			// 
-			this->buttonSoftInt2->Location = System::Drawing::Point(76, 280);
+			this->buttonSoftInt2->Location = System::Drawing::Point(80, 279);
 			this->buttonSoftInt2->Name = L"buttonSoftInt2";
 			this->buttonSoftInt2->Size = System::Drawing::Size(241, 101);
 			this->buttonSoftInt2->TabIndex = 2;
@@ -101,11 +101,14 @@ namespace ProjectSprv {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(382, 553);
+			this->ClientSize = System::Drawing::Size(402, 553);
 			this->Controls->Add(this->buttonSoftInt2);
 			this->Controls->Add(this->buttonSoftInt1);
 			this->Controls->Add(this->menuStrip1);
 			this->MainMenuStrip = this->menuStrip1;
+			this->MaximizeBox = false;
+			this->MaximumSize = System::Drawing::Size(420, 600);
+			this->MinimumSize = System::Drawing::Size(420, 600);
 			this->Name = L"Soft_Instructions_Form";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Òóòîğèàëû";

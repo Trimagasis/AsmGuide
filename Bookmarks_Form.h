@@ -76,7 +76,7 @@ namespace ProjectSprv {
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(721, 28);
+			this->menuStrip1->Size = System::Drawing::Size(722, 28);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -138,13 +138,16 @@ namespace ProjectSprv {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(721, 519);
+			this->ClientSize = System::Drawing::Size(722, 523);
 			this->Controls->Add(this->buttonCleen);
 			this->Controls->Add(this->buttonRemove);
 			this->Controls->Add(this->listBoxBookmark);
 			this->Controls->Add(this->buttonSort);
 			this->Controls->Add(this->menuStrip1);
 			this->MainMenuStrip = this->menuStrip1;
+			this->MaximizeBox = false;
+			this->MaximumSize = System::Drawing::Size(740, 570);
+			this->MinimumSize = System::Drawing::Size(740, 570);
 			this->Name = L"Bookmarks_Form";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Список закладок";
