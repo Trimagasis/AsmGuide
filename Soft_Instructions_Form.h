@@ -73,34 +73,37 @@ namespace ProjectSprv {
 			// âûõîäÂÌåíþToolStripMenuItem
 			// 
 			this->âûõîäÂÌåíþToolStripMenuItem->Name = L"âûõîäÂÌåíþToolStripMenuItem";
-			this->âûõîäÂÌåíþToolStripMenuItem->Size = System::Drawing::Size(121, 24);
+			this->âûõîäÂÌåíþToolStripMenuItem->Size = System::Drawing::Size(121, 26);
 			this->âûõîäÂÌåíþToolStripMenuItem->Text = L"Íàçàä â ìåíþ";
 			this->âûõîäÂÌåíþToolStripMenuItem->Click += gcnew System::EventHandler(this, &Soft_Instructions_Form::âûõîäÂÌåíþToolStripMenuItem_Click);
 			// 
 			// buttonSoftInt1
 			// 
+			this->buttonSoftInt1->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->buttonSoftInt1->Location = System::Drawing::Point(80, 159);
 			this->buttonSoftInt1->Name = L"buttonSoftInt1";
 			this->buttonSoftInt1->Size = System::Drawing::Size(241, 91);
 			this->buttonSoftInt1->TabIndex = 1;
 			this->buttonSoftInt1->Text = L"Íà÷àëüíûé óðîâåíü";
-			this->buttonSoftInt1->UseVisualStyleBackColor = true;
+			this->buttonSoftInt1->UseVisualStyleBackColor = false;
 			this->buttonSoftInt1->Click += gcnew System::EventHandler(this, &Soft_Instructions_Form::buttonSoftInt1_Click);
 			// 
 			// buttonSoftInt2
 			// 
+			this->buttonSoftInt2->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->buttonSoftInt2->Location = System::Drawing::Point(80, 279);
 			this->buttonSoftInt2->Name = L"buttonSoftInt2";
 			this->buttonSoftInt2->Size = System::Drawing::Size(241, 101);
 			this->buttonSoftInt2->TabIndex = 2;
 			this->buttonSoftInt2->Text = L"Ïðîäâèíóòûé óðîâåíü";
-			this->buttonSoftInt2->UseVisualStyleBackColor = true;
+			this->buttonSoftInt2->UseVisualStyleBackColor = false;
 			this->buttonSoftInt2->Click += gcnew System::EventHandler(this, &Soft_Instructions_Form::buttonSoftInt2_Click);
 			// 
 			// Soft_Instructions_Form
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
 			this->ClientSize = System::Drawing::Size(402, 553);
 			this->Controls->Add(this->buttonSoftInt2);
 			this->Controls->Add(this->buttonSoftInt1);

@@ -96,48 +96,54 @@ namespace ProjectSprv {
 			// 
 			// buttonSort
 			// 
+			this->buttonSort->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->buttonSort->Location = System::Drawing::Point(538, 32);
 			this->buttonSort->Name = L"buttonSort";
 			this->buttonSort->Size = System::Drawing::Size(171, 58);
 			this->buttonSort->TabIndex = 1;
 			this->buttonSort->Text = L"Сортировка списка закладок";
-			this->buttonSort->UseVisualStyleBackColor = true;
+			this->buttonSort->UseVisualStyleBackColor = false;
 			this->buttonSort->Click += gcnew System::EventHandler(this, &Bookmarks_Form::buttonSort_Click);
 			// 
 			// listBoxBookmark
 			// 
+			this->listBoxBookmark->Font = (gcnew System::Drawing::Font(L"Times New Roman", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
 			this->listBoxBookmark->FormattingEnabled = true;
-			this->listBoxBookmark->ItemHeight = 16;
+			this->listBoxBookmark->ItemHeight = 20;
 			this->listBoxBookmark->Location = System::Drawing::Point(13, 32);
 			this->listBoxBookmark->Name = L"listBoxBookmark";
-			this->listBoxBookmark->Size = System::Drawing::Size(469, 468);
+			this->listBoxBookmark->Size = System::Drawing::Size(519, 464);
 			this->listBoxBookmark->TabIndex = 2;
 			this->listBoxBookmark->MouseDoubleClick += gcnew System::Windows::Forms::MouseEventHandler(this, &Bookmarks_Form::listBoxBookmark_MouseDoubleClick);
 			// 
 			// buttonRemove
 			// 
+			this->buttonRemove->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->buttonRemove->Location = System::Drawing::Point(538, 96);
 			this->buttonRemove->Name = L"buttonRemove";
 			this->buttonRemove->Size = System::Drawing::Size(171, 58);
 			this->buttonRemove->TabIndex = 3;
 			this->buttonRemove->Text = L"Удалить выбранную закладку";
-			this->buttonRemove->UseVisualStyleBackColor = true;
+			this->buttonRemove->UseVisualStyleBackColor = false;
 			this->buttonRemove->Click += gcnew System::EventHandler(this, &Bookmarks_Form::buttonRemove_Click);
 			// 
 			// buttonCleen
 			// 
+			this->buttonCleen->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->buttonCleen->Location = System::Drawing::Point(538, 160);
 			this->buttonCleen->Name = L"buttonCleen";
 			this->buttonCleen->Size = System::Drawing::Size(171, 58);
 			this->buttonCleen->TabIndex = 4;
 			this->buttonCleen->Text = L"Очистить список закладок";
-			this->buttonCleen->UseVisualStyleBackColor = true;
+			this->buttonCleen->UseVisualStyleBackColor = false;
 			this->buttonCleen->Click += gcnew System::EventHandler(this, &Bookmarks_Form::buttonCleen_Click);
 			// 
 			// Bookmarks_Form
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
 			this->ClientSize = System::Drawing::Size(722, 523);
 			this->Controls->Add(this->buttonCleen);
 			this->Controls->Add(this->buttonRemove);

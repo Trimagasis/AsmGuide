@@ -137,7 +137,7 @@ namespace ProjectSprv {
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(882, 30);
+			this->menuStrip1->Size = System::Drawing::Size(882, 31);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -147,8 +147,10 @@ namespace ProjectSprv {
 				this->toolStripMenuItem2,
 					this->toolStripMenuItem3, this->toolStripMenuItem4, this->toolStripMenuItem5
 			});
+			this->îòêðûòüÆóðíàëÑÒåîðèåéToolStripMenuItem->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10.2F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
 			this->îòêðûòüÆóðíàëÑÒåîðèåéToolStripMenuItem->Name = L"îòêðûòüÆóðíàëÑÒåîðèåéToolStripMenuItem";
-			this->îòêðûòüÆóðíàëÑÒåîðèåéToolStripMenuItem->Size = System::Drawing::Size(210, 26);
+			this->îòêðûòüÆóðíàëÑÒåîðèåéToolStripMenuItem->Size = System::Drawing::Size(237, 27);
 			this->îòêðûòüÆóðíàëÑÒåîðèåéToolStripMenuItem->Text = L"Îòêðûòü æóðíàë ñ òåîðèåé";
 			// 
 			// toolStripMenuItem2
@@ -158,7 +160,7 @@ namespace ProjectSprv {
 					this->item3, this->item4
 			});
 			this->toolStripMenuItem2->Name = L"toolStripMenuItem2";
-			this->toolStripMenuItem2->Size = System::Drawing::Size(100, 26);
+			this->toolStripMenuItem2->Size = System::Drawing::Size(224, 28);
 			this->toolStripMenuItem2->Text = L"1";
 			// 
 			// toolStripMenuItem6
@@ -168,34 +170,34 @@ namespace ProjectSprv {
 					this->item2
 			});
 			this->toolStripMenuItem6->Name = L"toolStripMenuItem6";
-			this->toolStripMenuItem6->Size = System::Drawing::Size(111, 26);
+			this->toolStripMenuItem6->Size = System::Drawing::Size(224, 28);
 			this->toolStripMenuItem6->Text = L"1.1";
 			// 
 			// item1
 			// 
 			this->item1->Name = L"item1";
-			this->item1->Size = System::Drawing::Size(122, 26);
+			this->item1->Size = System::Drawing::Size(224, 28);
 			this->item1->Text = L"1.1.1";
 			this->item1->Click += gcnew System::EventHandler(this, &Main_Literature_Form::item1_Click);
 			// 
 			// item2
 			// 
 			this->item2->Name = L"item2";
-			this->item2->Size = System::Drawing::Size(122, 26);
+			this->item2->Size = System::Drawing::Size(224, 28);
 			this->item2->Text = L"1.1.2";
 			this->item2->Click += gcnew System::EventHandler(this, &Main_Literature_Form::item2_Click);
 			// 
 			// item3
 			// 
 			this->item3->Name = L"item3";
-			this->item3->Size = System::Drawing::Size(111, 26);
+			this->item3->Size = System::Drawing::Size(224, 28);
 			this->item3->Text = L"1.2";
 			this->item3->Click += gcnew System::EventHandler(this, &Main_Literature_Form::item3_Click);
 			// 
 			// item4
 			// 
 			this->item4->Name = L"item4";
-			this->item4->Size = System::Drawing::Size(111, 26);
+			this->item4->Size = System::Drawing::Size(224, 28);
 			this->item4->Text = L"1.3";
 			this->item4->Click += gcnew System::EventHandler(this, &Main_Literature_Form::item4_Click);
 			// 
@@ -206,25 +208,25 @@ namespace ProjectSprv {
 					this->toolStripMenuItem12, this->toolStripMenuItem13
 			});
 			this->toolStripMenuItem3->Name = L"toolStripMenuItem3";
-			this->toolStripMenuItem3->Size = System::Drawing::Size(100, 26);
+			this->toolStripMenuItem3->Size = System::Drawing::Size(224, 28);
 			this->toolStripMenuItem3->Text = L"1";
 			// 
 			// toolStripMenuItem11
 			// 
 			this->toolStripMenuItem11->Name = L"toolStripMenuItem11";
-			this->toolStripMenuItem11->Size = System::Drawing::Size(111, 26);
+			this->toolStripMenuItem11->Size = System::Drawing::Size(224, 28);
 			this->toolStripMenuItem11->Text = L"2.1";
 			// 
 			// toolStripMenuItem12
 			// 
 			this->toolStripMenuItem12->Name = L"toolStripMenuItem12";
-			this->toolStripMenuItem12->Size = System::Drawing::Size(111, 26);
+			this->toolStripMenuItem12->Size = System::Drawing::Size(224, 28);
 			this->toolStripMenuItem12->Text = L"2.2";
 			// 
 			// toolStripMenuItem13
 			// 
 			this->toolStripMenuItem13->Name = L"toolStripMenuItem13";
-			this->toolStripMenuItem13->Size = System::Drawing::Size(111, 26);
+			this->toolStripMenuItem13->Size = System::Drawing::Size(224, 28);
 			this->toolStripMenuItem13->Text = L"2.3";
 			// 
 			// toolStripMenuItem4
@@ -234,19 +236,19 @@ namespace ProjectSprv {
 					this->toolStripMenuItem15
 			});
 			this->toolStripMenuItem4->Name = L"toolStripMenuItem4";
-			this->toolStripMenuItem4->Size = System::Drawing::Size(100, 26);
+			this->toolStripMenuItem4->Size = System::Drawing::Size(224, 28);
 			this->toolStripMenuItem4->Text = L"1";
 			// 
 			// toolStripMenuItem14
 			// 
 			this->toolStripMenuItem14->Name = L"toolStripMenuItem14";
-			this->toolStripMenuItem14->Size = System::Drawing::Size(111, 26);
+			this->toolStripMenuItem14->Size = System::Drawing::Size(224, 28);
 			this->toolStripMenuItem14->Text = L"3.1";
 			// 
 			// toolStripMenuItem15
 			// 
 			this->toolStripMenuItem15->Name = L"toolStripMenuItem15";
-			this->toolStripMenuItem15->Size = System::Drawing::Size(111, 26);
+			this->toolStripMenuItem15->Size = System::Drawing::Size(224, 28);
 			this->toolStripMenuItem15->Text = L"3.2";
 			// 
 			// toolStripMenuItem5
@@ -256,32 +258,36 @@ namespace ProjectSprv {
 					this->toolStripMenuItem17
 			});
 			this->toolStripMenuItem5->Name = L"toolStripMenuItem5";
-			this->toolStripMenuItem5->Size = System::Drawing::Size(100, 26);
+			this->toolStripMenuItem5->Size = System::Drawing::Size(224, 28);
 			this->toolStripMenuItem5->Text = L"1";
 			// 
 			// toolStripMenuItem16
 			// 
 			this->toolStripMenuItem16->Name = L"toolStripMenuItem16";
-			this->toolStripMenuItem16->Size = System::Drawing::Size(111, 26);
+			this->toolStripMenuItem16->Size = System::Drawing::Size(224, 28);
 			this->toolStripMenuItem16->Text = L"4.1";
 			// 
 			// toolStripMenuItem17
 			// 
 			this->toolStripMenuItem17->Name = L"toolStripMenuItem17";
-			this->toolStripMenuItem17->Size = System::Drawing::Size(111, 26);
+			this->toolStripMenuItem17->Size = System::Drawing::Size(224, 28);
 			this->toolStripMenuItem17->Text = L"4.2";
 			// 
 			// íàçàäÂÌåíþToolStripMenuItem
 			// 
+			this->íàçàäÂÌåíþToolStripMenuItem->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
 			this->íàçàäÂÌåíþToolStripMenuItem->Name = L"íàçàäÂÌåíþToolStripMenuItem";
-			this->íàçàäÂÌåíþToolStripMenuItem->Size = System::Drawing::Size(121, 26);
+			this->íàçàäÂÌåíþToolStripMenuItem->Size = System::Drawing::Size(135, 27);
 			this->íàçàäÂÌåíþToolStripMenuItem->Text = L"Íàçàä â ìåíþ";
 			this->íàçàäÂÌåíþToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::íàçàäÂÌåíþToolStripMenuItem_Click);
 			// 
 			// ïåðåéòèÊÑïèñêóÇàêëàäîêToolStripMenuItem
 			// 
+			this->ïåðåéòèÊÑïèñêóÇàêëàäîêToolStripMenuItem->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10.2F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
 			this->ïåðåéòèÊÑïèñêóÇàêëàäîêToolStripMenuItem->Name = L"ïåðåéòèÊÑïèñêóÇàêëàäîêToolStripMenuItem";
-			this->ïåðåéòèÊÑïèñêóÇàêëàäîêToolStripMenuItem->Size = System::Drawing::Size(210, 26);
+			this->ïåðåéòèÊÑïèñêóÇàêëàäîêToolStripMenuItem->Size = System::Drawing::Size(236, 27);
 			this->ïåðåéòèÊÑïèñêóÇàêëàäîêToolStripMenuItem->Text = L"Ïåðåéòè ê ñïèñêó çàêëàäîê";
 			this->ïåðåéòèÊÑïèñêóÇàêëàäîêToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::ïåðåéòèÊÑïèñêóÇàêëàäîêToolStripMenuItem_Click);
 			// 
@@ -299,10 +305,12 @@ namespace ProjectSprv {
 			// 
 			// richTextBox1
 			// 
-			this->richTextBox1->Location = System::Drawing::Point(15, 21);
+			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->richTextBox1->Location = System::Drawing::Point(15, 33);
 			this->richTextBox1->Name = L"richTextBox1";
 			this->richTextBox1->ReadOnly = true;
-			this->richTextBox1->Size = System::Drawing::Size(752, 478);
+			this->richTextBox1->Size = System::Drawing::Size(752, 466);
 			this->richTextBox1->TabIndex = 4;
 			this->richTextBox1->Text = L"";
 			this->richTextBox1->TextChanged += gcnew System::EventHandler(this, &Main_Literature_Form::richTextBox1_TextChanged);
@@ -310,9 +318,11 @@ namespace ProjectSprv {
 			// groupBox1
 			// 
 			this->groupBox1->Controls->Add(this->richTextBox1);
-			this->groupBox1->Location = System::Drawing::Point(30, 31);
+			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->groupBox1->Location = System::Drawing::Point(12, 34);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(779, 519);
+			this->groupBox1->Size = System::Drawing::Size(797, 516);
 			this->groupBox1->TabIndex = 5;
 			this->groupBox1->TabStop = false;
 			// 
@@ -330,6 +340,7 @@ namespace ProjectSprv {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
 			this->ClientSize = System::Drawing::Size(882, 553);
 			this->Controls->Add(this->bookmarkImage);
 			this->Controls->Add(this->menuStrip1);

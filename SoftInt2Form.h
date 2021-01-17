@@ -97,6 +97,7 @@ namespace ProjectSprv {
 			// panel1
 			// 
 			this->panel1->AutoScroll = true;
+			this->panel1->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->panel1->Controls->Add(this->pictureBox4);
 			this->panel1->Controls->Add(this->label6);
 			this->panel1->Controls->Add(this->pictureBox3);
@@ -258,6 +259,7 @@ namespace ProjectSprv {
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
 			this->ClientSize = System::Drawing::Size(782, 553);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->menuStrip1);

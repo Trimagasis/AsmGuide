@@ -42,6 +42,8 @@ namespace ProjectSprv {
 	private: System::Windows::Forms::Button^ MainLit;
 	private: System::Windows::Forms::Button^ Bookmarks;
 	private: System::Windows::Forms::Button^ AddMat;
+	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Label^ label2;
 
 
 
@@ -61,6 +63,7 @@ namespace ProjectSprv {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(MenuForm::typeid));
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->âûõîäToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->îÏðîãðàììåToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -68,11 +71,14 @@ namespace ProjectSprv {
 			this->MainLit = (gcnew System::Windows::Forms::Button());
 			this->Bookmarks = (gcnew System::Windows::Forms::Button());
 			this->AddMat = (gcnew System::Windows::Forms::Button());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// menuStrip1
 			// 
+			this->menuStrip1->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
 			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
 				this->âûõîäToolStripMenuItem,
@@ -80,69 +86,108 @@ namespace ProjectSprv {
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(382, 30);
+			this->menuStrip1->Size = System::Drawing::Size(582, 28);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
 			// âûõîäToolStripMenuItem
 			// 
 			this->âûõîäToolStripMenuItem->Name = L"âûõîäToolStripMenuItem";
-			this->âûõîäToolStripMenuItem->Size = System::Drawing::Size(67, 26);
+			this->âûõîäToolStripMenuItem->Size = System::Drawing::Size(67, 24);
 			this->âûõîäToolStripMenuItem->Text = L"Âûõîä";
 			this->âûõîäToolStripMenuItem->Click += gcnew System::EventHandler(this, &MenuForm::âûõîäToolStripMenuItem_Click);
 			// 
 			// îÏðîãðàììåToolStripMenuItem
 			// 
 			this->îÏðîãðàììåToolStripMenuItem->Name = L"îÏðîãðàììåToolStripMenuItem";
-			this->îÏðîãðàììåToolStripMenuItem->Size = System::Drawing::Size(118, 26);
+			this->îÏðîãðàììåToolStripMenuItem->Size = System::Drawing::Size(118, 24);
 			this->îÏðîãðàììåToolStripMenuItem->Text = L"Î ïðîãðàììå";
 			this->îÏðîãðàììåToolStripMenuItem->Click += gcnew System::EventHandler(this, &MenuForm::îÏðîãðàììåToolStripMenuItem_Click);
 			// 
 			// Soft
 			// 
-			this->Soft->Location = System::Drawing::Point(89, 91);
+			this->Soft->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->Soft->Font = (gcnew System::Drawing::Font(L"Times New Roman", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->Soft->Location = System::Drawing::Point(130, 82);
 			this->Soft->Name = L"Soft";
-			this->Soft->Size = System::Drawing::Size(183, 72);
+			this->Soft->Size = System::Drawing::Size(304, 72);
 			this->Soft->TabIndex = 1;
 			this->Soft->Text = L"Òóòîðèàëû";
-			this->Soft->UseVisualStyleBackColor = true;
+			this->Soft->UseVisualStyleBackColor = false;
 			this->Soft->Click += gcnew System::EventHandler(this, &MenuForm::Soft_Click);
 			// 
 			// MainLit
 			// 
-			this->MainLit->Location = System::Drawing::Point(89, 187);
+			this->MainLit->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->MainLit->Font = (gcnew System::Drawing::Font(L"Times New Roman", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->MainLit->Location = System::Drawing::Point(130, 183);
 			this->MainLit->Name = L"MainLit";
-			this->MainLit->Size = System::Drawing::Size(183, 74);
+			this->MainLit->Size = System::Drawing::Size(304, 74);
 			this->MainLit->TabIndex = 2;
 			this->MainLit->Text = L"Îñíîâíîé òåîðåòè÷åñêèé ìàòåðèàë";
-			this->MainLit->UseVisualStyleBackColor = true;
+			this->MainLit->UseVisualStyleBackColor = false;
 			this->MainLit->Click += gcnew System::EventHandler(this, &MenuForm::MainLit_Click);
 			// 
 			// Bookmarks
 			// 
-			this->Bookmarks->Location = System::Drawing::Point(89, 282);
+			this->Bookmarks->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->Bookmarks->Font = (gcnew System::Drawing::Font(L"Times New Roman", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->Bookmarks->Location = System::Drawing::Point(130, 285);
 			this->Bookmarks->Name = L"Bookmarks";
-			this->Bookmarks->Size = System::Drawing::Size(183, 80);
+			this->Bookmarks->Size = System::Drawing::Size(304, 80);
 			this->Bookmarks->TabIndex = 3;
 			this->Bookmarks->Text = L"Ñïèñîê çàêëàäîê";
-			this->Bookmarks->UseVisualStyleBackColor = true;
+			this->Bookmarks->UseVisualStyleBackColor = false;
 			this->Bookmarks->Click += gcnew System::EventHandler(this, &MenuForm::Bookmarks_Click);
 			// 
 			// AddMat
 			// 
-			this->AddMat->Location = System::Drawing::Point(89, 386);
+			this->AddMat->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->AddMat->Font = (gcnew System::Drawing::Font(L"Times New Roman", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->AddMat->Location = System::Drawing::Point(130, 389);
 			this->AddMat->Name = L"AddMat";
-			this->AddMat->Size = System::Drawing::Size(183, 73);
+			this->AddMat->Size = System::Drawing::Size(304, 73);
 			this->AddMat->TabIndex = 4;
 			this->AddMat->Text = L"Äîï. ñïðàâî÷íûå ìàòåðèàëû";
-			this->AddMat->UseVisualStyleBackColor = true;
+			this->AddMat->UseVisualStyleBackColor = false;
 			this->AddMat->Click += gcnew System::EventHandler(this, &MenuForm::AddMat_Click);
+			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Times New Roman", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label1->ForeColor = System::Drawing::Color::Red;
+			this->label1->Location = System::Drawing::Point(12, 525);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(148, 19);
+			this->label1->TabIndex = 5;
+			this->label1->Text = L"Early Access Alpha";
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Times New Roman", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label2->Location = System::Drawing::Point(444, 525);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(110, 19);
+			this->label2->TabIndex = 6;
+			this->label2->Text = L"Version: 0.2.1";
 			// 
 			// MenuForm
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(382, 553);
+			this->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
+			this->ClientSize = System::Drawing::Size(582, 553);
+			this->Controls->Add(this->label2);
+			this->Controls->Add(this->label1);
 			this->Controls->Add(this->AddMat);
 			this->Controls->Add(this->Bookmarks);
 			this->Controls->Add(this->MainLit);
@@ -150,11 +195,11 @@ namespace ProjectSprv {
 			this->Controls->Add(this->menuStrip1);
 			this->MainMenuStrip = this->menuStrip1;
 			this->MaximizeBox = false;
-			this->MaximumSize = System::Drawing::Size(400, 600);
+			this->MaximumSize = System::Drawing::Size(600, 600);
 			this->MinimumSize = System::Drawing::Size(400, 600);
 			this->Name = L"MenuForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
-			this->Text = L"Ñïðàâî÷íèê v.0.2.0";
+			this->Text = L"Ñïðàâî÷íèê";
 			this->Load += gcnew System::EventHandler(this, &MenuForm::MenuForm_Load);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
