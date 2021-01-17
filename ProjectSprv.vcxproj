@@ -122,26 +122,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Add_Material_Form.cpp" />
     <ClCompile Include="Bookmarks_Form.cpp" />
     <ClCompile Include="Functions.cpp" />
+    <ClCompile Include="MainForm.cpp" />
     <ClCompile Include="Main_Literature_Form.cpp" />
     <ClCompile Include="MenuForm.cpp" />
+    <ClCompile Include="SoftInt1Form.cpp" />
+    <ClCompile Include="SoftInt2Form.cpp" />
     <ClCompile Include="Soft_Instructions_Form.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Add_Material_Form.h">
-      <FileType>CppForm</FileType>
-    </ClInclude>
     <ClInclude Include="Bookmarks_Form.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Functions.h" />
     <ClInclude Include="FunctionsStruct.h" />
+    <ClInclude Include="MainForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
     <ClInclude Include="Main_Literature_Form.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="MenuForm.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="SoftInt1Form.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="SoftInt2Form.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Soft_Instructions_Form.h">
@@ -149,17 +157,23 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Add_Material_Form.resx">
-      <DependentUpon>Add_Material_Form.h</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Bookmarks_Form.resx">
       <DependentUpon>Bookmarks_Form.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main_Literature_Form.resx">
       <DependentUpon>Main_Literature_Form.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuForm.resx">
       <DependentUpon>MenuForm.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SoftInt1Form.resx">
+      <DependentUpon>SoftInt1Form.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SoftInt2Form.resx">
+      <DependentUpon>SoftInt2Form.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Soft_Instructions_Form.resx">
       <DependentUpon>Soft_Instructions_Form.h</DependentUpon>
@@ -168,6 +182,13 @@
   <ItemGroup>
     <Image Include="bookmarkAktiv.png" />
     <Image Include="bookmarkNoAktiv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\Users\User\Desktop\Pr01\Pr01\ASCII_01.txt" />
+    <Text Include="..\..\..\Users\User\Desktop\Pr01\Pr01\ASCII_02.txt" />
+    <Text Include="..\..\..\Users\User\Desktop\Pr01\Pr01\ASCII_03.txt" />
+    <Text Include="..\..\..\Users\User\Desktop\Pr01\Pr01\ConditionalBranching.txt" />
+    <Text Include="..\..\..\Users\User\Desktop\Pr01\Pr01\DOSInt21h.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

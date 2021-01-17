@@ -3,7 +3,7 @@
 #include "Soft_Instructions_Form.h"
 #include "Main_Literature_Form.h"
 #include "Bookmarks_Form.h"
-#include "Add_Material_Form.h"
+#include "MainForm.h"
 
 #include "Functions.h"
 
@@ -61,7 +61,7 @@ System::Void ProjectSprv::MenuForm::Bookmarks_Click(System::Object^ sender, Syst
 
 System::Void ProjectSprv::MenuForm::AddMat_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	Add_Material_Form^ form = gcnew Add_Material_Form();	//создаем форму
+	MainForm^ form = gcnew MainForm();	//создаем форму
 	this->Hide();	//закрываем текущую форму
 	form->Show();	//открываем новую форму
 

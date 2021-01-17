@@ -30,7 +30,13 @@
     <ClCompile Include="Bookmarks_Form.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Add_Material_Form.cpp">
+    <ClCompile Include="MainForm.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="SoftInt1Form.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="SoftInt2Form.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -50,10 +56,16 @@
     <ClInclude Include="Bookmarks_Form.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Add_Material_Form.h">
+    <ClInclude Include="FunctionsStruct.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="FunctionsStruct.h">
+    <ClInclude Include="MainForm.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="SoftInt1Form.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="SoftInt2Form.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>
@@ -64,5 +76,12 @@
     <Image Include="bookmarkNoAktiv.png">
       <Filter>Файлы ресурсов</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="..\..\..\Users\User\Desktop\Pr01\Pr01\ConditionalBranching.txt" />
+    <Text Include="..\..\..\Users\User\Desktop\Pr01\Pr01\DOSInt21h.txt" />
+    <Text Include="..\..\..\Users\User\Desktop\Pr01\Pr01\ASCII_01.txt" />
+    <Text Include="..\..\..\Users\User\Desktop\Pr01\Pr01\ASCII_02.txt" />
+    <Text Include="..\..\..\Users\User\Desktop\Pr01\Pr01\ASCII_03.txt" />
   </ItemGroup>
 </Project>

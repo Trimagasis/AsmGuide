@@ -185,7 +185,7 @@ void checkbook(int& punct, bool& checkbookmark) {
 			current = current->next;
 		else {
 			checkbookmark = true;
-			//std::cout << "соси хуй быдло ты ебаное блять";
+
 			//system("pause>>nul");
 			return;
 		}

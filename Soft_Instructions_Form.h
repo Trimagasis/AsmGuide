@@ -37,6 +37,8 @@ namespace ProjectSprv {
 	private: System::Windows::Forms::MenuStrip^ menuStrip1;
 	protected:
 	private: System::Windows::Forms::ToolStripMenuItem^ âûõîäÂÌåíşToolStripMenuItem;
+	private: System::Windows::Forms::Button^ buttonSoftInt1;
+	private: System::Windows::Forms::Button^ buttonSoftInt2;
 
 	private:
 		/// <summary>
@@ -53,6 +55,8 @@ namespace ProjectSprv {
 		{
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->âûõîäÂÌåíşToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->buttonSoftInt1 = (gcnew System::Windows::Forms::Button());
+			this->buttonSoftInt2 = (gcnew System::Windows::Forms::Button());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -62,7 +66,7 @@ namespace ProjectSprv {
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->âûõîäÂÌåíşToolStripMenuItem });
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(801, 28);
+			this->menuStrip1->Size = System::Drawing::Size(382, 28);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -73,11 +77,33 @@ namespace ProjectSprv {
 			this->âûõîäÂÌåíşToolStripMenuItem->Text = L"Íàçàä â ìåíş";
 			this->âûõîäÂÌåíşToolStripMenuItem->Click += gcnew System::EventHandler(this, &Soft_Instructions_Form::âûõîäÂÌåíşToolStripMenuItem_Click);
 			// 
+			// buttonSoftInt1
+			// 
+			this->buttonSoftInt1->Location = System::Drawing::Point(76, 160);
+			this->buttonSoftInt1->Name = L"buttonSoftInt1";
+			this->buttonSoftInt1->Size = System::Drawing::Size(241, 91);
+			this->buttonSoftInt1->TabIndex = 1;
+			this->buttonSoftInt1->Text = L"Íà÷àëüíûé óğîâåíü";
+			this->buttonSoftInt1->UseVisualStyleBackColor = true;
+			this->buttonSoftInt1->Click += gcnew System::EventHandler(this, &Soft_Instructions_Form::buttonSoftInt1_Click);
+			// 
+			// buttonSoftInt2
+			// 
+			this->buttonSoftInt2->Location = System::Drawing::Point(76, 280);
+			this->buttonSoftInt2->Name = L"buttonSoftInt2";
+			this->buttonSoftInt2->Size = System::Drawing::Size(241, 101);
+			this->buttonSoftInt2->TabIndex = 2;
+			this->buttonSoftInt2->Text = L"Ïğîäâèíóòûé óğîâåíü";
+			this->buttonSoftInt2->UseVisualStyleBackColor = true;
+			this->buttonSoftInt2->Click += gcnew System::EventHandler(this, &Soft_Instructions_Form::buttonSoftInt2_Click);
+			// 
 			// Soft_Instructions_Form
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
-			this->ClientSize = System::Drawing::Size(801, 494);
+			this->ClientSize = System::Drawing::Size(382, 553);
+			this->Controls->Add(this->buttonSoftInt2);
+			this->Controls->Add(this->buttonSoftInt1);
 			this->Controls->Add(this->menuStrip1);
 			this->MainMenuStrip = this->menuStrip1;
 			this->Name = L"Soft_Instructions_Form";
@@ -91,5 +117,7 @@ namespace ProjectSprv {
 		}
 #pragma endregion
 	private: System::Void âûõîäÂÌåíşToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
-	};
+	private: System::Void buttonSoftInt1_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void buttonSoftInt2_Click(System::Object^ sender, System::EventArgs^ e);
+};
 }
