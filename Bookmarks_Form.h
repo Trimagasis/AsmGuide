@@ -57,6 +57,7 @@ namespace ProjectSprv {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Bookmarks_Form::typeid));
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->íàçàäÂÌåíþToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->ïåðåéòèÊÑáîðíèêóÒåîðèèToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
@@ -76,32 +77,36 @@ namespace ProjectSprv {
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(1257, 28);
+			this->menuStrip1->Size = System::Drawing::Size(1257, 31);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
 			// íàçàäÂÌåíþToolStripMenuItem
 			// 
+			this->íàçàäÂÌåíþToolStripMenuItem->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
 			this->íàçàäÂÌåíþToolStripMenuItem->Name = L"íàçàäÂÌåíþToolStripMenuItem";
-			this->íàçàäÂÌåíþToolStripMenuItem->Size = System::Drawing::Size(121, 24);
+			this->íàçàäÂÌåíþToolStripMenuItem->Size = System::Drawing::Size(135, 27);
 			this->íàçàäÂÌåíþToolStripMenuItem->Text = L"Íàçàä â ìåíþ";
 			this->íàçàäÂÌåíþToolStripMenuItem->Click += gcnew System::EventHandler(this, &Bookmarks_Form::íàçàäÂÌåíþToolStripMenuItem_Click);
 			// 
 			// ïåðåéòèÊÑáîðíèêóÒåîðèèToolStripMenuItem
 			// 
+			this->ïåðåéòèÊÑáîðíèêóÒåîðèèToolStripMenuItem->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10.2F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
 			this->ïåðåéòèÊÑáîðíèêóÒåîðèèToolStripMenuItem->Name = L"ïåðåéòèÊÑáîðíèêóÒåîðèèToolStripMenuItem";
-			this->ïåðåéòèÊÑáîðíèêóÒåîðèèToolStripMenuItem->Size = System::Drawing::Size(218, 24);
+			this->ïåðåéòèÊÑáîðíèêóÒåîðèèToolStripMenuItem->Size = System::Drawing::Size(244, 27);
 			this->ïåðåéòèÊÑáîðíèêóÒåîðèèToolStripMenuItem->Text = L"Ïåðåéòè ê ñáîðíèêó òåîðèè";
 			this->ïåðåéòèÊÑáîðíèêóÒåîðèèToolStripMenuItem->Click += gcnew System::EventHandler(this, &Bookmarks_Form::ïåðåéòèÊÑáîðíèêóÒåîðèèToolStripMenuItem_Click);
 			// 
 			// buttonSort
 			// 
 			this->buttonSort->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->buttonSort->Font = (gcnew System::Drawing::Font(L"Times New Roman", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->buttonSort->Font = (gcnew System::Drawing::Font(L"Times New Roman", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->buttonSort->Location = System::Drawing::Point(997, 43);
+			this->buttonSort->Location = System::Drawing::Point(997, 31);
 			this->buttonSort->Name = L"buttonSort";
-			this->buttonSort->Size = System::Drawing::Size(189, 75);
+			this->buttonSort->Size = System::Drawing::Size(217, 80);
 			this->buttonSort->TabIndex = 1;
 			this->buttonSort->Text = L"Ñîðòèðîâêà ñïèñêà çàêëàäîê";
 			this->buttonSort->UseVisualStyleBackColor = false;
@@ -109,24 +114,25 @@ namespace ProjectSprv {
 			// 
 			// listBoxBookmark
 			// 
-			this->listBoxBookmark->Font = (gcnew System::Drawing::Font(L"Times New Roman", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->listBoxBookmark->BackColor = System::Drawing::SystemColors::Control;
+			this->listBoxBookmark->Font = (gcnew System::Drawing::Font(L"Times New Roman", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->listBoxBookmark->FormattingEnabled = true;
-			this->listBoxBookmark->ItemHeight = 20;
-			this->listBoxBookmark->Location = System::Drawing::Point(13, 32);
+			this->listBoxBookmark->ItemHeight = 26;
+			this->listBoxBookmark->Location = System::Drawing::Point(13, 43);
 			this->listBoxBookmark->Name = L"listBoxBookmark";
-			this->listBoxBookmark->Size = System::Drawing::Size(978, 604);
+			this->listBoxBookmark->Size = System::Drawing::Size(978, 602);
 			this->listBoxBookmark->TabIndex = 2;
 			this->listBoxBookmark->MouseDoubleClick += gcnew System::Windows::Forms::MouseEventHandler(this, &Bookmarks_Form::listBoxBookmark_MouseDoubleClick);
 			// 
 			// buttonRemove
 			// 
 			this->buttonRemove->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->buttonRemove->Font = (gcnew System::Drawing::Font(L"Times New Roman", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->buttonRemove->Font = (gcnew System::Drawing::Font(L"Times New Roman", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->buttonRemove->Location = System::Drawing::Point(997, 124);
+			this->buttonRemove->Location = System::Drawing::Point(997, 117);
 			this->buttonRemove->Name = L"buttonRemove";
-			this->buttonRemove->Size = System::Drawing::Size(189, 80);
+			this->buttonRemove->Size = System::Drawing::Size(217, 80);
 			this->buttonRemove->TabIndex = 3;
 			this->buttonRemove->Text = L"Óäàëèòü âûáðàííóþ çàêëàäêó";
 			this->buttonRemove->UseVisualStyleBackColor = false;
@@ -135,11 +141,11 @@ namespace ProjectSprv {
 			// buttonCleen
 			// 
 			this->buttonCleen->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->buttonCleen->Font = (gcnew System::Drawing::Font(L"Times New Roman", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->buttonCleen->Font = (gcnew System::Drawing::Font(L"Times New Roman", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->buttonCleen->Location = System::Drawing::Point(997, 210);
+			this->buttonCleen->Location = System::Drawing::Point(997, 203);
 			this->buttonCleen->Name = L"buttonCleen";
-			this->buttonCleen->Size = System::Drawing::Size(189, 68);
+			this->buttonCleen->Size = System::Drawing::Size(217, 80);
 			this->buttonCleen->TabIndex = 4;
 			this->buttonCleen->Text = L"Î÷èñòèòü ñïèñîê çàêëàäîê";
 			this->buttonCleen->UseVisualStyleBackColor = false;
@@ -150,6 +156,7 @@ namespace ProjectSprv {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1257, 679);
 			this->Controls->Add(this->buttonCleen);
 			this->Controls->Add(this->buttonRemove);

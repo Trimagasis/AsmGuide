@@ -53,6 +53,7 @@ namespace ProjectSprv {
 		/// </summary>
 		void InitializeComponent(void)
 		{
+			System::ComponentModel::ComponentResourceManager^ resources = (gcnew System::ComponentModel::ComponentResourceManager(Soft_Instructions_Form::typeid));
 			this->menuStrip1 = (gcnew System::Windows::Forms::MenuStrip());
 			this->âûõîäÂÌåíþToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->buttonSoftInt1 = (gcnew System::Windows::Forms::Button());
@@ -66,20 +67,24 @@ namespace ProjectSprv {
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->âûõîäÂÌåíþToolStripMenuItem });
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(402, 30);
+			this->menuStrip1->Size = System::Drawing::Size(402, 31);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
 			// âûõîäÂÌåíþToolStripMenuItem
 			// 
+			this->âûõîäÂÌåíþToolStripMenuItem->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
 			this->âûõîäÂÌåíþToolStripMenuItem->Name = L"âûõîäÂÌåíþToolStripMenuItem";
-			this->âûõîäÂÌåíþToolStripMenuItem->Size = System::Drawing::Size(121, 26);
+			this->âûõîäÂÌåíþToolStripMenuItem->Size = System::Drawing::Size(135, 27);
 			this->âûõîäÂÌåíþToolStripMenuItem->Text = L"Íàçàä â ìåíþ";
 			this->âûõîäÂÌåíþToolStripMenuItem->Click += gcnew System::EventHandler(this, &Soft_Instructions_Form::âûõîäÂÌåíþToolStripMenuItem_Click);
 			// 
 			// buttonSoftInt1
 			// 
 			this->buttonSoftInt1->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->buttonSoftInt1->Font = (gcnew System::Drawing::Font(L"Times New Roman", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
 			this->buttonSoftInt1->Location = System::Drawing::Point(80, 159);
 			this->buttonSoftInt1->Name = L"buttonSoftInt1";
 			this->buttonSoftInt1->Size = System::Drawing::Size(241, 91);
@@ -91,6 +96,8 @@ namespace ProjectSprv {
 			// buttonSoftInt2
 			// 
 			this->buttonSoftInt2->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->buttonSoftInt2->Font = (gcnew System::Drawing::Font(L"Times New Roman", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
 			this->buttonSoftInt2->Location = System::Drawing::Point(80, 279);
 			this->buttonSoftInt2->Name = L"buttonSoftInt2";
 			this->buttonSoftInt2->Size = System::Drawing::Size(241, 101);
@@ -104,6 +111,7 @@ namespace ProjectSprv {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(402, 553);
 			this->Controls->Add(this->buttonSoftInt2);
 			this->Controls->Add(this->buttonSoftInt1);

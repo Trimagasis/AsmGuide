@@ -160,11 +160,13 @@ namespace ProjectSprv {
 			// 
 			// menuStrip1
 			// 
+			this->menuStrip1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
 			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->íàçàäToolStripMenuItem });
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(782, 28);
+			this->menuStrip1->Size = System::Drawing::Size(782, 31);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -630,6 +632,7 @@ namespace ProjectSprv {
 			this->MaximumSize = System::Drawing::Size(800, 600);
 			this->MinimumSize = System::Drawing::Size(800, 600);
 			this->Name = L"SoftInt1Form";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Òóòîðèàë ¹1";
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();

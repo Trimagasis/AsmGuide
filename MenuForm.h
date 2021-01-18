@@ -107,7 +107,7 @@ namespace ProjectSprv {
 			// Soft
 			// 
 			this->Soft->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->Soft->Font = (gcnew System::Drawing::Font(L"Times New Roman", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->Soft->Font = (gcnew System::Drawing::Font(L"Times New Roman", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->Soft->Location = System::Drawing::Point(130, 82);
 			this->Soft->Name = L"Soft";
@@ -120,7 +120,7 @@ namespace ProjectSprv {
 			// MainLit
 			// 
 			this->MainLit->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->MainLit->Font = (gcnew System::Drawing::Font(L"Times New Roman", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->MainLit->Font = (gcnew System::Drawing::Font(L"Times New Roman", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->MainLit->Location = System::Drawing::Point(130, 183);
 			this->MainLit->Name = L"MainLit";
@@ -133,7 +133,7 @@ namespace ProjectSprv {
 			// Bookmarks
 			// 
 			this->Bookmarks->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->Bookmarks->Font = (gcnew System::Drawing::Font(L"Times New Roman", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->Bookmarks->Font = (gcnew System::Drawing::Font(L"Times New Roman", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->Bookmarks->Location = System::Drawing::Point(130, 285);
 			this->Bookmarks->Name = L"Bookmarks";
@@ -146,7 +146,7 @@ namespace ProjectSprv {
 			// AddMat
 			// 
 			this->AddMat->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->AddMat->Font = (gcnew System::Drawing::Font(L"Times New Roman", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->AddMat->Font = (gcnew System::Drawing::Font(L"Times New Roman", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->AddMat->Location = System::Drawing::Point(130, 389);
 			this->AddMat->Name = L"AddMat";
@@ -177,7 +177,7 @@ namespace ProjectSprv {
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(110, 19);
 			this->label2->TabIndex = 6;
-			this->label2->Text = L"Version: 0.2.5";
+			this->label2->Text = L"Version: 0.2.7";
 			// 
 			// MenuForm
 			// 

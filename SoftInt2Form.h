@@ -227,7 +227,7 @@ namespace ProjectSprv {
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->âÇàäToolStripMenuItem });
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(782, 28);
+			this->menuStrip1->Size = System::Drawing::Size(782, 31);
 			this->menuStrip1->TabIndex = 1;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -237,21 +237,27 @@ namespace ProjectSprv {
 				this->êÂûáîðóÒóòîðèàëàToolStripMenuItem,
 					this->âÌåíþToolStripMenuItem
 			});
+			this->âÇàäToolStripMenuItem->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
 			this->âÇàäToolStripMenuItem->Name = L"âÇàäToolStripMenuItem";
-			this->âÇàäToolStripMenuItem->Size = System::Drawing::Size(65, 24);
+			this->âÇàäToolStripMenuItem->Size = System::Drawing::Size(71, 27);
 			this->âÇàäToolStripMenuItem->Text = L"Íàçàä";
 			// 
 			// êÂûáîðóÒóòîðèàëàToolStripMenuItem
 			// 
+			this->êÂûáîðóÒóòîðèàëàToolStripMenuItem->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10.2F, System::Drawing::FontStyle::Regular,
+				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
 			this->êÂûáîðóÒóòîðèàëàToolStripMenuItem->Name = L"êÂûáîðóÒóòîðèàëàToolStripMenuItem";
-			this->êÂûáîðóÒóòîðèàëàToolStripMenuItem->Size = System::Drawing::Size(234, 26);
+			this->êÂûáîðóÒóòîðèàëàToolStripMenuItem->Size = System::Drawing::Size(254, 28);
 			this->êÂûáîðóÒóòîðèàëàToolStripMenuItem->Text = L"Ê âûáîðó Òóòîðèàëà";
 			this->êÂûáîðóÒóòîðèàëàToolStripMenuItem->Click += gcnew System::EventHandler(this, &SoftInt2Form::êÂûáîðóÒóòîðèàëàToolStripMenuItem_Click);
 			// 
 			// âÌåíþToolStripMenuItem
 			// 
+			this->âÌåíþToolStripMenuItem->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
 			this->âÌåíþToolStripMenuItem->Name = L"âÌåíþToolStripMenuItem";
-			this->âÌåíþToolStripMenuItem->Size = System::Drawing::Size(234, 26);
+			this->âÌåíþToolStripMenuItem->Size = System::Drawing::Size(254, 28);
 			this->âÌåíþToolStripMenuItem->Text = L"Â ìåíþ";
 			this->âÌåíþToolStripMenuItem->Click += gcnew System::EventHandler(this, &SoftInt2Form::âÌåíþToolStripMenuItem_Click);
 			// 
@@ -268,6 +274,7 @@ namespace ProjectSprv {
 			this->MaximumSize = System::Drawing::Size(800, 600);
 			this->MinimumSize = System::Drawing::Size(800, 600);
 			this->Name = L"SoftInt2Form";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Òóòîðèàë ¹2";
 			this->panel1->ResumeLayout(false);
 			this->panel1->PerformLayout();

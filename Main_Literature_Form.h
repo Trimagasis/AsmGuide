@@ -249,7 +249,7 @@ namespace ProjectSprv {
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(1471, 31);
+			this->menuStrip1->Size = System::Drawing::Size(1482, 31);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -869,7 +869,7 @@ namespace ProjectSprv {
 			this->richTextBox1->Location = System::Drawing::Point(15, 33);
 			this->richTextBox1->Name = L"richTextBox1";
 			this->richTextBox1->ReadOnly = true;
-			this->richTextBox1->Size = System::Drawing::Size(1335, 768);
+			this->richTextBox1->Size = System::Drawing::Size(1335, 820);
 			this->richTextBox1->TabIndex = 4;
 			this->richTextBox1->Text = L"";
 			this->richTextBox1->TextChanged += gcnew System::EventHandler(this, &Main_Literature_Form::richTextBox1_TextChanged);
@@ -882,7 +882,7 @@ namespace ProjectSprv {
 				static_cast<System::Byte>(204)));
 			this->groupBox1->Location = System::Drawing::Point(12, 46);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(1376, 805);
+			this->groupBox1->Size = System::Drawing::Size(1376, 879);
 			this->groupBox1->TabIndex = 5;
 			this->groupBox1->TabStop = false;
 			// 
@@ -901,13 +901,14 @@ namespace ProjectSprv {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
-			this->ClientSize = System::Drawing::Size(1471, 878);
+			this->ClientSize = System::Drawing::Size(1482, 953);
 			this->Controls->Add(this->bookmarkImage);
 			this->Controls->Add(this->menuStrip1);
 			this->Controls->Add(this->groupBox1);
 			this->MainMenuStrip = this->menuStrip1;
 			this->MaximizeBox = false;
-			this->MinimumSize = System::Drawing::Size(900, 600);
+			this->MaximumSize = System::Drawing::Size(1500, 1000);
+			this->MinimumSize = System::Drawing::Size(1500, 1000);
 			this->Name = L"Main_Literature_Form";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Основной теоретический материал";
