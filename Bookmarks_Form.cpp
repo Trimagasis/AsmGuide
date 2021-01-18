@@ -24,9 +24,12 @@ System::Void ProjectSprv::Bookmarks_Form::Bookmarks_Form_Load(System::Object^ se
     {
         OutFullBookmark(currentP1, flag);
         if (flag == true) {
-            stroka = currentP1->p1 + ukazatel + currentP1->p2.headP2->p2;
-            if (currentP1->p2.headP2->p3.headP3 != NULL)
-                stroka += ukazatel + currentP1->p2.headP2->p3.headP3->p3;
+            stroka = currentP1->p1;
+            if (currentP1->p2.headP2 != NULL) {
+                stroka += ukazatel + currentP1->p2.headP2->p2;
+                if (currentP1->p2.headP2->p3.headP3 != NULL)
+                    stroka += ukazatel + currentP1->p2.headP2->p3.headP3->p3;
+            }
             System::String^ clistr = gcnew System::String(stroka.c_str());
             listBoxBookmark->Items->Add(clistr);
         }

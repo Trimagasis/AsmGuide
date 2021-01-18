@@ -88,17 +88,21 @@ System::Void ProjectSprv::Main_Literature_Form::Main_Literature_Form_Load(System
                     }
             }
             else strNumPunct = "100";
-            filestream.close();
             
         }
+        filestream.close();
         book* start = new book;
         start->a = atoi(std::string({ (char)strNumPunct[0] }).c_str());
-        if (atoi(std::string({ (char)strNumPunct[1] }).c_str()) != '\0')
+        if (atoi(std::string({ (char)strNumPunct[1] }).c_str()) != '\0') {
             start->b = atoi(std::string({ (char)strNumPunct[1] }).c_str());
-        else start->b = 0;
-        if(atoi(std::string({ (char)strNumPunct[2] }).c_str()) != '\0')
-            start->c = atoi(std::string({ (char)strNumPunct[2] }).c_str());
-        else start->c = 0;
+            if (atoi(std::string({ (char)strNumPunct[2] }).c_str()) != '\0')
+                start->c = atoi(std::string({ (char)strNumPunct[2] }).c_str());
+            else start->c = 0;
+        }
+        else {
+            start->b = 0;
+            start->c = 0;
+        }
 
         SearchItem(start, predpunct);
 
@@ -109,6 +113,9 @@ System::Void ProjectSprv::Main_Literature_Form::Main_Literature_Form_Load(System
 
         richTextBox1->Text = clistr;    //вывод текста теории
         groupBox1->Text = clistr2;
+
+        std::ofstream filestream1("tempBkmrk.txt", std::ios_base::trunc);
+        filestream1.close();
 
     return System::Void();
 }

@@ -438,22 +438,24 @@ void OutFullBookmark(Punct*& currentP1, bool& flag) {
 		currentP1 = currentP1->next;
 		NumPunct++;
 	}
-
-	NumPunct = 1;
-	while (start->b != NumPunct)
-	{
-		currentP1->p2.headP2 = currentP1->p2.headP2->next;
-		NumPunct++;
-	}
-	if (start->c != 0) {
+	if (start->b != 0) {
 		NumPunct = 1;
-		while (start->c != NumPunct)
+		while (start->b != NumPunct)
 		{
-			currentP1->p2.headP2->p3.headP3 = currentP1->p2.headP2->p3.headP3->next;
+			currentP1->p2.headP2 = currentP1->p2.headP2->next;
 			NumPunct++;
 		}
+		if (start->c != 0) {
+			NumPunct = 1;
+			while (start->c != NumPunct)
+			{
+				currentP1->p2.headP2->p3.headP3 = currentP1->p2.headP2->p3.headP3->next;
+				NumPunct++;
+			}
+		}
+		else currentP1->p2.headP2->p3.headP3 = NULL;
 	}
-	else currentP1->p2.headP2->p3.headP3 = NULL;
+	else currentP1->p2.headP2 = NULL;
 }
 
 //бшбнд ндмни гюйкюдйх

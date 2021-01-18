@@ -262,8 +262,9 @@ namespace ProjectSprv {
 			});
 			this->îòêðûòüÆóðíàëÑÒåîðèåéToolStripMenuItem->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10.2F, System::Drawing::FontStyle::Regular,
 				System::Drawing::GraphicsUnit::Point, static_cast<System::Byte>(204)));
+			this->îòêðûòüÆóðíàëÑÒåîðèåéToolStripMenuItem->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"îòêðûòüÆóðíàëÑÒåîðèåéToolStripMenuItem.Image")));
 			this->îòêðûòüÆóðíàëÑÒåîðèåéToolStripMenuItem->Name = L"îòêðûòüÆóðíàëÑÒåîðèåéToolStripMenuItem";
-			this->îòêðûòüÆóðíàëÑÒåîðèåéToolStripMenuItem->Size = System::Drawing::Size(237, 27);
+			this->îòêðûòüÆóðíàëÑÒåîðèåéToolStripMenuItem->Size = System::Drawing::Size(257, 27);
 			this->îòêðûòüÆóðíàëÑÒåîðèåéToolStripMenuItem->Text = L"Îòêðûòü æóðíàë ñ òåîðèåé";
 			// 
 			// toolStripMenuItem2
@@ -875,12 +876,13 @@ namespace ProjectSprv {
 			// 
 			// groupBox1
 			// 
+			this->groupBox1->BackColor = System::Drawing::Color::Transparent;
 			this->groupBox1->Controls->Add(this->richTextBox1);
-			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Times New Roman", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->groupBox1->Location = System::Drawing::Point(12, 34);
+			this->groupBox1->Location = System::Drawing::Point(12, 46);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(1376, 817);
+			this->groupBox1->Size = System::Drawing::Size(1376, 805);
 			this->groupBox1->TabIndex = 5;
 			this->groupBox1->TabStop = false;
 			// 
@@ -899,7 +901,7 @@ namespace ProjectSprv {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
-			this->ClientSize = System::Drawing::Size(1471, 870);
+			this->ClientSize = System::Drawing::Size(1471, 878);
 			this->Controls->Add(this->bookmarkImage);
 			this->Controls->Add(this->menuStrip1);
 			this->Controls->Add(this->groupBox1);
