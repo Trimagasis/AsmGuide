@@ -86,21 +86,21 @@ namespace ProjectSprv {
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(582, 28);
+			this->menuStrip1->Size = System::Drawing::Size(582, 30);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
 			// âûõîäToolStripMenuItem
 			// 
 			this->âûõîäToolStripMenuItem->Name = L"âûõîäToolStripMenuItem";
-			this->âûõîäToolStripMenuItem->Size = System::Drawing::Size(67, 24);
+			this->âûõîäToolStripMenuItem->Size = System::Drawing::Size(67, 26);
 			this->âûõîäToolStripMenuItem->Text = L"Âûõîä";
 			this->âûõîäToolStripMenuItem->Click += gcnew System::EventHandler(this, &MenuForm::âûõîäToolStripMenuItem_Click);
 			// 
 			// îÏðîãðàììåToolStripMenuItem
 			// 
 			this->îÏðîãðàììåToolStripMenuItem->Name = L"îÏðîãðàììåToolStripMenuItem";
-			this->îÏðîãðàììåToolStripMenuItem->Size = System::Drawing::Size(118, 24);
+			this->îÏðîãðàììåToolStripMenuItem->Size = System::Drawing::Size(118, 26);
 			this->îÏðîãðàììåToolStripMenuItem->Text = L"Î ïðîãðàììå";
 			this->îÏðîãðàììåToolStripMenuItem->Click += gcnew System::EventHandler(this, &MenuForm::îÏðîãðàììåToolStripMenuItem_Click);
 			// 
@@ -177,7 +177,7 @@ namespace ProjectSprv {
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(110, 19);
 			this->label2->TabIndex = 6;
-			this->label2->Text = L"Version: 0.2.1";
+			this->label2->Text = L"Version: 0.2.3";
 			// 
 			// MenuForm
 			// 

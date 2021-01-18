@@ -76,7 +76,7 @@ namespace ProjectSprv {
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(722, 28);
+			this->menuStrip1->Size = System::Drawing::Size(1257, 28);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -97,9 +97,11 @@ namespace ProjectSprv {
 			// buttonSort
 			// 
 			this->buttonSort->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->buttonSort->Location = System::Drawing::Point(538, 32);
+			this->buttonSort->Font = (gcnew System::Drawing::Font(L"Times New Roman", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->buttonSort->Location = System::Drawing::Point(997, 43);
 			this->buttonSort->Name = L"buttonSort";
-			this->buttonSort->Size = System::Drawing::Size(171, 58);
+			this->buttonSort->Size = System::Drawing::Size(189, 75);
 			this->buttonSort->TabIndex = 1;
 			this->buttonSort->Text = L"Сортировка списка закладок";
 			this->buttonSort->UseVisualStyleBackColor = false;
@@ -113,16 +115,18 @@ namespace ProjectSprv {
 			this->listBoxBookmark->ItemHeight = 20;
 			this->listBoxBookmark->Location = System::Drawing::Point(13, 32);
 			this->listBoxBookmark->Name = L"listBoxBookmark";
-			this->listBoxBookmark->Size = System::Drawing::Size(519, 464);
+			this->listBoxBookmark->Size = System::Drawing::Size(978, 604);
 			this->listBoxBookmark->TabIndex = 2;
 			this->listBoxBookmark->MouseDoubleClick += gcnew System::Windows::Forms::MouseEventHandler(this, &Bookmarks_Form::listBoxBookmark_MouseDoubleClick);
 			// 
 			// buttonRemove
 			// 
 			this->buttonRemove->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->buttonRemove->Location = System::Drawing::Point(538, 96);
+			this->buttonRemove->Font = (gcnew System::Drawing::Font(L"Times New Roman", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->buttonRemove->Location = System::Drawing::Point(997, 124);
 			this->buttonRemove->Name = L"buttonRemove";
-			this->buttonRemove->Size = System::Drawing::Size(171, 58);
+			this->buttonRemove->Size = System::Drawing::Size(189, 80);
 			this->buttonRemove->TabIndex = 3;
 			this->buttonRemove->Text = L"Удалить выбранную закладку";
 			this->buttonRemove->UseVisualStyleBackColor = false;
@@ -131,9 +135,11 @@ namespace ProjectSprv {
 			// buttonCleen
 			// 
 			this->buttonCleen->BackColor = System::Drawing::SystemColors::ButtonFace;
-			this->buttonCleen->Location = System::Drawing::Point(538, 160);
+			this->buttonCleen->Font = (gcnew System::Drawing::Font(L"Times New Roman", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->buttonCleen->Location = System::Drawing::Point(997, 210);
 			this->buttonCleen->Name = L"buttonCleen";
-			this->buttonCleen->Size = System::Drawing::Size(171, 58);
+			this->buttonCleen->Size = System::Drawing::Size(189, 68);
 			this->buttonCleen->TabIndex = 4;
 			this->buttonCleen->Text = L"Очистить список закладок";
 			this->buttonCleen->UseVisualStyleBackColor = false;
@@ -144,7 +150,7 @@ namespace ProjectSprv {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
-			this->ClientSize = System::Drawing::Size(722, 523);
+			this->ClientSize = System::Drawing::Size(1257, 679);
 			this->Controls->Add(this->buttonCleen);
 			this->Controls->Add(this->buttonRemove);
 			this->Controls->Add(this->listBoxBookmark);
@@ -152,7 +158,6 @@ namespace ProjectSprv {
 			this->Controls->Add(this->menuStrip1);
 			this->MainMenuStrip = this->menuStrip1;
 			this->MaximizeBox = false;
-			this->MaximumSize = System::Drawing::Size(740, 570);
 			this->MinimumSize = System::Drawing::Size(740, 570);
 			this->Name = L"Bookmarks_Form";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;

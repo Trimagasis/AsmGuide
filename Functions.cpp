@@ -33,7 +33,7 @@ char* del_char(const char* src, char* res, char c)
 void InTeor(Teoria*& headT) {
 	std::ifstream fsTeor("baseTeor.txt", std::ios::in | std::ios::binary);
 	if (!fsTeor) return; //Если ошибка открытия файла, то завершаем программу
-
+	/*
 	char* strk = new char[1024];
 	int n = 0;
 	std::ifstream base("baseTeor.txt");
@@ -43,21 +43,20 @@ void InTeor(Teoria*& headT) {
 		n++;
 	}
 	base.close();
-
+	*/
 	headT = new Teoria;
 	fsTeor.getline(headT->buf, len - 1, '&');
 	fsTeor.getline(headT->opredelenie, len - 1, '&'); //Считываем строки в массив
 	tailT = headT;
 	headT->next = 0;
 	tailT->next = 0;
-	for (int r = 1; r < n; r++)
-	{
+	do{
 		tailT->next = new Teoria;
 		tailT = tailT->next;
 		fsTeor.getline(tailT->buf, len - 1, '&');
 		fsTeor.getline(tailT->opredelenie, len - 1, '&'); //Считываем строки в массив
 		tailT->next = 0;
-	}
+	} while (tailT->opredelenie[0] != '\0');
 	fsTeor.close(); //Закрываем файл
 }
 
@@ -107,7 +106,7 @@ void InPunct() {
 			tmpBlock->block = block;
 			++A;
 			tmpBlock->a = A;
-
+			B = 0, C = 0;
 			currentP1->p2.headP2 = NULL;
 		}
 		else if ((currentP1->buf[0]) == '2') {
@@ -120,8 +119,14 @@ void InPunct() {
 				currentP1->p2.headP2->p3.headP3 = NULL;
 				currentP1->p2.currentP2 = currentP1->p2.headP2;
 
-				B = 1;
+				tmpBlock->next = new Block;
+				tmpBlock = tmpBlock->next;
+				tmpBlock->next = NULL;
+				++block; ++B;
+				tmpBlock->block = block;
+				tmpBlock->a = A;
 				tmpBlock->b = B;
+				C = 0;
 			}
 			else {
 				tmpBlock->next = new Block;
@@ -136,12 +141,19 @@ void InPunct() {
 				currentP1->p2.currentP2 = currentP1->p2.currentP2->next;
 				fsTeor.getline(currentP1->p2.currentP2->p2, len - 1, '@');
 				currentP1->p2.currentP2->p3.headP3 = NULL;
+				C = 0;
 			}
 		}
 		else if ((currentP1->buf[0]) == '3') {
 			if (currentP1->p2.currentP2->p3.headP3 == NULL)
 			{
-				C = 1;
+				tmpBlock->next = new Block;
+				tmpBlock = tmpBlock->next;
+				tmpBlock->next = NULL;
+				++block; ++C;
+				tmpBlock->block = block;
+				tmpBlock->a = A;
+				tmpBlock->b = B;
 				tmpBlock->c = C;
 
 				currentP1->p2.currentP2->p3.headP3 = new P3;
@@ -470,22 +482,27 @@ void OutBookmark(Punct*& currentP1, int& punct) {
 	}
 	//std::cout << currentP1->p1 << strelka;
 
-	NumPunct = 1;
-	while (start->b != NumPunct)
-	{
-		currentP1->p2.headP2 = currentP1->p2.headP2->next;
-		NumPunct++;
-	}
-	if (start->c != 0) {
-		//std::cout << _currentP2->p2 << strelka;
+	if (start->b != 0) {
 		NumPunct = 1;
-		while (start->c != NumPunct)
+		while (start->b != NumPunct)
 		{
-			currentP1->p2.headP2->p3.headP3 = currentP1->p2.headP2->p3.headP3->next;
+			currentP1->p2.headP2 = currentP1->p2.headP2->next;
 			NumPunct++;
 		}
-		//std::cout << _currentP3->p3 << std::endl;
+
+		if (start->c != 0) {
+			//std::cout << _currentP2->p2 << strelka;
+			NumPunct = 1;
+			while (start->c != NumPunct)
+			{
+				currentP1->p2.headP2->p3.headP3 = currentP1->p2.headP2->p3.headP3->next;
+				NumPunct++;
+			}
+			//std::cout << _currentP3->p3 << std::endl;
+		}
+		else currentP1->p2.headP2->p3.headP3 = NULL;
 	}
+	else currentP1->p2.headP2 = NULL;
 	//else std::cout << _currentP2->p2 << std::endl;
 /*
 else if ((atoi(std::string({ (char)h }).c_str())) == i + 1) {

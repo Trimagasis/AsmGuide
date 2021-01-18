@@ -32,7 +32,7 @@ struct Teoria	//структура хранения теоретического материала
 struct P3	//структура хранения имен подподпунктов
 {
 	int blockP3 = 0;
-	char p3[30] = { NULL };
+	char p3[50] = { NULL };
 	struct P3* next;
 	struct P3* headP3, * currentP3;
 };
@@ -40,7 +40,7 @@ struct P3	//структура хранения имен подподпунктов
 struct P2	//структура хранения имен подпунктов
 {
 	int blockP2 = 0;
-	char p2[30] = { NULL };
+	char p2[50] = { NULL };
 	struct P3 p3;
 	struct P2* next;
 	struct P2* headP2, * currentP2;
@@ -49,7 +49,7 @@ struct P2	//структура хранения имен подпунктов
 struct Punct	//структура хранения имен пунктов
 {
 	char buf[len] = { NULL };
-	char p1[30] = { NULL };
+	char p1[50] = { NULL };
 	struct P2 p2;
 	struct Punct* next;
 };
