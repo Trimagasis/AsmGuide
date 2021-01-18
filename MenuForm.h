@@ -36,7 +36,7 @@ namespace ProjectSprv {
 		}
 	private: System::Windows::Forms::MenuStrip^ menuStrip1;
 	protected:
-	private: System::Windows::Forms::ToolStripMenuItem^ âûõîäToolStripMenuItem;
+
 	private: System::Windows::Forms::ToolStripMenuItem^ îÏðîãðàììåToolStripMenuItem;
 	private: System::Windows::Forms::Button^ Soft;
 	private: System::Windows::Forms::Button^ MainLit;
@@ -45,6 +45,7 @@ namespace ProjectSprv {
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
 	private: System::Windows::Forms::Button^ buttonPrimeri;
+	private: System::Windows::Forms::ToolStripMenuItem^ âûõîäToolStripMenuItem;
 
 
 
@@ -80,7 +81,7 @@ namespace ProjectSprv {
 			// 
 			// menuStrip1
 			// 
-			this->menuStrip1->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
+			this->menuStrip1->BackColor = System::Drawing::Color::Transparent;
 			this->menuStrip1->ImageScalingSize = System::Drawing::Size(20, 20);
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(2) {
 				this->âûõîäToolStripMenuItem,
@@ -94,6 +95,9 @@ namespace ProjectSprv {
 			// 
 			// âûõîäToolStripMenuItem
 			// 
+			this->âûõîäToolStripMenuItem->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->âûõîäToolStripMenuItem->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
 			this->âûõîäToolStripMenuItem->Name = L"âûõîäToolStripMenuItem";
 			this->âûõîäToolStripMenuItem->Size = System::Drawing::Size(67, 26);
 			this->âûõîäToolStripMenuItem->Text = L"Âûõîä";
@@ -101,6 +105,9 @@ namespace ProjectSprv {
 			// 
 			// îÏðîãðàììåToolStripMenuItem
 			// 
+			this->îÏðîãðàììåToolStripMenuItem->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->îÏðîãðàììåToolStripMenuItem->Font = (gcnew System::Drawing::Font(L"Segoe UI", 9, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
 			this->îÏðîãðàììåToolStripMenuItem->Name = L"îÏðîãðàììåToolStripMenuItem";
 			this->îÏðîãðàììåToolStripMenuItem->Size = System::Drawing::Size(118, 26);
 			this->îÏðîãðàììåToolStripMenuItem->Text = L"Î ïðîãðàììå";
@@ -179,7 +186,7 @@ namespace ProjectSprv {
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(110, 19);
 			this->label2->TabIndex = 6;
-			this->label2->Text = L"Version: 0.2.9";
+			this->label2->Text = L"Version: 0.3.0";
 			// 
 			// buttonPrimeri
 			// 
