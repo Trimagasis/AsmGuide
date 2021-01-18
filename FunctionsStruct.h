@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include <string>
 
-const int len = 2600;  //кол-во символов
+const int len = 7000;  //кол-во символов
 
 
 struct book { //список закладок

@@ -249,7 +249,7 @@ namespace ProjectSprv {
 			});
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(1282, 31);
+			this->menuStrip1->Size = System::Drawing::Size(1471, 31);
 			this->menuStrip1->TabIndex = 0;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
@@ -273,21 +273,21 @@ namespace ProjectSprv {
 					this->item3, this->item4, this->ñåãìåíòíûåÐåãèñòðûToolStripMenuItem, this->èñïîëüçîâàíèåÑòåêàToolStripMenuItem
 			});
 			this->toolStripMenuItem2->Name = L"toolStripMenuItem2";
-			this->toolStripMenuItem2->Size = System::Drawing::Size(525, 26);
+			this->toolStripMenuItem2->Size = System::Drawing::Size(426, 28);
 			this->toolStripMenuItem2->Text = L"1. Ðåãèñòðû";
 			this->toolStripMenuItem2->Click += gcnew System::EventHandler(this, &Main_Literature_Form::toolStripMenuItem2_Click);
 			// 
 			// toolStripMenuItem6
 			// 
 			this->toolStripMenuItem6->Name = L"toolStripMenuItem6";
-			this->toolStripMenuItem6->Size = System::Drawing::Size(315, 26);
+			this->toolStripMenuItem6->Size = System::Drawing::Size(349, 28);
 			this->toolStripMenuItem6->Text = L"1. Ðåãèñòðû îáùåãî íàçíà÷åíèÿ";
 			this->toolStripMenuItem6->Click += gcnew System::EventHandler(this, &Main_Literature_Form::toolStripMenuItem6_Click);
 			// 
 			// item3
 			// 
 			this->item3->Name = L"item3";
-			this->item3->Size = System::Drawing::Size(315, 26);
+			this->item3->Size = System::Drawing::Size(349, 28);
 			this->item3->Text = L"2. Óêàçàòåëü êîìàíä";
 			this->item3->Click += gcnew System::EventHandler(this, &Main_Literature_Form::item3_Click);
 			// 
@@ -298,42 +298,42 @@ namespace ProjectSprv {
 					this->óïðàâëÿþùèéÔëàãToolStripMenuItem, this->ñèñòåìíûåÔëàãèÈÏîëåIOPLToolStripMenuItem
 			});
 			this->item4->Name = L"item4";
-			this->item4->Size = System::Drawing::Size(315, 26);
+			this->item4->Size = System::Drawing::Size(349, 28);
 			this->item4->Text = L"3. Ðåãèñòð ôëàãîâ";
 			this->item4->Click += gcnew System::EventHandler(this, &Main_Literature_Form::item4_Click);
 			// 
 			// ôëàãèÑîñòîÿíèÿToolStripMenuItem
 			// 
 			this->ôëàãèÑîñòîÿíèÿToolStripMenuItem->Name = L"ôëàãèÑîñòîÿíèÿToolStripMenuItem";
-			this->ôëàãèÑîñòîÿíèÿToolStripMenuItem->Size = System::Drawing::Size(315, 26);
+			this->ôëàãèÑîñòîÿíèÿToolStripMenuItem->Size = System::Drawing::Size(351, 28);
 			this->ôëàãèÑîñòîÿíèÿToolStripMenuItem->Text = L"1. Ôëàãè ñîñòîÿíèÿ";
 			this->ôëàãèÑîñòîÿíèÿToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::ôëàãèÑîñòîÿíèÿToolStripMenuItem_Click);
 			// 
 			// óïðàâëÿþùèéÔëàãToolStripMenuItem
 			// 
 			this->óïðàâëÿþùèéÔëàãToolStripMenuItem->Name = L"óïðàâëÿþùèéÔëàãToolStripMenuItem";
-			this->óïðàâëÿþùèéÔëàãToolStripMenuItem->Size = System::Drawing::Size(315, 26);
+			this->óïðàâëÿþùèéÔëàãToolStripMenuItem->Size = System::Drawing::Size(351, 28);
 			this->óïðàâëÿþùèéÔëàãToolStripMenuItem->Text = L"2. Óïðàâëÿþùèé ôëàã";
 			this->óïðàâëÿþùèéÔëàãToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::óïðàâëÿþùèéÔëàãToolStripMenuItem_Click);
 			// 
 			// ñèñòåìíûåÔëàãèÈÏîëåIOPLToolStripMenuItem
 			// 
 			this->ñèñòåìíûåÔëàãèÈÏîëåIOPLToolStripMenuItem->Name = L"ñèñòåìíûåÔëàãèÈÏîëåIOPLToolStripMenuItem";
-			this->ñèñòåìíûåÔëàãèÈÏîëåIOPLToolStripMenuItem->Size = System::Drawing::Size(315, 26);
+			this->ñèñòåìíûåÔëàãèÈÏîëåIOPLToolStripMenuItem->Size = System::Drawing::Size(351, 28);
 			this->ñèñòåìíûåÔëàãèÈÏîëåIOPLToolStripMenuItem->Text = L"3. Ñèñòåìíûå ôëàãè è ïîëå IOPL";
 			this->ñèñòåìíûåÔëàãèÈÏîëåIOPLToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::ñèñòåìíûåÔëàãèÈÏîëåIOPLToolStripMenuItem_Click);
 			// 
 			// ñåãìåíòíûåÐåãèñòðûToolStripMenuItem
 			// 
 			this->ñåãìåíòíûåÐåãèñòðûToolStripMenuItem->Name = L"ñåãìåíòíûåÐåãèñòðûToolStripMenuItem";
-			this->ñåãìåíòíûåÐåãèñòðûToolStripMenuItem->Size = System::Drawing::Size(315, 26);
+			this->ñåãìåíòíûåÐåãèñòðûToolStripMenuItem->Size = System::Drawing::Size(349, 28);
 			this->ñåãìåíòíûåÐåãèñòðûToolStripMenuItem->Text = L"4. Ñåãìåíòíûå ðåãèñòðû";
 			this->ñåãìåíòíûåÐåãèñòðûToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::ñåãìåíòíûåÐåãèñòðûToolStripMenuItem_Click);
 			// 
 			// èñïîëüçîâàíèåÑòåêàToolStripMenuItem
 			// 
 			this->èñïîëüçîâàíèåÑòåêàToolStripMenuItem->Name = L"èñïîëüçîâàíèåÑòåêàToolStripMenuItem";
-			this->èñïîëüçîâàíèåÑòåêàToolStripMenuItem->Size = System::Drawing::Size(315, 26);
+			this->èñïîëüçîâàíèåÑòåêàToolStripMenuItem->Size = System::Drawing::Size(349, 28);
 			this->èñïîëüçîâàíèåÑòåêàToolStripMenuItem->Text = L"5. Èñïîëüçîâàíèå ñòåêà";
 			this->èñïîëüçîâàíèåÑòåêàToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::èñïîëüçîâàíèåÑòåêàToolStripMenuItem_Click);
 			// 
@@ -345,63 +345,63 @@ namespace ProjectSprv {
 					this->äèðåêòèâûÎïðåäåëåíèÿÄàííûõToolStripMenuItem, this->êîìàíäûToolStripMenuItem, this->îïåðàíäûÊîìàíäToolStripMenuItem
 			});
 			this->toolStripMenuItem3->Name = L"toolStripMenuItem3";
-			this->toolStripMenuItem3->Size = System::Drawing::Size(525, 26);
+			this->toolStripMenuItem3->Size = System::Drawing::Size(426, 28);
 			this->toolStripMenuItem3->Text = L"2. Îñíîâíûå ïîíÿòèÿ ÿçûêà àññåìáëåðà";
 			this->toolStripMenuItem3->Click += gcnew System::EventHandler(this, &Main_Literature_Form::toolStripMenuItem3_Click);
 			// 
 			// toolStripMenuItem11
 			// 
 			this->toolStripMenuItem11->Name = L"toolStripMenuItem11";
-			this->toolStripMenuItem11->Size = System::Drawing::Size(337, 26);
+			this->toolStripMenuItem11->Size = System::Drawing::Size(371, 28);
 			this->toolStripMenuItem11->Text = L"1. Èäåíòèôèêàòîðû";
 			this->toolStripMenuItem11->Click += gcnew System::EventHandler(this, &Main_Literature_Form::toolStripMenuItem11_Click);
 			// 
 			// toolStripMenuItem12
 			// 
 			this->toolStripMenuItem12->Name = L"toolStripMenuItem12";
-			this->toolStripMenuItem12->Size = System::Drawing::Size(337, 26);
+			this->toolStripMenuItem12->Size = System::Drawing::Size(371, 28);
 			this->toolStripMenuItem12->Text = L"2. Öåëûå ÷èñëà";
 			this->toolStripMenuItem12->Click += gcnew System::EventHandler(this, &Main_Literature_Form::toolStripMenuItem12_Click);
 			// 
 			// toolStripMenuItem13
 			// 
 			this->toolStripMenuItem13->Name = L"toolStripMenuItem13";
-			this->toolStripMenuItem13->Size = System::Drawing::Size(337, 26);
+			this->toolStripMenuItem13->Size = System::Drawing::Size(371, 28);
 			this->toolStripMenuItem13->Text = L"3. Ñèìâîëüíûå äàííûå";
 			this->toolStripMenuItem13->Click += gcnew System::EventHandler(this, &Main_Literature_Form::toolStripMenuItem13_Click);
 			// 
 			// êîììåíòàðèèToolStripMenuItem
 			// 
 			this->êîììåíòàðèèToolStripMenuItem->Name = L"êîììåíòàðèèToolStripMenuItem";
-			this->êîììåíòàðèèToolStripMenuItem->Size = System::Drawing::Size(337, 26);
+			this->êîììåíòàðèèToolStripMenuItem->Size = System::Drawing::Size(371, 28);
 			this->êîììåíòàðèèToolStripMenuItem->Text = L"4. Êîììåíòàðèè";
 			this->êîììåíòàðèèToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::êîììåíòàðèèToolStripMenuItem_Click);
 			// 
 			// äèðåêòèâàÝêâèâàëåíòíîñòèToolStripMenuItem
 			// 
 			this->äèðåêòèâàÝêâèâàëåíòíîñòèToolStripMenuItem->Name = L"äèðåêòèâàÝêâèâàëåíòíîñòèToolStripMenuItem";
-			this->äèðåêòèâàÝêâèâàëåíòíîñòèToolStripMenuItem->Size = System::Drawing::Size(337, 26);
+			this->äèðåêòèâàÝêâèâàëåíòíîñòèToolStripMenuItem->Size = System::Drawing::Size(371, 28);
 			this->äèðåêòèâàÝêâèâàëåíòíîñòèToolStripMenuItem->Text = L"5. Äèðåêòèâà ýêâèâàëåíòíîñòè";
 			this->äèðåêòèâàÝêâèâàëåíòíîñòèToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::äèðåêòèâàÝêâèâàëåíòíîñòèToolStripMenuItem_Click);
 			// 
 			// äèðåêòèâûÎïðåäåëåíèÿÄàííûõToolStripMenuItem
 			// 
 			this->äèðåêòèâûÎïðåäåëåíèÿÄàííûõToolStripMenuItem->Name = L"äèðåêòèâûÎïðåäåëåíèÿÄàííûõToolStripMenuItem";
-			this->äèðåêòèâûÎïðåäåëåíèÿÄàííûõToolStripMenuItem->Size = System::Drawing::Size(337, 26);
+			this->äèðåêòèâûÎïðåäåëåíèÿÄàííûõToolStripMenuItem->Size = System::Drawing::Size(371, 28);
 			this->äèðåêòèâûÎïðåäåëåíèÿÄàííûõToolStripMenuItem->Text = L"6. Äèðåêòèâû îïðåäåëåíèÿ äàííûõ";
 			this->äèðåêòèâûÎïðåäåëåíèÿÄàííûõToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::äèðåêòèâûÎïðåäåëåíèÿÄàííûõToolStripMenuItem_Click);
 			// 
 			// êîìàíäûToolStripMenuItem
 			// 
 			this->êîìàíäûToolStripMenuItem->Name = L"êîìàíäûToolStripMenuItem";
-			this->êîìàíäûToolStripMenuItem->Size = System::Drawing::Size(337, 26);
+			this->êîìàíäûToolStripMenuItem->Size = System::Drawing::Size(371, 28);
 			this->êîìàíäûToolStripMenuItem->Text = L"7. Êîìàíäû";
 			this->êîìàíäûToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::êîìàíäûToolStripMenuItem_Click);
 			// 
 			// îïåðàíäûÊîìàíäToolStripMenuItem
 			// 
 			this->îïåðàíäûÊîìàíäToolStripMenuItem->Name = L"îïåðàíäûÊîìàíäToolStripMenuItem";
-			this->îïåðàíäûÊîìàíäToolStripMenuItem->Size = System::Drawing::Size(337, 26);
+			this->îïåðàíäûÊîìàíäToolStripMenuItem->Size = System::Drawing::Size(371, 28);
 			this->îïåðàíäûÊîìàíäToolStripMenuItem->Text = L"8. Îïåðàíäû êîìàíä";
 			this->îïåðàíäûÊîìàíäToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::îïåðàíäûÊîìàíäToolStripMenuItem_Click);
 			// 
@@ -413,28 +413,28 @@ namespace ProjectSprv {
 					this->èçìåíåíèåÐàçìåðà×èñëàToolStripMenuItem
 			});
 			this->toolStripMenuItem4->Name = L"toolStripMenuItem4";
-			this->toolStripMenuItem4->Size = System::Drawing::Size(525, 26);
+			this->toolStripMenuItem4->Size = System::Drawing::Size(426, 28);
 			this->toolStripMenuItem4->Text = L"3. Ïåðåñûëêà è àðèôìåòè÷åñêèå êîìàíäû";
 			this->toolStripMenuItem4->Click += gcnew System::EventHandler(this, &Main_Literature_Form::toolStripMenuItem4_Click);
 			// 
 			// toolStripMenuItem14
 			// 
 			this->toolStripMenuItem14->Name = L"toolStripMenuItem14";
-			this->toolStripMenuItem14->Size = System::Drawing::Size(338, 26);
+			this->toolStripMenuItem14->Size = System::Drawing::Size(373, 28);
 			this->toolStripMenuItem14->Text = L"1. Êîìàíäû ïåðåñûëêè è îáìåíà";
 			this->toolStripMenuItem14->Click += gcnew System::EventHandler(this, &Main_Literature_Form::toolStripMenuItem14_Click);
 			// 
 			// toolStripMenuItem15
 			// 
 			this->toolStripMenuItem15->Name = L"toolStripMenuItem15";
-			this->toolStripMenuItem15->Size = System::Drawing::Size(338, 26);
+			this->toolStripMenuItem15->Size = System::Drawing::Size(373, 28);
 			this->toolStripMenuItem15->Text = L"2. Îïåðàòîð óêàçàíèÿ òèïà";
 			this->toolStripMenuItem15->Click += gcnew System::EventHandler(this, &Main_Literature_Form::toolStripMenuItem15_Click);
 			// 
 			// êîìàíäûÑëîæåíèÿÈÂû÷èòàíèÿToolStripMenuItem
 			// 
 			this->êîìàíäûÑëîæåíèÿÈÂû÷èòàíèÿToolStripMenuItem->Name = L"êîìàíäûÑëîæåíèÿÈÂû÷èòàíèÿToolStripMenuItem";
-			this->êîìàíäûÑëîæåíèÿÈÂû÷èòàíèÿToolStripMenuItem->Size = System::Drawing::Size(338, 26);
+			this->êîìàíäûÑëîæåíèÿÈÂû÷èòàíèÿToolStripMenuItem->Size = System::Drawing::Size(373, 28);
 			this->êîìàíäûÑëîæåíèÿÈÂû÷èòàíèÿToolStripMenuItem->Text = L"3. Êîìàíäû ñëîæåíèÿ è âû÷èòàíèÿ";
 			this->êîìàíäûÑëîæåíèÿÈÂû÷èòàíèÿToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::êîìàíäûÑëîæåíèÿÈÂû÷èòàíèÿToolStripMenuItem_Click);
 			// 
@@ -445,28 +445,28 @@ namespace ProjectSprv {
 					this->êîìàíäûÄåëåíèÿToolStripMenuItem
 			});
 			this->êîìàíäûÓìíîæåíèÿÈÄåëåíèÿToolStripMenuItem->Name = L"êîìàíäûÓìíîæåíèÿÈÄåëåíèÿToolStripMenuItem";
-			this->êîìàíäûÓìíîæåíèÿÈÄåëåíèÿToolStripMenuItem->Size = System::Drawing::Size(338, 26);
+			this->êîìàíäûÓìíîæåíèÿÈÄåëåíèÿToolStripMenuItem->Size = System::Drawing::Size(373, 28);
 			this->êîìàíäûÓìíîæåíèÿÈÄåëåíèÿToolStripMenuItem->Text = L"4. Êîìàíäû óìíîæåíèÿ è äåëåíèÿ";
 			this->êîìàíäûÓìíîæåíèÿÈÄåëåíèÿToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::êîìàíäûÓìíîæåíèÿÈÄåëåíèÿToolStripMenuItem_Click);
 			// 
 			// êîìàíäûÓìíîæåíèÿToolStripMenuItem
 			// 
 			this->êîìàíäûÓìíîæåíèÿToolStripMenuItem->Name = L"êîìàíäûÓìíîæåíèÿToolStripMenuItem";
-			this->êîìàíäûÓìíîæåíèÿToolStripMenuItem->Size = System::Drawing::Size(257, 26);
+			this->êîìàíäûÓìíîæåíèÿToolStripMenuItem->Size = System::Drawing::Size(280, 28);
 			this->êîìàíäûÓìíîæåíèÿToolStripMenuItem->Text = L"1. Êîìàíäû óìíîæåíèÿ";
 			this->êîìàíäûÓìíîæåíèÿToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::êîìàíäûÓìíîæåíèÿToolStripMenuItem_Click);
 			// 
 			// êîìàíäûÄåëåíèÿToolStripMenuItem
 			// 
 			this->êîìàíäûÄåëåíèÿToolStripMenuItem->Name = L"êîìàíäûÄåëåíèÿToolStripMenuItem";
-			this->êîìàíäûÄåëåíèÿToolStripMenuItem->Size = System::Drawing::Size(257, 26);
+			this->êîìàíäûÄåëåíèÿToolStripMenuItem->Size = System::Drawing::Size(280, 28);
 			this->êîìàíäûÄåëåíèÿToolStripMenuItem->Text = L"2. Êîìàíäû äåëåíèÿ";
 			this->êîìàíäûÄåëåíèÿToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::êîìàíäûÄåëåíèÿToolStripMenuItem_Click);
 			// 
 			// èçìåíåíèåÐàçìåðà×èñëàToolStripMenuItem
 			// 
 			this->èçìåíåíèåÐàçìåðà×èñëàToolStripMenuItem->Name = L"èçìåíåíèåÐàçìåðà×èñëàToolStripMenuItem";
-			this->èçìåíåíèåÐàçìåðà×èñëàToolStripMenuItem->Size = System::Drawing::Size(338, 26);
+			this->èçìåíåíèåÐàçìåðà×èñëàToolStripMenuItem->Size = System::Drawing::Size(373, 28);
 			this->èçìåíåíèåÐàçìåðà×èñëàToolStripMenuItem->Text = L"5. Èçìåíåíèå ðàçìåðà ÷èñëà";
 			this->èçìåíåíèåÐàçìåðà×èñëàToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::èçìåíåíèåÐàçìåðà×èñëàToolStripMenuItem_Click);
 			// 
@@ -477,7 +477,7 @@ namespace ProjectSprv {
 					this->toolStripMenuItem17, this->êîìàíäûÓïðàâëåíèÿÖèêëîìToolStripMenuItem
 			});
 			this->toolStripMenuItem5->Name = L"toolStripMenuItem5";
-			this->toolStripMenuItem5->Size = System::Drawing::Size(525, 26);
+			this->toolStripMenuItem5->Size = System::Drawing::Size(426, 28);
 			this->toolStripMenuItem5->Text = L"4. Ïåðåõîäû è öèêëû";
 			this->toolStripMenuItem5->Click += gcnew System::EventHandler(this, &Main_Literature_Form::toolStripMenuItem5_Click);
 			// 
@@ -488,28 +488,28 @@ namespace ProjectSprv {
 					this->êîñâåííûéÏåðåõîäToolStripMenuItem
 			});
 			this->toolStripMenuItem16->Name = L"toolStripMenuItem16";
-			this->toolStripMenuItem16->Size = System::Drawing::Size(410, 26);
+			this->toolStripMenuItem16->Size = System::Drawing::Size(453, 28);
 			this->toolStripMenuItem16->Text = L"1. Áåçóñëîâíûé ïåðåõîä";
 			this->toolStripMenuItem16->Click += gcnew System::EventHandler(this, &Main_Literature_Form::toolStripMenuItem16_Click);
 			// 
 			// ïðÿìîéÏåðåõîäToolStripMenuItem
 			// 
 			this->ïðÿìîéÏåðåõîäToolStripMenuItem->Name = L"ïðÿìîéÏåðåõîäToolStripMenuItem";
-			this->ïðÿìîéÏåðåõîäToolStripMenuItem->Size = System::Drawing::Size(248, 26);
+			this->ïðÿìîéÏåðåõîäToolStripMenuItem->Size = System::Drawing::Size(270, 28);
 			this->ïðÿìîéÏåðåõîäToolStripMenuItem->Text = L"1. Ïðÿìîé ïåðåõîä";
 			this->ïðÿìîéÏåðåõîäToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::ïðÿìîéÏåðåõîäToolStripMenuItem_Click);
 			// 
 			// êîñâåííûéÏåðåõîäToolStripMenuItem
 			// 
 			this->êîñâåííûéÏåðåõîäToolStripMenuItem->Name = L"êîñâåííûéÏåðåõîäToolStripMenuItem";
-			this->êîñâåííûéÏåðåõîäToolStripMenuItem->Size = System::Drawing::Size(248, 26);
+			this->êîñâåííûéÏåðåõîäToolStripMenuItem->Size = System::Drawing::Size(270, 28);
 			this->êîñâåííûéÏåðåõîäToolStripMenuItem->Text = L"2. Êîñâåííûé ïåðåõîä";
 			this->êîñâåííûéÏåðåõîäToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::êîñâåííûéÏåðåõîäToolStripMenuItem_Click);
 			// 
 			// toolStripMenuItem17
 			// 
 			this->toolStripMenuItem17->Name = L"toolStripMenuItem17";
-			this->toolStripMenuItem17->Size = System::Drawing::Size(410, 26);
+			this->toolStripMenuItem17->Size = System::Drawing::Size(453, 28);
 			this->toolStripMenuItem17->Text = L"2. Êîìàíäû ñðàâíåíèÿ è óñëîâíîãî ïåðåõîäà";
 			this->toolStripMenuItem17->Click += gcnew System::EventHandler(this, &Main_Literature_Form::toolStripMenuItem17_Click);
 			// 
@@ -520,21 +520,21 @@ namespace ProjectSprv {
 					this->êîìàíäûLOOPELOOPZÈLOOPNELOOPNZToolStripMenuItem
 			});
 			this->êîìàíäûÓïðàâëåíèÿÖèêëîìToolStripMenuItem->Name = L"êîìàíäûÓïðàâëåíèÿÖèêëîìToolStripMenuItem";
-			this->êîìàíäûÓïðàâëåíèÿÖèêëîìToolStripMenuItem->Size = System::Drawing::Size(410, 26);
+			this->êîìàíäûÓïðàâëåíèÿÖèêëîìToolStripMenuItem->Size = System::Drawing::Size(453, 28);
 			this->êîìàíäûÓïðàâëåíèÿÖèêëîìToolStripMenuItem->Text = L"3. Êîìàíäû óïðàâëåíèÿ öèêëîì";
 			this->êîìàíäûÓïðàâëåíèÿÖèêëîìToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::êîìàíäûÓïðàâëåíèÿÖèêëîìToolStripMenuItem_Click);
 			// 
 			// êîìàíäàLOOPToolStripMenuItem
 			// 
 			this->êîìàíäàLOOPToolStripMenuItem->Name = L"êîìàíäàLOOPToolStripMenuItem";
-			this->êîìàíäàLOOPToolStripMenuItem->Size = System::Drawing::Size(405, 26);
+			this->êîìàíäàLOOPToolStripMenuItem->Size = System::Drawing::Size(459, 28);
 			this->êîìàíäàLOOPToolStripMenuItem->Text = L"1. Êîìàíäà LOOP";
 			this->êîìàíäàLOOPToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::êîìàíäàLOOPToolStripMenuItem_Click);
 			// 
 			// êîìàíäûLOOPELOOPZÈLOOPNELOOPNZToolStripMenuItem
 			// 
 			this->êîìàíäûLOOPELOOPZÈLOOPNELOOPNZToolStripMenuItem->Name = L"êîìàíäûLOOPELOOPZÈLOOPNELOOPNZToolStripMenuItem";
-			this->êîìàíäûLOOPELOOPZÈLOOPNELOOPNZToolStripMenuItem->Size = System::Drawing::Size(405, 26);
+			this->êîìàíäûLOOPELOOPZÈLOOPNELOOPNZToolStripMenuItem->Size = System::Drawing::Size(459, 28);
 			this->êîìàíäûLOOPELOOPZÈLOOPNELOOPNZToolStripMenuItem->Text = L"2. Êîìàíäû LOOPE/LOOPZ è LOOPNE/LOOPNZ";
 			this->êîìàíäûLOOPELOOPZÈLOOPNELOOPNZToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::êîìàíäûLOOPELOOPZÈLOOPNELOOPNZToolStripMenuItem_Click);
 			// 
@@ -545,28 +545,28 @@ namespace ProjectSprv {
 					this->êîìàíäàLEAToolStripMenuItem, this->îáðàáîòêàÌàññèâîâToolStripMenuItem
 			});
 			this->ìàññèâûToolStripMenuItem->Name = L"ìàññèâûToolStripMenuItem";
-			this->ìàññèâûToolStripMenuItem->Size = System::Drawing::Size(525, 26);
+			this->ìàññèâûToolStripMenuItem->Size = System::Drawing::Size(426, 28);
 			this->ìàññèâûToolStripMenuItem->Text = L"5. Ìàññèâû";
 			this->ìàññèâûToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::ìàññèâûToolStripMenuItem_Click);
 			// 
 			// ìîäèôèêàöèÿÀäðåñîâToolStripMenuItem
 			// 
 			this->ìîäèôèêàöèÿÀäðåñîâToolStripMenuItem->Name = L"ìîäèôèêàöèÿÀäðåñîâToolStripMenuItem";
-			this->ìîäèôèêàöèÿÀäðåñîâToolStripMenuItem->Size = System::Drawing::Size(267, 26);
+			this->ìîäèôèêàöèÿÀäðåñîâToolStripMenuItem->Size = System::Drawing::Size(293, 28);
 			this->ìîäèôèêàöèÿÀäðåñîâToolStripMenuItem->Text = L"1. Ìîäèôèêàöèÿ àäðåñîâ";
 			this->ìîäèôèêàöèÿÀäðåñîâToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::ìîäèôèêàöèÿÀäðåñîâToolStripMenuItem_Click);
 			// 
 			// êîìàíäàLEAToolStripMenuItem
 			// 
 			this->êîìàíäàLEAToolStripMenuItem->Name = L"êîìàíäàLEAToolStripMenuItem";
-			this->êîìàíäàLEAToolStripMenuItem->Size = System::Drawing::Size(267, 26);
+			this->êîìàíäàLEAToolStripMenuItem->Size = System::Drawing::Size(293, 28);
 			this->êîìàíäàLEAToolStripMenuItem->Text = L"2. Êîìàíäà LEA";
 			this->êîìàíäàLEAToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::êîìàíäàLEAToolStripMenuItem_Click);
 			// 
 			// îáðàáîòêàÌàññèâîâToolStripMenuItem
 			// 
 			this->îáðàáîòêàÌàññèâîâToolStripMenuItem->Name = L"îáðàáîòêàÌàññèâîâToolStripMenuItem";
-			this->îáðàáîòêàÌàññèâîâToolStripMenuItem->Size = System::Drawing::Size(267, 26);
+			this->îáðàáîòêàÌàññèâîâToolStripMenuItem->Size = System::Drawing::Size(293, 28);
 			this->îáðàáîòêàÌàññèâîâToolStripMenuItem->Text = L"3. Îáðàáîòêà ìàññèâîâ";
 			this->îáðàáîòêàÌàññèâîâToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::îáðàáîòêàÌàññèâîâToolStripMenuItem_Click);
 			// 
@@ -577,14 +577,14 @@ namespace ProjectSprv {
 					this->êîìàíäûÑäâèãàToolStripMenuItem, this->óìíîæåíèåÈÄåëåíèåÑÏîìîùüþÏîðàçðÿäíûõÎïåðàöèéToolStripMenuItem
 			});
 			this->ïîðàçðÿäíûåÎïåðàöèèToolStripMenuItem->Name = L"ïîðàçðÿäíûåÎïåðàöèèToolStripMenuItem";
-			this->ïîðàçðÿäíûåÎïåðàöèèToolStripMenuItem->Size = System::Drawing::Size(525, 26);
+			this->ïîðàçðÿäíûåÎïåðàöèèToolStripMenuItem->Size = System::Drawing::Size(426, 28);
 			this->ïîðàçðÿäíûåÎïåðàöèèToolStripMenuItem->Text = L"6. Ïîðàçðÿäíûå îïåðàöèè";
 			this->ïîðàçðÿäíûåÎïåðàöèèToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::ïîðàçðÿäíûåÎïåðàöèèToolStripMenuItem_Click);
 			// 
 			// ëîãè÷åñêèåÊîìàíäûToolStripMenuItem
 			// 
 			this->ëîãè÷åñêèåÊîìàíäûToolStripMenuItem->Name = L"ëîãè÷åñêèåÊîìàíäûToolStripMenuItem";
-			this->ëîãè÷åñêèåÊîìàíäûToolStripMenuItem->Size = System::Drawing::Size(417, 26);
+			this->ëîãè÷åñêèåÊîìàíäûToolStripMenuItem->Size = System::Drawing::Size(464, 28);
 			this->ëîãè÷åñêèåÊîìàíäûToolStripMenuItem->Text = L"1. Ëîãè÷åñêèå êîìàíäû";
 			this->ëîãè÷åñêèåÊîìàíäûToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::ëîãè÷åñêèåÊîìàíäûToolStripMenuItem_Click);
 			// 
@@ -595,35 +595,35 @@ namespace ProjectSprv {
 					this->àðèôìåòè÷åñêèåÑäâèãèToolStripMenuItem, this->öèêëè÷åñêèåÑäâèãèToolStripMenuItem, this->ðàñøèðåííûåÑäâèãèToolStripMenuItem
 			});
 			this->êîìàíäûÑäâèãàToolStripMenuItem->Name = L"êîìàíäûÑäâèãàToolStripMenuItem";
-			this->êîìàíäûÑäâèãàToolStripMenuItem->Size = System::Drawing::Size(417, 26);
+			this->êîìàíäûÑäâèãàToolStripMenuItem->Size = System::Drawing::Size(464, 28);
 			this->êîìàíäûÑäâèãàToolStripMenuItem->Text = L"2. Êîìàíäû ñäâèãà";
 			this->êîìàíäûÑäâèãàToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::êîìàíäûÑäâèãàToolStripMenuItem_Click);
 			// 
 			// ëîãè÷åñêèåÑäâèãèToolStripMenuItem
 			// 
 			this->ëîãè÷åñêèåÑäâèãèToolStripMenuItem->Name = L"ëîãè÷åñêèåÑäâèãèToolStripMenuItem";
-			this->ëîãè÷åñêèåÑäâèãèToolStripMenuItem->Size = System::Drawing::Size(277, 26);
+			this->ëîãè÷åñêèåÑäâèãèToolStripMenuItem->Size = System::Drawing::Size(305, 28);
 			this->ëîãè÷åñêèåÑäâèãèToolStripMenuItem->Text = L"1. Ëîãè÷åñêèå ñäâèãè";
 			this->ëîãè÷åñêèåÑäâèãèToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::ëîãè÷åñêèåÑäâèãèToolStripMenuItem_Click);
 			// 
 			// àðèôìåòè÷åñêèåÑäâèãèToolStripMenuItem
 			// 
 			this->àðèôìåòè÷åñêèåÑäâèãèToolStripMenuItem->Name = L"àðèôìåòè÷åñêèåÑäâèãèToolStripMenuItem";
-			this->àðèôìåòè÷åñêèåÑäâèãèToolStripMenuItem->Size = System::Drawing::Size(277, 26);
+			this->àðèôìåòè÷åñêèåÑäâèãèToolStripMenuItem->Size = System::Drawing::Size(305, 28);
 			this->àðèôìåòè÷åñêèåÑäâèãèToolStripMenuItem->Text = L"2. Àðèôìåòè÷åñêèå ñäâèãè";
 			this->àðèôìåòè÷åñêèåÑäâèãèToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::àðèôìåòè÷åñêèåÑäâèãèToolStripMenuItem_Click);
 			// 
 			// öèêëè÷åñêèåÑäâèãèToolStripMenuItem
 			// 
 			this->öèêëè÷åñêèåÑäâèãèToolStripMenuItem->Name = L"öèêëè÷åñêèåÑäâèãèToolStripMenuItem";
-			this->öèêëè÷åñêèåÑäâèãèToolStripMenuItem->Size = System::Drawing::Size(277, 26);
+			this->öèêëè÷åñêèåÑäâèãèToolStripMenuItem->Size = System::Drawing::Size(305, 28);
 			this->öèêëè÷åñêèåÑäâèãèToolStripMenuItem->Text = L"3. Öèêëè÷åñêèå ñäâèãè";
 			this->öèêëè÷åñêèåÑäâèãèToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::öèêëè÷åñêèåÑäâèãèToolStripMenuItem_Click);
 			// 
 			// ðàñøèðåííûåÑäâèãèToolStripMenuItem
 			// 
 			this->ðàñøèðåííûåÑäâèãèToolStripMenuItem->Name = L"ðàñøèðåííûåÑäâèãèToolStripMenuItem";
-			this->ðàñøèðåííûåÑäâèãèToolStripMenuItem->Size = System::Drawing::Size(277, 26);
+			this->ðàñøèðåííûåÑäâèãèToolStripMenuItem->Size = System::Drawing::Size(305, 28);
 			this->ðàñøèðåííûåÑäâèãèToolStripMenuItem->Text = L"4. Ðàñøèðåííûå ñäâèãè";
 			this->ðàñøèðåííûåÑäâèãèToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::ðàñøèðåííûåÑäâèãèToolStripMenuItem_Click);
 			// 
@@ -634,28 +634,28 @@ namespace ProjectSprv {
 					this->äåëåíèåToolStripMenuItem, this->ïîëó÷åíèåÎñòàòêàÎòÄåëåíèÿToolStripMenuItem
 			});
 			this->óìíîæåíèåÈÄåëåíèåÑÏîìîùüþÏîðàçðÿäíûõÎïåðàöèéToolStripMenuItem->Name = L"óìíîæåíèåÈÄåëåíèåÑÏîìîùüþÏîðàçðÿäíûõÎïåðàöèéToolStripMenuItem";
-			this->óìíîæåíèåÈÄåëåíèåÑÏîìîùüþÏîðàçðÿäíûõÎïåðàöèéToolStripMenuItem->Size = System::Drawing::Size(417, 26);
+			this->óìíîæåíèåÈÄåëåíèåÑÏîìîùüþÏîðàçðÿäíûõÎïåðàöèéToolStripMenuItem->Size = System::Drawing::Size(464, 28);
 			this->óìíîæåíèåÈÄåëåíèåÑÏîìîùüþÏîðàçðÿäíûõÎïåðàöèéToolStripMenuItem->Text = L"3. \"*\" è \"/\" ñ ïîìîùüþ ïîðàçðÿäíûõ îïåðàöèé";
 			this->óìíîæåíèåÈÄåëåíèåÑÏîìîùüþÏîðàçðÿäíûõÎïåðàöèéToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::óìíîæåíèåÈÄåëåíèåÑÏîìîùüþÏîðàçðÿäíûõÎïåðàöèéToolStripMenuItem_Click);
 			// 
 			// óìíîæåíèåToolStripMenuItem
 			// 
 			this->óìíîæåíèåToolStripMenuItem->Name = L"óìíîæåíèåToolStripMenuItem";
-			this->óìíîæåíèåToolStripMenuItem->Size = System::Drawing::Size(320, 26);
+			this->óìíîæåíèåToolStripMenuItem->Size = System::Drawing::Size(354, 28);
 			this->óìíîæåíèåToolStripMenuItem->Text = L"1. Óìíîæåíèå";
 			this->óìíîæåíèåToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::óìíîæåíèåToolStripMenuItem_Click);
 			// 
 			// äåëåíèåToolStripMenuItem
 			// 
 			this->äåëåíèåToolStripMenuItem->Name = L"äåëåíèåToolStripMenuItem";
-			this->äåëåíèåToolStripMenuItem->Size = System::Drawing::Size(320, 26);
+			this->äåëåíèåToolStripMenuItem->Size = System::Drawing::Size(354, 28);
 			this->äåëåíèåToolStripMenuItem->Text = L"2. Äåëåíèå";
 			this->äåëåíèåToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::äåëåíèåToolStripMenuItem_Click);
 			// 
 			// ïîëó÷åíèåÎñòàòêàÎòÄåëåíèÿToolStripMenuItem
 			// 
 			this->ïîëó÷åíèåÎñòàòêàÎòÄåëåíèÿToolStripMenuItem->Name = L"ïîëó÷åíèåÎñòàòêàÎòÄåëåíèÿToolStripMenuItem";
-			this->ïîëó÷åíèåÎñòàòêàÎòÄåëåíèÿToolStripMenuItem->Size = System::Drawing::Size(320, 26);
+			this->ïîëó÷åíèåÎñòàòêàÎòÄåëåíèÿToolStripMenuItem->Size = System::Drawing::Size(354, 28);
 			this->ïîëó÷åíèåÎñòàòêàÎòÄåëåíèÿToolStripMenuItem->Text = L"3. Ïîëó÷åíèå îñòàòêà îò äåëåíèÿ";
 			this->ïîëó÷åíèåÎñòàòêàÎòÄåëåíèÿToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::ïîëó÷åíèåÎñòàòêàÎòÄåëåíèÿToolStripMenuItem_Click);
 			// 
@@ -668,70 +668,70 @@ namespace ProjectSprv {
 					this->ëîêàëüíûåÄàííûåÏðîöåäóðToolStripMenuItem, this->ðåêóðñèâíûåÏðîöåäóðûToolStripMenuItem
 			});
 			this->ïðîãðàììàÏðîöåäóðûToolStripMenuItem->Name = L"ïðîãðàììàÏðîöåäóðûToolStripMenuItem";
-			this->ïðîãðàììàÏðîöåäóðûToolStripMenuItem->Size = System::Drawing::Size(525, 26);
+			this->ïðîãðàììàÏðîöåäóðûToolStripMenuItem->Size = System::Drawing::Size(426, 28);
 			this->ïðîãðàììàÏðîöåäóðûToolStripMenuItem->Text = L"7. Ïðîãðàììà. Ïðîöåäóðû";
 			this->ïðîãðàììàÏðîöåäóðûToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::ïðîãðàììàÏðîöåäóðûToolStripMenuItem_Click);
 			// 
 			// ñòðóêòóðàÏðîãðàììûÍàßçûêåÀññåìáëåðàToolStripMenuItem
 			// 
 			this->ñòðóêòóðàÏðîãðàììûÍàßçûêåÀññåìáëåðàToolStripMenuItem->Name = L"ñòðóêòóðàÏðîãðàììûÍàßçûêåÀññåìáëåðàToolStripMenuItem";
-			this->ñòðóêòóðàÏðîãðàììûÍàßçûêåÀññåìáëåðàToolStripMenuItem->Size = System::Drawing::Size(415, 26);
+			this->ñòðóêòóðàÏðîãðàììûÍàßçûêåÀññåìáëåðàToolStripMenuItem->Size = System::Drawing::Size(460, 28);
 			this->ñòðóêòóðàÏðîãðàììûÍàßçûêåÀññåìáëåðàToolStripMenuItem->Text = L"1. Ñòðóêòóðà ïðîãðàììû íà ÿçûêå àññåìáëåðà";
 			this->ñòðóêòóðàÏðîãðàììûÍàßçûêåÀññåìáëåðàToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::ñòðóêòóðàÏðîãðàììûÍàßçûêåÀññåìáëåðàToolStripMenuItem_Click);
 			// 
 			// êîìàíäûÐàáîòûÑîÑòåêîìToolStripMenuItem
 			// 
 			this->êîìàíäûÐàáîòûÑîÑòåêîìToolStripMenuItem->Name = L"êîìàíäûÐàáîòûÑîÑòåêîìToolStripMenuItem";
-			this->êîìàíäûÐàáîòûÑîÑòåêîìToolStripMenuItem->Size = System::Drawing::Size(415, 26);
+			this->êîìàíäûÐàáîòûÑîÑòåêîìToolStripMenuItem->Size = System::Drawing::Size(460, 28);
 			this->êîìàíäûÐàáîòûÑîÑòåêîìToolStripMenuItem->Text = L"2. Êîìàíäû ðàáîòû ñî ñòåêîì";
 			this->êîìàíäûÐàáîòûÑîÑòåêîìToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::êîìàíäûÐàáîòûÑîÑòåêîìToolStripMenuItem_Click);
 			// 
 			// ñèíòàêñèñÏðîöåäóðûToolStripMenuItem
 			// 
 			this->ñèíòàêñèñÏðîöåäóðûToolStripMenuItem->Name = L"ñèíòàêñèñÏðîöåäóðûToolStripMenuItem";
-			this->ñèíòàêñèñÏðîöåäóðûToolStripMenuItem->Size = System::Drawing::Size(415, 26);
+			this->ñèíòàêñèñÏðîöåäóðûToolStripMenuItem->Size = System::Drawing::Size(460, 28);
 			this->ñèíòàêñèñÏðîöåäóðûToolStripMenuItem->Text = L"3. Ñèíòàêñèñ ïðîöåäóðû";
 			this->ñèíòàêñèñÏðîöåäóðûToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::ñèíòàêñèñÏðîöåäóðûToolStripMenuItem_Click);
 			// 
 			// âûçîâÏðîöåäóðûÈÂîçâðàòÈçÏðîöåäóðûToolStripMenuItem
 			// 
 			this->âûçîâÏðîöåäóðûÈÂîçâðàòÈçÏðîöåäóðûToolStripMenuItem->Name = L"âûçîâÏðîöåäóðûÈÂîçâðàòÈçÏðîöåäóðûToolStripMenuItem";
-			this->âûçîâÏðîöåäóðûÈÂîçâðàòÈçÏðîöåäóðûToolStripMenuItem->Size = System::Drawing::Size(415, 26);
+			this->âûçîâÏðîöåäóðûÈÂîçâðàòÈçÏðîöåäóðûToolStripMenuItem->Size = System::Drawing::Size(460, 28);
 			this->âûçîâÏðîöåäóðûÈÂîçâðàòÈçÏðîöåäóðûToolStripMenuItem->Text = L"4. Âûçîâ ïðîöåäóðû è âîçâðàò èç ïðîöåäóðû";
 			this->âûçîâÏðîöåäóðûÈÂîçâðàòÈçÏðîöåäóðûToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::âûçîâÏðîöåäóðûÈÂîçâðàòÈçÏðîöåäóðûToolStripMenuItem_Click);
 			// 
 			// ïåðåäà÷àÏàðàìåòðîâÏðîöåäóðûToolStripMenuItem
 			// 
 			this->ïåðåäà÷àÏàðàìåòðîâÏðîöåäóðûToolStripMenuItem->Name = L"ïåðåäà÷àÏàðàìåòðîâÏðîöåäóðûToolStripMenuItem";
-			this->ïåðåäà÷àÏàðàìåòðîâÏðîöåäóðûToolStripMenuItem->Size = System::Drawing::Size(415, 26);
+			this->ïåðåäà÷àÏàðàìåòðîâÏðîöåäóðûToolStripMenuItem->Size = System::Drawing::Size(460, 28);
 			this->ïåðåäà÷àÏàðàìåòðîâÏðîöåäóðûToolStripMenuItem->Text = L"5. Ïåðåäà÷à ïàðàìåòðîâ ïðîöåäóðû";
 			this->ïåðåäà÷àÏàðàìåòðîâÏðîöåäóðûToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::ïåðåäà÷àÏàðàìåòðîâÏðîöåäóðûToolStripMenuItem_Click);
 			// 
 			// ïåðåäà÷àÐåçóëüòàòàÏðîöåäóðûToolStripMenuItem
 			// 
 			this->ïåðåäà÷àÐåçóëüòàòàÏðîöåäóðûToolStripMenuItem->Name = L"ïåðåäà÷àÐåçóëüòàòàÏðîöåäóðûToolStripMenuItem";
-			this->ïåðåäà÷àÐåçóëüòàòàÏðîöåäóðûToolStripMenuItem->Size = System::Drawing::Size(415, 26);
+			this->ïåðåäà÷àÐåçóëüòàòàÏðîöåäóðûToolStripMenuItem->Size = System::Drawing::Size(460, 28);
 			this->ïåðåäà÷àÐåçóëüòàòàÏðîöåäóðûToolStripMenuItem->Text = L"6. Ïåðåäà÷à ðåçóëüòàòà ïðîöåäóðû";
 			this->ïåðåäà÷àÐåçóëüòàòàÏðîöåäóðûToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::ïåðåäà÷àÐåçóëüòàòàÏðîöåäóðûToolStripMenuItem_Click);
 			// 
 			// ñîõðàíåíèåÐåãèñòðîâÂÏðîöåäóðåToolStripMenuItem
 			// 
 			this->ñîõðàíåíèåÐåãèñòðîâÂÏðîöåäóðåToolStripMenuItem->Name = L"ñîõðàíåíèåÐåãèñòðîâÂÏðîöåäóðåToolStripMenuItem";
-			this->ñîõðàíåíèåÐåãèñòðîâÂÏðîöåäóðåToolStripMenuItem->Size = System::Drawing::Size(415, 26);
+			this->ñîõðàíåíèåÐåãèñòðîâÂÏðîöåäóðåToolStripMenuItem->Size = System::Drawing::Size(460, 28);
 			this->ñîõðàíåíèåÐåãèñòðîâÂÏðîöåäóðåToolStripMenuItem->Text = L"7. Ñîõðàíåíèå ðåãèñòðîâ â ïðîöåäóðå";
 			this->ñîõðàíåíèåÐåãèñòðîâÂÏðîöåäóðåToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::ñîõðàíåíèåÐåãèñòðîâÂÏðîöåäóðåToolStripMenuItem_Click);
 			// 
 			// ëîêàëüíûåÄàííûåÏðîöåäóðToolStripMenuItem
 			// 
 			this->ëîêàëüíûåÄàííûåÏðîöåäóðToolStripMenuItem->Name = L"ëîêàëüíûåÄàííûåÏðîöåäóðToolStripMenuItem";
-			this->ëîêàëüíûåÄàííûåÏðîöåäóðToolStripMenuItem->Size = System::Drawing::Size(415, 26);
+			this->ëîêàëüíûåÄàííûåÏðîöåäóðToolStripMenuItem->Size = System::Drawing::Size(460, 28);
 			this->ëîêàëüíûåÄàííûåÏðîöåäóðToolStripMenuItem->Text = L"8. Ëîêàëüíûå äàííûå ïðîöåäóð";
 			this->ëîêàëüíûåÄàííûåÏðîöåäóðToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::ëîêàëüíûåÄàííûåÏðîöåäóðToolStripMenuItem_Click);
 			// 
 			// ðåêóðñèâíûåÏðîöåäóðûToolStripMenuItem
 			// 
 			this->ðåêóðñèâíûåÏðîöåäóðûToolStripMenuItem->Name = L"ðåêóðñèâíûåÏðîöåäóðûToolStripMenuItem";
-			this->ðåêóðñèâíûåÏðîöåäóðûToolStripMenuItem->Size = System::Drawing::Size(415, 26);
+			this->ðåêóðñèâíûåÏðîöåäóðûToolStripMenuItem->Size = System::Drawing::Size(460, 28);
 			this->ðåêóðñèâíûåÏðîöåäóðûToolStripMenuItem->Text = L"9. Ðåêóðñèâíûå ïðîöåäóðû";
 			this->ðåêóðñèâíûåÏðîöåäóðûToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::ðåêóðñèâíûåÏðîöåäóðûToolStripMenuItem_Click);
 			// 
@@ -749,7 +749,7 @@ namespace ProjectSprv {
 			// âûñîêîóðîâíåâàÿÎïòèìèçàöèÿToolStripMenuItem
 			// 
 			this->âûñîêîóðîâíåâàÿÎïòèìèçàöèÿToolStripMenuItem->Name = L"âûñîêîóðîâíåâàÿÎïòèìèçàöèÿToolStripMenuItem";
-			this->âûñîêîóðîâíåâàÿÎïòèìèçàöèÿToolStripMenuItem->Size = System::Drawing::Size(331, 26);
+			this->âûñîêîóðîâíåâàÿÎïòèìèçàöèÿToolStripMenuItem->Size = System::Drawing::Size(363, 28);
 			this->âûñîêîóðîâíåâàÿÎïòèìèçàöèÿToolStripMenuItem->Text = L"1. Âûñîêîóðîâíåâàÿ îïòèìèçàöèÿ";
 			this->âûñîêîóðîâíåâàÿÎïòèìèçàöèÿToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::âûñîêîóðîâíåâàÿÎïòèìèçàöèÿToolStripMenuItem_Click);
 			// 
@@ -760,35 +760,35 @@ namespace ProjectSprv {
 					this->ïåðåíîñÏðîâåðêèÓñëîâèÿÂÊîíåöÖèêëàToolStripMenuItem, this->âûïîëíåíèåÖèêëàÇàäîìÍàïåð¸äToolStripMenuItem, this->ðàçâîðà÷èâàíèåÖèêëîâToolStripMenuItem
 			});
 			this->îïòèìèçàöèÿÑðåäíåãîÓðîâíÿToolStripMenuItem->Name = L"îïòèìèçàöèÿÑðåäíåãîÓðîâíÿToolStripMenuItem";
-			this->îïòèìèçàöèÿÑðåäíåãîÓðîâíÿToolStripMenuItem->Size = System::Drawing::Size(331, 26);
+			this->îïòèìèçàöèÿÑðåäíåãîÓðîâíÿToolStripMenuItem->Size = System::Drawing::Size(363, 28);
 			this->îïòèìèçàöèÿÑðåäíåãîÓðîâíÿToolStripMenuItem->Text = L"2. Îïòèìèçàöèÿ ñðåäíåãî óðîâíÿ";
 			this->îïòèìèçàöèÿÑðåäíåãîÓðîâíÿToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::îïòèìèçàöèÿÑðåäíåãîÓðîâíÿToolStripMenuItem_Click);
 			// 
 			// âû÷èñëåíèåÊîíñòàíòÂíåÖèêëàToolStripMenuItem
 			// 
 			this->âû÷èñëåíèåÊîíñòàíòÂíåÖèêëàToolStripMenuItem->Name = L"âû÷èñëåíèåÊîíñòàíòÂíåÖèêëàToolStripMenuItem";
-			this->âû÷èñëåíèåÊîíñòàíòÂíåÖèêëàToolStripMenuItem->Size = System::Drawing::Size(403, 26);
+			this->âû÷èñëåíèåÊîíñòàíòÂíåÖèêëàToolStripMenuItem->Size = System::Drawing::Size(446, 28);
 			this->âû÷èñëåíèåÊîíñòàíòÂíåÖèêëàToolStripMenuItem->Text = L"1. Âû÷èñëåíèå êîíñòàíò âíå öèêëà";
 			this->âû÷èñëåíèåÊîíñòàíòÂíåÖèêëàToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::âû÷èñëåíèåÊîíñòàíòÂíåÖèêëàToolStripMenuItem_Click);
 			// 
 			// ïåðåíîñÏðîâåðêèÓñëîâèÿÂÊîíåöÖèêëàToolStripMenuItem
 			// 
 			this->ïåðåíîñÏðîâåðêèÓñëîâèÿÂÊîíåöÖèêëàToolStripMenuItem->Name = L"ïåðåíîñÏðîâåðêèÓñëîâèÿÂÊîíåöÖèêëàToolStripMenuItem";
-			this->ïåðåíîñÏðîâåðêèÓñëîâèÿÂÊîíåöÖèêëàToolStripMenuItem->Size = System::Drawing::Size(403, 26);
+			this->ïåðåíîñÏðîâåðêèÓñëîâèÿÂÊîíåöÖèêëàToolStripMenuItem->Size = System::Drawing::Size(446, 28);
 			this->ïåðåíîñÏðîâåðêèÓñëîâèÿÂÊîíåöÖèêëàToolStripMenuItem->Text = L"2. Ïåðåíîñ ïðîâåðêè óñëîâèÿ â êîíåö öèêëà";
 			this->ïåðåíîñÏðîâåðêèÓñëîâèÿÂÊîíåöÖèêëàToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::ïåðåíîñÏðîâåðêèÓñëîâèÿÂÊîíåöÖèêëàToolStripMenuItem_Click);
 			// 
 			// âûïîëíåíèåÖèêëàÇàäîìÍàïåð¸äToolStripMenuItem
 			// 
 			this->âûïîëíåíèåÖèêëàÇàäîìÍàïåð¸äToolStripMenuItem->Name = L"âûïîëíåíèåÖèêëàÇàäîìÍàïåð¸äToolStripMenuItem";
-			this->âûïîëíåíèåÖèêëàÇàäîìÍàïåð¸äToolStripMenuItem->Size = System::Drawing::Size(403, 26);
+			this->âûïîëíåíèåÖèêëàÇàäîìÍàïåð¸äToolStripMenuItem->Size = System::Drawing::Size(446, 28);
 			this->âûïîëíåíèåÖèêëàÇàäîìÍàïåð¸äToolStripMenuItem->Text = L"3. Âûïîëíåíèå öèêëà çàäîì íàïåð¸ä";
 			this->âûïîëíåíèåÖèêëàÇàäîìÍàïåð¸äToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::âûïîëíåíèåÖèêëàÇàäîìÍàïåð¸äToolStripMenuItem_Click);
 			// 
 			// ðàçâîðà÷èâàíèåÖèêëîâToolStripMenuItem
 			// 
 			this->ðàçâîðà÷èâàíèåÖèêëîâToolStripMenuItem->Name = L"ðàçâîðà÷èâàíèåÖèêëîâToolStripMenuItem";
-			this->ðàçâîðà÷èâàíèåÖèêëîâToolStripMenuItem->Size = System::Drawing::Size(403, 26);
+			this->ðàçâîðà÷èâàíèåÖèêëîâToolStripMenuItem->Size = System::Drawing::Size(446, 28);
 			this->ðàçâîðà÷èâàíèåÖèêëîâToolStripMenuItem->Text = L"4. Ðàçâîðà÷èâàíèå öèêëîâ";
 			this->ðàçâîðà÷èâàíèåÖèêëîâToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::ðàçâîðà÷èâàíèåÖèêëîâToolStripMenuItem_Click);
 			// 
@@ -799,35 +799,35 @@ namespace ProjectSprv {
 					this->èñïîëüçîâàíèåÊîìàíäûLEAToolStripMenuItem, this->çàìåíàÊîìàíäToolStripMenuItem, this->âûðàâíèâàíèåToolStripMenuItem
 			});
 			this->íèçêîóðîâíåâàÿÎïòèìèçàöèÿToolStripMenuItem->Name = L"íèçêîóðîâíåâàÿÎïòèìèçàöèÿToolStripMenuItem";
-			this->íèçêîóðîâíåâàÿÎïòèìèçàöèÿToolStripMenuItem->Size = System::Drawing::Size(331, 26);
+			this->íèçêîóðîâíåâàÿÎïòèìèçàöèÿToolStripMenuItem->Size = System::Drawing::Size(363, 28);
 			this->íèçêîóðîâíåâàÿÎïòèìèçàöèÿToolStripMenuItem->Text = L"3. Íèçêîóðîâíåâàÿ îïòèìèçàöèÿ";
 			this->íèçêîóðîâíåâàÿÎïòèìèçàöèÿToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::íèçêîóðîâíåâàÿÎïòèìèçàöèÿToolStripMenuItem_Click);
 			// 
 			// îñíîâíûåÏðèíöèïûToolStripMenuItem
 			// 
 			this->îñíîâíûåÏðèíöèïûToolStripMenuItem->Name = L"îñíîâíûåÏðèíöèïûToolStripMenuItem";
-			this->îñíîâíûåÏðèíöèïûToolStripMenuItem->Size = System::Drawing::Size(313, 26);
+			this->îñíîâíûåÏðèíöèïûToolStripMenuItem->Size = System::Drawing::Size(344, 28);
 			this->îñíîâíûåÏðèíöèïûToolStripMenuItem->Text = L"1. Îñíîâíûå ïðèíöèïû";
 			this->îñíîâíûåÏðèíöèïûToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::îñíîâíûåÏðèíöèïûToolStripMenuItem_Click);
 			// 
 			// èñïîëüçîâàíèåÊîìàíäûLEAToolStripMenuItem
 			// 
 			this->èñïîëüçîâàíèåÊîìàíäûLEAToolStripMenuItem->Name = L"èñïîëüçîâàíèåÊîìàíäûLEAToolStripMenuItem";
-			this->èñïîëüçîâàíèåÊîìàíäûLEAToolStripMenuItem->Size = System::Drawing::Size(313, 26);
+			this->èñïîëüçîâàíèåÊîìàíäûLEAToolStripMenuItem->Size = System::Drawing::Size(344, 28);
 			this->èñïîëüçîâàíèåÊîìàíäûLEAToolStripMenuItem->Text = L"2. Èñïîëüçîâàíèå êîìàíäû LEA";
 			this->èñïîëüçîâàíèåÊîìàíäûLEAToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::èñïîëüçîâàíèåÊîìàíäûLEAToolStripMenuItem_Click);
 			// 
 			// çàìåíàÊîìàíäToolStripMenuItem
 			// 
 			this->çàìåíàÊîìàíäToolStripMenuItem->Name = L"çàìåíàÊîìàíäToolStripMenuItem";
-			this->çàìåíàÊîìàíäToolStripMenuItem->Size = System::Drawing::Size(313, 26);
+			this->çàìåíàÊîìàíäToolStripMenuItem->Size = System::Drawing::Size(344, 28);
 			this->çàìåíàÊîìàíäToolStripMenuItem->Text = L"3. Çàìåíà êîìàíä";
 			this->çàìåíàÊîìàíäToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::çàìåíàÊîìàíäToolStripMenuItem_Click);
 			// 
 			// âûðàâíèâàíèåToolStripMenuItem
 			// 
 			this->âûðàâíèâàíèåToolStripMenuItem->Name = L"âûðàâíèâàíèåToolStripMenuItem";
-			this->âûðàâíèâàíèåToolStripMenuItem->Size = System::Drawing::Size(313, 26);
+			this->âûðàâíèâàíèåToolStripMenuItem->Size = System::Drawing::Size(344, 28);
 			this->âûðàâíèâàíèåToolStripMenuItem->Text = L"4. Âûðàâíèâàíèå";
 			this->âûðàâíèâàíèåToolStripMenuItem->Click += gcnew System::EventHandler(this, &Main_Literature_Form::âûðàâíèâàíèåToolStripMenuItem_Click);
 			// 
@@ -863,12 +863,12 @@ namespace ProjectSprv {
 			// 
 			// richTextBox1
 			// 
-			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Times New Roman", 13.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->richTextBox1->Location = System::Drawing::Point(15, 33);
 			this->richTextBox1->Name = L"richTextBox1";
 			this->richTextBox1->ReadOnly = true;
-			this->richTextBox1->Size = System::Drawing::Size(1161, 768);
+			this->richTextBox1->Size = System::Drawing::Size(1335, 768);
 			this->richTextBox1->TabIndex = 4;
 			this->richTextBox1->Text = L"";
 			this->richTextBox1->TextChanged += gcnew System::EventHandler(this, &Main_Literature_Form::richTextBox1_TextChanged);
@@ -880,14 +880,14 @@ namespace ProjectSprv {
 				static_cast<System::Byte>(204)));
 			this->groupBox1->Location = System::Drawing::Point(12, 34);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(1195, 817);
+			this->groupBox1->Size = System::Drawing::Size(1376, 817);
 			this->groupBox1->TabIndex = 5;
 			this->groupBox1->TabStop = false;
 			// 
 			// bookmarkImage
 			// 
 			this->bookmarkImage->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bookmarkImage.Image")));
-			this->bookmarkImage->Location = System::Drawing::Point(1194, 51);
+			this->bookmarkImage->Location = System::Drawing::Point(1394, 46);
 			this->bookmarkImage->Name = L"bookmarkImage";
 			this->bookmarkImage->Size = System::Drawing::Size(65, 59);
 			this->bookmarkImage->TabIndex = 6;
@@ -899,7 +899,7 @@ namespace ProjectSprv {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
-			this->ClientSize = System::Drawing::Size(1282, 870);
+			this->ClientSize = System::Drawing::Size(1471, 870);
 			this->Controls->Add(this->bookmarkImage);
 			this->Controls->Add(this->menuStrip1);
 			this->Controls->Add(this->groupBox1);
