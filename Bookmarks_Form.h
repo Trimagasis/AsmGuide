@@ -165,7 +165,8 @@ namespace ProjectSprv {
 			this->Controls->Add(this->menuStrip1);
 			this->MainMenuStrip = this->menuStrip1;
 			this->MaximizeBox = false;
-			this->MinimumSize = System::Drawing::Size(740, 570);
+			this->MaximumSize = System::Drawing::Size(1275, 726);
+			this->MinimumSize = System::Drawing::Size(1275, 726);
 			this->Name = L"Bookmarks_Form";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Список закладок";

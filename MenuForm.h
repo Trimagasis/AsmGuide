@@ -44,6 +44,7 @@ namespace ProjectSprv {
 	private: System::Windows::Forms::Button^ AddMat;
 	private: System::Windows::Forms::Label^ label1;
 	private: System::Windows::Forms::Label^ label2;
+	private: System::Windows::Forms::Button^ buttonPrimeri;
 
 
 
@@ -73,6 +74,7 @@ namespace ProjectSprv {
 			this->AddMat = (gcnew System::Windows::Forms::Button());
 			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->label2 = (gcnew System::Windows::Forms::Label());
+			this->buttonPrimeri = (gcnew System::Windows::Forms::Button());
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
@@ -162,7 +164,7 @@ namespace ProjectSprv {
 			this->label1->Font = (gcnew System::Drawing::Font(L"Times New Roman", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
 			this->label1->ForeColor = System::Drawing::Color::Red;
-			this->label1->Location = System::Drawing::Point(12, 525);
+			this->label1->Location = System::Drawing::Point(12, 595);
 			this->label1->Name = L"label1";
 			this->label1->Size = System::Drawing::Size(148, 19);
 			this->label1->TabIndex = 5;
@@ -173,11 +175,23 @@ namespace ProjectSprv {
 			this->label2->AutoSize = true;
 			this->label2->Font = (gcnew System::Drawing::Font(L"Times New Roman", 10.2F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->label2->Location = System::Drawing::Point(444, 525);
+			this->label2->Location = System::Drawing::Point(445, 595);
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(110, 19);
 			this->label2->TabIndex = 6;
-			this->label2->Text = L"Version: 0.2.7";
+			this->label2->Text = L"Version: 0.2.8";
+			// 
+			// buttonPrimeri
+			// 
+			this->buttonPrimeri->BackColor = System::Drawing::SystemColors::ButtonFace;
+			this->buttonPrimeri->Font = (gcnew System::Drawing::Font(L"Times New Roman", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->buttonPrimeri->Location = System::Drawing::Point(130, 485);
+			this->buttonPrimeri->Name = L"buttonPrimeri";
+			this->buttonPrimeri->Size = System::Drawing::Size(304, 73);
+			this->buttonPrimeri->TabIndex = 7;
+			this->buttonPrimeri->Text = L"Примеры программ";
+			this->buttonPrimeri->UseVisualStyleBackColor = false;
 			// 
 			// MenuForm
 			// 
@@ -185,7 +199,8 @@ namespace ProjectSprv {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(582, 553);
+			this->ClientSize = System::Drawing::Size(582, 633);
+			this->Controls->Add(this->buttonPrimeri);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
 			this->Controls->Add(this->AddMat);
@@ -193,9 +208,9 @@ namespace ProjectSprv {
 			this->Controls->Add(this->MainLit);
 			this->Controls->Add(this->Soft);
 			this->Controls->Add(this->menuStrip1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MainMenuStrip = this->menuStrip1;
 			this->MaximizeBox = false;
-			this->MaximumSize = System::Drawing::Size(600, 600);
 			this->MinimumSize = System::Drawing::Size(400, 600);
 			this->Name = L"MenuForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;

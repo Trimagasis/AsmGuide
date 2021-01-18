@@ -308,7 +308,8 @@ namespace ProjectSprv {
 			this->MainMenuStrip = this->menuStrip1;
 			this->Margin = System::Windows::Forms::Padding(4);
 			this->MaximizeBox = false;
-			this->MinimumSize = System::Drawing::Size(1050, 540);
+			this->MaximumSize = System::Drawing::Size(1300, 800);
+			this->MinimumSize = System::Drawing::Size(1300, 800);
 			this->Name = L"MainForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Доп. справочные материалы";
