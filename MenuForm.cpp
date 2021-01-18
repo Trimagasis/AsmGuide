@@ -28,7 +28,7 @@ System::Void ProjectSprv::MenuForm::выходToolStripMenuItem_Click(System::Object^
 
 System::Void ProjectSprv::MenuForm::оПрограммеToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	MessageBox::Show("Разработали:\nTrimagasis (при участии Archimedes68) в Январе 2021.", "О программе");
+	MessageBox::Show("Разработали:\nTrimagasis (при участии Archimedes68) в Январе 2021.\nДизайнер: KapitanKop", "О программе");
 
 	return System::Void();
 }

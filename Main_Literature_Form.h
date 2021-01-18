@@ -880,6 +880,7 @@ namespace ProjectSprv {
 			this->groupBox1->Controls->Add(this->richTextBox1);
 			this->groupBox1->Font = (gcnew System::Drawing::Font(L"Times New Roman", 13.8F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
+			this->groupBox1->ForeColor = System::Drawing::Color::White;
 			this->groupBox1->Location = System::Drawing::Point(12, 46);
 			this->groupBox1->Name = L"groupBox1";
 			this->groupBox1->Size = System::Drawing::Size(1376, 716);

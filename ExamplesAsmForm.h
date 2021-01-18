@@ -71,15 +71,17 @@ namespace ProjectSprv {
 			this->buttonExample1->TabIndex = 0;
 			this->buttonExample1->Text = L"Ïğèìåğ 1";
 			this->buttonExample1->UseVisualStyleBackColor = true;
+			this->buttonExample1->Click += gcnew System::EventHandler(this, &ExamplesAsmForm::buttonExample1_Click);
 			// 
 			// buttonExample2
 			// 
-			this->buttonExample2->Location = System::Drawing::Point(150, 210);
+			this->buttonExample2->Location = System::Drawing::Point(150, 221);
 			this->buttonExample2->Name = L"buttonExample2";
 			this->buttonExample2->Size = System::Drawing::Size(264, 92);
 			this->buttonExample2->TabIndex = 1;
 			this->buttonExample2->Text = L"Ïğèìåğ 2";
 			this->buttonExample2->UseVisualStyleBackColor = true;
+			this->buttonExample2->Click += gcnew System::EventHandler(this, &ExamplesAsmForm::buttonExample2_Click);
 			// 
 			// buttonExample3
 			// 
@@ -89,6 +91,7 @@ namespace ProjectSprv {
 			this->buttonExample3->TabIndex = 2;
 			this->buttonExample3->Text = L"Ïğèìåğ 3";
 			this->buttonExample3->UseVisualStyleBackColor = true;
+			this->buttonExample3->Click += gcnew System::EventHandler(this, &ExamplesAsmForm::buttonExample3_Click);
 			// 
 			// menuStrip1
 			// 
@@ -96,14 +99,14 @@ namespace ProjectSprv {
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->íàçàäÂÌåíşToolStripMenuItem });
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(582, 30);
+			this->menuStrip1->Size = System::Drawing::Size(582, 28);
 			this->menuStrip1->TabIndex = 3;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
 			// íàçàäÂÌåíşToolStripMenuItem
 			// 
 			this->íàçàäÂÌåíşToolStripMenuItem->Name = L"íàçàäÂÌåíşToolStripMenuItem";
-			this->íàçàäÂÌåíşToolStripMenuItem->Size = System::Drawing::Size(121, 26);
+			this->íàçàäÂÌåíşToolStripMenuItem->Size = System::Drawing::Size(121, 24);
 			this->íàçàäÂÌåíşToolStripMenuItem->Text = L"Íàçàä â ìåíş";
 			this->íàçàäÂÌåíşToolStripMenuItem->Click += gcnew System::EventHandler(this, &ExamplesAsmForm::íàçàäÂÌåíşToolStripMenuItem_Click);
 			// 
@@ -133,5 +136,8 @@ namespace ProjectSprv {
 		}
 #pragma endregion
 	private: System::Void íàçàäÂÌåíşToolStripMenuItem_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void buttonExample1_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void buttonExample2_Click(System::Object^ sender, System::EventArgs^ e);
+private: System::Void buttonExample3_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }
