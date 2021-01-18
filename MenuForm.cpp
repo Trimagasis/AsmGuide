@@ -4,6 +4,7 @@
 #include "Main_Literature_Form.h"
 #include "Bookmarks_Form.h"
 #include "MainForm.h"
+#include "ExamplesAsmForm.h"
 
 #include "Functions.h"
 
@@ -68,15 +69,11 @@ System::Void ProjectSprv::MenuForm::AddMat_Click(System::Object^ sender, System:
 	return System::Void();
 }
 
-bool metka = false;
-System::Void ProjectSprv::MenuForm::MenuForm_Load(System::Object^ sender, System::EventArgs^ e)
+System::Void ProjectSprv::MenuForm::buttonPrimeri_Click(System::Object^ sender, System::EventArgs^ e)
 {
-	
-	/*
-	if (metka == false) {
-		InTeor();
-		metka = true;
-	}
-	*/
+	ExamplesAsmForm^ form = gcnew ExamplesAsmForm();
+	this->Hide();
+	form->Show();
+
 	return System::Void();
 }

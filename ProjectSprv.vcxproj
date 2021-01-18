@@ -123,6 +123,10 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Bookmarks_Form.cpp" />
+    <ClCompile Include="Example1Form.cpp" />
+    <ClCompile Include="Example2Form.cpp" />
+    <ClCompile Include="Example3Form.cpp" />
+    <ClCompile Include="ExamplesAsmForm.cpp" />
     <ClCompile Include="Functions.cpp" />
     <ClCompile Include="MainForm.cpp" />
     <ClCompile Include="Main_Literature_Form.cpp" />
@@ -133,6 +137,18 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Bookmarks_Form.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Example1Form.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Example2Form.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Example3Form.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="ExamplesAsmForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
     <ClInclude Include="Functions.h" />
@@ -159,6 +175,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Bookmarks_Form.resx">
       <DependentUpon>Bookmarks_Form.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExamplesAsmForm.resx">
+      <DependentUpon>ExamplesAsmForm.h</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.h</DependentUpon>

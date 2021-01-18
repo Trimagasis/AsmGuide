@@ -179,7 +179,7 @@ namespace ProjectSprv {
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(110, 19);
 			this->label2->TabIndex = 6;
-			this->label2->Text = L"Version: 0.2.8";
+			this->label2->Text = L"Version: 0.2.9";
 			// 
 			// buttonPrimeri
 			// 
@@ -192,6 +192,7 @@ namespace ProjectSprv {
 			this->buttonPrimeri->TabIndex = 7;
 			this->buttonPrimeri->Text = L"Примеры программ";
 			this->buttonPrimeri->UseVisualStyleBackColor = false;
+			this->buttonPrimeri->Click += gcnew System::EventHandler(this, &MenuForm::buttonPrimeri_Click);
 			// 
 			// MenuForm
 			// 
@@ -215,7 +216,6 @@ namespace ProjectSprv {
 			this->Name = L"MenuForm";
 			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
 			this->Text = L"Справочник";
-			this->Load += gcnew System::EventHandler(this, &MenuForm::MenuForm_Load);
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);
@@ -229,6 +229,6 @@ namespace ProjectSprv {
 	private: System::Void MainLit_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void Bookmarks_Click(System::Object^ sender, System::EventArgs^ e);
 	private: System::Void AddMat_Click(System::Object^ sender, System::EventArgs^ e);
-	private: System::Void MenuForm_Load(System::Object^ sender, System::EventArgs^ e);
+	private: System::Void buttonPrimeri_Click(System::Object^ sender, System::EventArgs^ e);
 };
 }
