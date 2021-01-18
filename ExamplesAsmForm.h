@@ -96,14 +96,14 @@ namespace ProjectSprv {
 			this->menuStrip1->Items->AddRange(gcnew cli::array< System::Windows::Forms::ToolStripItem^  >(1) { this->íàçàäÂÌåíþToolStripMenuItem });
 			this->menuStrip1->Location = System::Drawing::Point(0, 0);
 			this->menuStrip1->Name = L"menuStrip1";
-			this->menuStrip1->Size = System::Drawing::Size(582, 28);
+			this->menuStrip1->Size = System::Drawing::Size(582, 30);
 			this->menuStrip1->TabIndex = 3;
 			this->menuStrip1->Text = L"menuStrip1";
 			// 
 			// íàçàäÂÌåíþToolStripMenuItem
 			// 
 			this->íàçàäÂÌåíþToolStripMenuItem->Name = L"íàçàäÂÌåíþToolStripMenuItem";
-			this->íàçàäÂÌåíþToolStripMenuItem->Size = System::Drawing::Size(121, 24);
+			this->íàçàäÂÌåíþToolStripMenuItem->Size = System::Drawing::Size(121, 26);
 			this->íàçàäÂÌåíþToolStripMenuItem->Text = L"Íàçàä â ìåíþ";
 			this->íàçàäÂÌåíþToolStripMenuItem->Click += gcnew System::EventHandler(this, &ExamplesAsmForm::íàçàäÂÌåíþToolStripMenuItem_Click);
 			// 
@@ -117,6 +117,7 @@ namespace ProjectSprv {
 			this->Controls->Add(this->buttonExample2);
 			this->Controls->Add(this->buttonExample1);
 			this->Controls->Add(this->menuStrip1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MainMenuStrip = this->menuStrip1;
 			this->MaximizeBox = false;
 			this->MaximumSize = System::Drawing::Size(600, 700);

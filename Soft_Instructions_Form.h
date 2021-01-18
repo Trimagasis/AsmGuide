@@ -116,6 +116,7 @@ namespace ProjectSprv {
 			this->Controls->Add(this->buttonSoftInt2);
 			this->Controls->Add(this->buttonSoftInt1);
 			this->Controls->Add(this->menuStrip1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MainMenuStrip = this->menuStrip1;
 			this->MaximizeBox = false;
 			this->MaximumSize = System::Drawing::Size(420, 600);

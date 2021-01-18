@@ -869,7 +869,7 @@ namespace ProjectSprv {
 			this->richTextBox1->Location = System::Drawing::Point(15, 33);
 			this->richTextBox1->Name = L"richTextBox1";
 			this->richTextBox1->ReadOnly = true;
-			this->richTextBox1->Size = System::Drawing::Size(1335, 820);
+			this->richTextBox1->Size = System::Drawing::Size(1335, 647);
 			this->richTextBox1->TabIndex = 4;
 			this->richTextBox1->Text = L"";
 			this->richTextBox1->TextChanged += gcnew System::EventHandler(this, &Main_Literature_Form::richTextBox1_TextChanged);
@@ -882,12 +882,13 @@ namespace ProjectSprv {
 				static_cast<System::Byte>(204)));
 			this->groupBox1->Location = System::Drawing::Point(12, 46);
 			this->groupBox1->Name = L"groupBox1";
-			this->groupBox1->Size = System::Drawing::Size(1376, 879);
+			this->groupBox1->Size = System::Drawing::Size(1376, 716);
 			this->groupBox1->TabIndex = 5;
 			this->groupBox1->TabStop = false;
 			// 
 			// bookmarkImage
 			// 
+			this->bookmarkImage->BackColor = System::Drawing::Color::Transparent;
 			this->bookmarkImage->Image = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"bookmarkImage.Image")));
 			this->bookmarkImage->Location = System::Drawing::Point(1394, 46);
 			this->bookmarkImage->Name = L"bookmarkImage";
@@ -901,10 +902,12 @@ namespace ProjectSprv {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1482, 953);
 			this->Controls->Add(this->bookmarkImage);
 			this->Controls->Add(this->menuStrip1);
 			this->Controls->Add(this->groupBox1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MainMenuStrip = this->menuStrip1;
 			this->MaximizeBox = false;
 			this->MaximumSize = System::Drawing::Size(1500, 1000);

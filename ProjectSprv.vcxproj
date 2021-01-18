@@ -176,6 +176,15 @@
     <EmbeddedResource Include="Bookmarks_Form.resx">
       <DependentUpon>Bookmarks_Form.h</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Example1Form.resx">
+      <DependentUpon>Example1Form.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Example2Form.resx">
+      <DependentUpon>Example2Form.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Example3Form.resx">
+      <DependentUpon>Example3Form.h</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExamplesAsmForm.resx">
       <DependentUpon>ExamplesAsmForm.h</DependentUpon>
     </EmbeddedResource>
@@ -201,6 +210,7 @@
   <ItemGroup>
     <Image Include="bookmarkAktiv.png" />
     <Image Include="bookmarkNoAktiv.png" />
+    <Image Include="icon.ico" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="..\..\..\Users\User\Desktop\Pr01\Pr01\ASCII_01.txt" />

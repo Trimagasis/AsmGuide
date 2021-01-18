@@ -177,20 +177,20 @@ namespace ProjectSprv {
 					this->âÌåíþToolStripMenuItem
 			});
 			this->íàçàäToolStripMenuItem->Name = L"íàçàäToolStripMenuItem";
-			this->íàçàäToolStripMenuItem->Size = System::Drawing::Size(65, 24);
+			this->íàçàäToolStripMenuItem->Size = System::Drawing::Size(71, 27);
 			this->íàçàäToolStripMenuItem->Text = L"Íàçàä";
 			// 
 			// êÂûáîðóÒóòîðèàëàToolStripMenuItem
 			// 
 			this->êÂûáîðóÒóòîðèàëàToolStripMenuItem->Name = L"êÂûáîðóÒóòîðèàëàToolStripMenuItem";
-			this->êÂûáîðóÒóòîðèàëàToolStripMenuItem->Size = System::Drawing::Size(234, 26);
+			this->êÂûáîðóÒóòîðèàëàToolStripMenuItem->Size = System::Drawing::Size(254, 28);
 			this->êÂûáîðóÒóòîðèàëàToolStripMenuItem->Text = L"Ê âûáîðó Òóòîðèàëà";
 			this->êÂûáîðóÒóòîðèàëàToolStripMenuItem->Click += gcnew System::EventHandler(this, &SoftInt1Form::êÂûáîðóÒóòîðèàëàToolStripMenuItem_Click);
 			// 
 			// âÌåíþToolStripMenuItem
 			// 
 			this->âÌåíþToolStripMenuItem->Name = L"âÌåíþToolStripMenuItem";
-			this->âÌåíþToolStripMenuItem->Size = System::Drawing::Size(234, 26);
+			this->âÌåíþToolStripMenuItem->Size = System::Drawing::Size(254, 28);
 			this->âÌåíþToolStripMenuItem->Text = L"Â ìåíþ";
 			this->âÌåíþToolStripMenuItem->Click += gcnew System::EventHandler(this, &SoftInt1Form::âÌåíþToolStripMenuItem_Click);
 			// 
@@ -236,7 +236,7 @@ namespace ProjectSprv {
 			this->panel1->Controls->Add(this->linkLabel1);
 			this->panel1->Controls->Add(this->label2);
 			this->panel1->Controls->Add(this->label1);
-			this->panel1->Location = System::Drawing::Point(12, 31);
+			this->panel1->Location = System::Drawing::Point(12, 41);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(740, 500);
 			this->panel1->TabIndex = 1;
@@ -624,9 +624,11 @@ namespace ProjectSprv {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(782, 553);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->menuStrip1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MainMenuStrip = this->menuStrip1;
 			this->MaximizeBox = false;
 			this->MaximumSize = System::Drawing::Size(800, 600);

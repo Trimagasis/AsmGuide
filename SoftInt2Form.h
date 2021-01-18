@@ -109,7 +109,7 @@ namespace ProjectSprv {
 			this->panel1->Controls->Add(this->label3);
 			this->panel1->Controls->Add(this->linkLabel1);
 			this->panel1->Controls->Add(this->label2);
-			this->panel1->Location = System::Drawing::Point(12, 31);
+			this->panel1->Location = System::Drawing::Point(12, 34);
 			this->panel1->Name = L"panel1";
 			this->panel1->Size = System::Drawing::Size(758, 510);
 			this->panel1->TabIndex = 0;
@@ -266,9 +266,11 @@ namespace ProjectSprv {
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(782, 553);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->menuStrip1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MainMenuStrip = this->menuStrip1;
 			this->MaximizeBox = false;
 			this->MaximumSize = System::Drawing::Size(800, 600);

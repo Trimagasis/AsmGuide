@@ -104,7 +104,7 @@ namespace ProjectSprv {
 			this->buttonSort->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->buttonSort->Font = (gcnew System::Drawing::Font(L"Times New Roman", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->buttonSort->Location = System::Drawing::Point(997, 31);
+			this->buttonSort->Location = System::Drawing::Point(1016, 43);
 			this->buttonSort->Name = L"buttonSort";
 			this->buttonSort->Size = System::Drawing::Size(217, 80);
 			this->buttonSort->TabIndex = 1;
@@ -130,7 +130,7 @@ namespace ProjectSprv {
 			this->buttonRemove->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->buttonRemove->Font = (gcnew System::Drawing::Font(L"Times New Roman", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->buttonRemove->Location = System::Drawing::Point(997, 117);
+			this->buttonRemove->Location = System::Drawing::Point(1016, 129);
 			this->buttonRemove->Name = L"buttonRemove";
 			this->buttonRemove->Size = System::Drawing::Size(217, 80);
 			this->buttonRemove->TabIndex = 3;
@@ -143,7 +143,7 @@ namespace ProjectSprv {
 			this->buttonCleen->BackColor = System::Drawing::SystemColors::ButtonFace;
 			this->buttonCleen->Font = (gcnew System::Drawing::Font(L"Times New Roman", 10.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
 				static_cast<System::Byte>(204)));
-			this->buttonCleen->Location = System::Drawing::Point(997, 203);
+			this->buttonCleen->Location = System::Drawing::Point(1016, 215);
 			this->buttonCleen->Name = L"buttonCleen";
 			this->buttonCleen->Size = System::Drawing::Size(217, 80);
 			this->buttonCleen->TabIndex = 4;
@@ -163,6 +163,7 @@ namespace ProjectSprv {
 			this->Controls->Add(this->listBoxBookmark);
 			this->Controls->Add(this->buttonSort);
 			this->Controls->Add(this->menuStrip1);
+			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MainMenuStrip = this->menuStrip1;
 			this->MaximizeBox = false;
 			this->MaximumSize = System::Drawing::Size(1275, 726);

@@ -460,12 +460,7 @@ void OutFullBookmark(Punct*& currentP1, bool& flag) {
 
 //ВЫВОД ОДНОЙ ЗАКЛАДКИ
 void OutBookmark(Punct*& currentP1, int& punct) {
-	//InBookmark(n, start);	//ЧТЕНИЕ СПИСКА ЗАКЛАДОК ИЗ ФАЙЛА
 	InPunct();
-	//if (head == NULL) return;
-	//if (run == false) std::cout << "Список закладок:\n";
-	//std::string strelka = " -->> ";
-	//for (int i = 0; i < n; i++) {
 	book* start = new book;
 	tmpBlock = headBlock;
 	while (tmpBlock->block != punct) {
@@ -475,14 +470,12 @@ void OutBookmark(Punct*& currentP1, int& punct) {
 	start->b = tmpBlock->b;
 	start->c = tmpBlock->c;
 	currentP1 = headP1;
-	//std::cout << i + 1 << ") ";
 	int NumPunct = 1;
 	while (start->a != NumPunct)
 	{
 		currentP1 = currentP1->next;
 		NumPunct++;
 	}
-	//std::cout << currentP1->p1 << strelka;
 
 	if (start->b != 0) {
 		NumPunct = 1;
@@ -493,50 +486,20 @@ void OutBookmark(Punct*& currentP1, int& punct) {
 		}
 
 		if (start->c != 0) {
-			//std::cout << _currentP2->p2 << strelka;
 			NumPunct = 1;
 			while (start->c != NumPunct)
 			{
 				currentP1->p2.headP2->p3.headP3 = currentP1->p2.headP2->p3.headP3->next;
 				NumPunct++;
 			}
-			//std::cout << _currentP3->p3 << std::endl;
 		}
 		else currentP1->p2.headP2->p3.headP3 = NULL;
 	}
 	else currentP1->p2.headP2 = NULL;
-	//else std::cout << _currentP2->p2 << std::endl;
-/*
-else if ((atoi(std::string({ (char)h }).c_str())) == i + 1) {
-	int punct = start->block;
-	std::string directory = "-";
-	Teoria* tmp = headT;
-	PodMenu_x_x_x(punct, tmp);
-	break;
-}*/
-//start = start->next;
-//}
 }
 
 //УДАЛЕНИЕ 1-ОЙ ЗАКЛАДКИ
 void DeleteBookmark(int& punct) {
-	/*
-	int key = 0;
-	std::cout << "Введите номер удаляемого элемента: ";
-
-	do {
-		std::cin.clear();
-		std::cin.ignore(std::cin.rdbuf()->in_avail());
-		std::cin >> key;
-		if (std::cin.fail()) {
-			std::cout << "Номер введи, а не символ :)\n> ";
-		}
-	} while (std::cin.fail());				//проверка на ввод численного значения
-
-	if (key > n || key <= 0) {
-		std::cout << "Данный пункт отсутствует!";	system("pause>>nul"); return;
-	}
-	*/
 	book* q = 0;
 	book* del = tail;
 	q = head;
@@ -575,24 +538,15 @@ void DeleteBookmark(int& punct) {
 			break;
 		}
 	}
-	//std::cout << "Закладка №" << key << " успешно удалена!\n";
 	SaveFile();
-	//system("pause>>nul");
 }
 //СОРТИРОВКА ЗАКЛАДОК
 void SortBookmark(bool& sort, bool & numberBookmarks) {
-	//if (sort == true) {
-		//std::cout << "Список закладок уже был отсортирован!";
-		//system("pause>>nul");
-		//return;
-	//}
 	InBookmark();
 	if (head == NULL) return;
 	if (head->next == NULL)
 	{
 		numberBookmarks = true;
-		//std::cout << "В списке всего 1 пункт. Что Вы собрались сортировать?...";
-		//system("pause>>nul");
 		return;
 	}
 	book* start;
@@ -618,11 +572,8 @@ void SortBookmark(bool& sort, bool & numberBookmarks) {
 		else
 			start = tek;
 	}
-
-	//std::cout << "Список закладок успешно отсортирован!";
 	sort = true;
 	SaveFile();
-	//system("pause>>nul");
 }
 /*
 //СПИСОК ЗАКЛАДОК

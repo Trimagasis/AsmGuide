@@ -186,7 +186,7 @@ namespace ProjectSprv {
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(110, 19);
 			this->label2->TabIndex = 6;
-			this->label2->Text = L"Version: 0.3.0";
+			this->label2->Text = L"Version: 0.3.1";
 			// 
 			// buttonPrimeri
 			// 
@@ -207,7 +207,8 @@ namespace ProjectSprv {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackColor = System::Drawing::SystemColors::GradientInactiveCaption;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(582, 633);
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
+			this->ClientSize = System::Drawing::Size(582, 668);
 			this->Controls->Add(this->buttonPrimeri);
 			this->Controls->Add(this->label2);
 			this->Controls->Add(this->label1);
