@@ -25,6 +25,7 @@
     <Keyword>ManagedCProj</Keyword>
     <RootNamespace>ProjectSprv</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>AsmGuide</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -103,6 +104,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
+      <EntryPointSymbol>main</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -112,6 +114,7 @@
     </ClCompile>
     <Link>
       <AdditionalDependencies />
+      <EntryPointSymbol>main</EntryPointSymbol>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -162,6 +165,8 @@
     <ClInclude Include="MenuForm.h">
       <FileType>CppForm</FileType>
     </ClInclude>
+    <ClInclude Include="resource.h" />
+    <ClInclude Include="resource1.h" />
     <ClInclude Include="SoftInt1Form.h">
       <FileType>CppForm</FileType>
     </ClInclude>
@@ -218,6 +223,18 @@
     <Text Include="..\..\..\Users\User\Desktop\Pr01\Pr01\ASCII_03.txt" />
     <Text Include="..\..\..\Users\User\Desktop\Pr01\Pr01\ConditionalBranching.txt" />
     <Text Include="..\..\..\Users\User\Desktop\Pr01\Pr01\DOSInt21h.txt" />
+    <Text Include="baseBlock.txt" />
+    <Text Include="baseTeor.txt" />
+    <Text Include="tempBkmrk.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Booklet" />
+    <None Include="PR.01.exe" />
+    <None Include="PR.02.exe" />
+    <None Include="PR.03.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource.rc" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

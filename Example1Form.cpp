@@ -22,7 +22,7 @@ System::Void ProjectSprv::Example1Form::âÌåíþToolStripMenuItem_Click(System::Obj
 
 System::Void ProjectSprv::Example1Form::button1_Click(System::Object^ sender, System::EventArgs^ e)
 {
-    Diagnostics::Process::Start("PR.01.exe");
+    Diagnostics::Process::Start("data\\PR.01.exe");
 
     return System::Void();
 }

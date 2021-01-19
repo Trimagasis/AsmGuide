@@ -52,11 +52,11 @@ System::Void ProjectSprv::Main_Literature_Form::bookmarkImage_MouseDown(System::
         checkbook(punct, checkbookmark);    //проверка на существование закладки
         if (checkbookmark == false) {
             OFstream(punct, checkbookmark);  //добавление закладки в файл
-            bookmarkImage->Image = Image::FromFile("bookmarkAktiv.png");    //флажок = красный
+            bookmarkImage->Image = Image::FromFile("data\\bookmarkAktiv.png");    //флажок = красный
         }
         else {
             DeleteBookmark(punct);  //удаление закладки из файла
-            bookmarkImage->Image = Image::FromFile("bookmarkNoAktiv.png");  //флажок = серый
+            bookmarkImage->Image = Image::FromFile("data\\bookmarkNoAktiv.png");  //флажок = серый
         }
     }
     return System::Void();
@@ -67,13 +67,13 @@ System::Void ProjectSprv::Main_Literature_Form::bookmarkImage_MouseDown(System::
 System::Void ProjectSprv::Main_Literature_Form::Main_Literature_Form_Load(System::Object^ sender, System::EventArgs^ e)
 {
     this->bookmarkImage->SizeMode = System::Windows::Forms::PictureBoxSizeMode::StretchImage;
-        bookmarkImage->Image = Image::FromFile("bookmarkNoAktiv.png");
+        bookmarkImage->Image = Image::FromFile("data\\bookmarkNoAktiv.png");
 
 
 
         //using namespace System::IO;
         //StreamReader^ sr1 = gcnew StreamReader("tempBkmrk.txt", System::Text::Encoding::Default);
-        std::ifstream filestream("tempBkmrk.txt");
+        std::ifstream filestream("data\\tempBkmrk.txt");
         std::string str, strNumPunct;
         if (filestream) {
             char tmp[100];
@@ -114,7 +114,7 @@ System::Void ProjectSprv::Main_Literature_Form::Main_Literature_Form_Load(System
         richTextBox1->Text = clistr;    //вывод текста теории
         groupBox1->Text = clistr2;
 
-        std::ofstream filestream1("tempBkmrk.txt", std::ios_base::trunc);
+        std::ofstream filestream1("data\\tempBkmrk.txt", std::ios_base::trunc);
         filestream1.close();
 
     return System::Void();
@@ -129,9 +129,9 @@ System::Void ProjectSprv::Main_Literature_Form::richTextBox1_TextChanged(System:
     bool checkbookmark = false;
     checkbook(punct, checkbookmark);
     if (checkbookmark == true)
-        bookmarkImage->Image = Image::FromFile("bookmarkAktiv.png");
+        bookmarkImage->Image = Image::FromFile("data\\bookmarkAktiv.png");
     else
-        bookmarkImage->Image = Image::FromFile("bookmarkNoAktiv.png");
+        bookmarkImage->Image = Image::FromFile("data\\bookmarkNoAktiv.png");
 
     return System::Void();
 }

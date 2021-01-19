@@ -31,7 +31,7 @@ char* del_char(const char* src, char* res, char c)
 
 //загрузка вопросов из файла в структуру
 void InTeor(Teoria*& headT) {
-	std::ifstream fsTeor("baseTeor.txt", std::ios::in | std::ios::binary);
+	std::ifstream fsTeor("data\\baseTeor.txt", std::ios::in | std::ios::binary);
 	if (!fsTeor) return; //Если ошибка открытия файла, то завершаем программу
 	/*
 	char* strk = new char[1024];
@@ -62,12 +62,12 @@ void InTeor(Teoria*& headT) {
 
 //загрузка пунктов из файла в структуру
 void InPunct() {
-	std::ifstream fsTeor("baseTeor.txt", std::ios::in | std::ios::binary);
+	std::ifstream fsTeor("data\\baseTeor.txt", std::ios::in | std::ios::binary);
 	if (!fsTeor) return; //Если ошибка открытия файла, то завершаем программу
 
 	char* strk = new char[1024];
 	int n = 0, block = 1;
-	std::ifstream base("baseTeor.txt");
+	std::ifstream base("data\\baseTeor.txt");
 	while (!base.eof())
 	{
 		base.getline(strk, 1024, '\n');
@@ -178,7 +178,7 @@ void InPunct() {
 			}
 		}
 	}
-	std::ofstream filestream("baseBlock.txt");
+	std::ofstream filestream("data\\baseBlock.txt");
 	tmpBlock = headBlock;
 	do {		
 		filestream << std::to_string(tmpBlock->block) << " " << std::to_string(tmpBlock->a) 
@@ -206,8 +206,8 @@ void checkbook(int& punct, bool& checkbookmark) {
 
 //добавление закладки в файл
 void OFstream(int& punct, bool& checkbookmark) {
-	std::ofstream OFfile("Booklet", std::ios::app);
-	std::fstream Ffile("Booklet");
+	std::ofstream OFfile("data\\Booklet", std::ios::app);
+	std::fstream Ffile("data\\Booklet");
 	if (OFfile.is_open()) {
 		book* current = head;
 		checkbook(punct, checkbookmark);
@@ -234,7 +234,7 @@ void OFstream(int& punct, bool& checkbookmark) {
 
 //ЧТЕНИЕ СПИСКА ЗАКЛАДОК ИЗ ФАЙЛА
 void InBookmark() {
-	std::ifstream INfile("Booklet");
+	std::ifstream INfile("data\\Booklet");
 	int n = 0;
 	if (INfile.is_open()) {
 		if (INfile.peek() == EOF) {
@@ -243,7 +243,7 @@ void InBookmark() {
 		}
 		tail = new book;
 		char* strk = new char[1024];
-		std::ifstream base("Booklet");
+		std::ifstream base("data\\Booklet");
 		while (!base.eof())
 		{
 			base.getline(strk, 1024, '\n');
@@ -374,7 +374,7 @@ void Menu3(char& h, int& punct, std::string& directory) {
 */
 //СОХРАНЕНИЕ СПИСКА ЗАКЛАДОК В ФАЙЛ
 void SaveFile() {
-	std::ofstream record("Booklet", std::ios::out);
+	std::ofstream record("data\\Booklet", std::ios::out);
 	book* q = head;
 	if (record) {
 		while (q != NULL) {
@@ -409,7 +409,7 @@ void CleenBookmark(bool & checkCleen) {
 		return;
 	}
 	clearLib();
-	std::ofstream record("Booklet", std::ios::out);
+	std::ofstream record("data\\Booklet", std::ios::out);
 	record.clear();
 	record.close();
 }

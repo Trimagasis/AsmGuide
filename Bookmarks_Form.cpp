@@ -52,7 +52,7 @@ System::Void ProjectSprv::Bookmarks_Form::listBoxBookmark_MouseDoubleClick(Syste
         SelectItem = chars;
         Marshal::FreeHGlobal(IntPtr((void*)chars));
 
-        std::ofstream filestream("tempBkmrk.txt", std::ios_base::trunc);
+        std::ofstream filestream("data\\tempBkmrk.txt", std::ios_base::trunc);
         if (filestream) {
             filestream << SelectItem;
             filestream.close();
@@ -85,7 +85,7 @@ System::Void ProjectSprv::Bookmarks_Form::buttonRemove_Click(System::Object^ sen
         SelectItem = chars;
         Marshal::FreeHGlobal(IntPtr((void*)chars));
 
-        std::ofstream filestream("tempBkmrk.txt", std::ios_base::trunc);
+        std::ofstream filestream("data\\tempBkmrk.txt", std::ios_base::trunc);
         if (filestream) {
             filestream << SelectItem;
             filestream.close();
@@ -93,7 +93,7 @@ System::Void ProjectSprv::Bookmarks_Form::buttonRemove_Click(System::Object^ sen
 
             //выборка цифр из считанной строки
             int punct, predpunct;
-            std::ifstream filestream("tempBkmrk.txt");
+            std::ifstream filestream("data\\tempBkmrk.txt");
             std::string str, strNumPunct;
             if (filestream) {
                 char tmp[100];

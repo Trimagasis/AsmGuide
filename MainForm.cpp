@@ -3,11 +3,11 @@
 
 System::Void ProjectSprv::MainForm::MainForm_Load(System::Object^ sender, System::EventArgs^ e)
 {
-	this->textBox1->Text = File::ReadAllText(L"ASCII_01.txt");
-	this->textBox2->Text = File::ReadAllText(L"ASCII_02.txt");
-	this->textBox3->Text = File::ReadAllText(L"ASCII_03.txt");
-	this->textBox4->Text = File::ReadAllText(L"ConditionalBranching.txt");
-	this->textBox5->Text = File::ReadAllText(L"DOSInt21h.txt");
+	this->textBox1->Text = File::ReadAllText(L"data\\ASCII_01.txt");
+	this->textBox2->Text = File::ReadAllText(L"data\\ASCII_02.txt");
+	this->textBox3->Text = File::ReadAllText(L"data\\ASCII_03.txt");
+	this->textBox4->Text = File::ReadAllText(L"data\\ConditionalBranching.txt");
+	this->textBox5->Text = File::ReadAllText(L"data\\DOSInt21h.txt");
 
 	return System::Void();
 }

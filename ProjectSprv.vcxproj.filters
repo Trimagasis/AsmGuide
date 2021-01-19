@@ -92,15 +92,21 @@
     <ClInclude Include="Example3Form.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="resource1.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <Image Include="icon.ico">
+      <Filter>Файлы ресурсов</Filter>
+    </Image>
     <Image Include="bookmarkAktiv.png">
       <Filter>Файлы ресурсов</Filter>
     </Image>
     <Image Include="bookmarkNoAktiv.png">
-      <Filter>Файлы ресурсов</Filter>
-    </Image>
-    <Image Include="icon.ico">
       <Filter>Файлы ресурсов</Filter>
     </Image>
   </ItemGroup>
@@ -110,5 +116,19 @@
     <Text Include="..\..\..\Users\User\Desktop\Pr01\Pr01\ASCII_01.txt" />
     <Text Include="..\..\..\Users\User\Desktop\Pr01\Pr01\ASCII_02.txt" />
     <Text Include="..\..\..\Users\User\Desktop\Pr01\Pr01\ASCII_03.txt" />
+    <Text Include="baseBlock.txt" />
+    <Text Include="baseTeor.txt" />
+    <Text Include="tempBkmrk.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Booklet" />
+    <None Include="PR.01.exe" />
+    <None Include="PR.02.exe" />
+    <None Include="PR.03.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Resource.rc">
+      <Filter>Файлы ресурсов</Filter>
+    </ResourceCompile>
   </ItemGroup>
 </Project>
