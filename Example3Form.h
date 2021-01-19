@@ -41,6 +41,7 @@ namespace ProjectSprv {
 	private: System::Windows::Forms::ToolStripMenuItem^ Ì‡Á‡‰ToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ ÍœËÏÂ‡ÏToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ ‚ÃÂÌ˛ToolStripMenuItem;
+	private: System::Windows::Forms::Label^ label1;
 
 	private:
 		/// <summary>
@@ -62,12 +63,16 @@ namespace ProjectSprv {
 			this->Ì‡Á‡‰ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->ÍœËÏÂ‡ÏToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->‚ÃÂÌ˛ToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
+			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->panel1->SuspendLayout();
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(1210, 120);
+			this->button1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->button1->Location = System::Drawing::Point(1215, 66);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(210, 96);
 			this->button1->TabIndex = 5;
@@ -77,9 +82,11 @@ namespace ProjectSprv {
 			// 
 			// panel1
 			// 
-			this->panel1->Location = System::Drawing::Point(34, 149);
+			this->panel1->AutoScroll = true;
+			this->panel1->Controls->Add(this->label1);
+			this->panel1->Location = System::Drawing::Point(12, 66);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(1082, 740);
+			this->panel1->Size = System::Drawing::Size(1152, 740);
 			this->panel1->TabIndex = 4;
 			// 
 			// menuStrip1
@@ -120,18 +127,35 @@ namespace ProjectSprv {
 			this->‚ÃÂÌ˛ToolStripMenuItem->Text = L"¬ ÏÂÌ˛";
 			this->‚ÃÂÌ˛ToolStripMenuItem->Click += gcnew System::EventHandler(this, &Example3Form::‚ÃÂÌ˛ToolStripMenuItem_Click);
 			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label1->Location = System::Drawing::Point(14, 16);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(1438, 8500);
+			this->label1->TabIndex = 2;
+			this->label1->Text = resources->GetString(L"label1.Text");
+			// 
 			// Example3Form
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(1482, 953);
+			this->ClientSize = System::Drawing::Size(1482, 838);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->menuStrip1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
+			this->MaximizeBox = false;
+			this->MaximumSize = System::Drawing::Size(1500, 885);
+			this->MinimumSize = System::Drawing::Size(1500, 885);
 			this->Name = L"Example3Form";
-			this->Text = L"Example3Form";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
+			this->Text = L"¿ÌËÏ‡ˆËˇ + ÔÂÂÏÂ˘ÂÌËÂ ÙË„Û˚ Ò ÔÓÏÓ˘¸˛ ÍÎ‡‚Ë‡ÚÛ˚";
+			this->panel1->ResumeLayout(false);
+			this->panel1->PerformLayout();
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
 			this->ResumeLayout(false);

@@ -41,6 +41,7 @@ namespace ProjectSprv {
 	private: System::Windows::Forms::ToolStripMenuItem^ âÌåíþToolStripMenuItem;
 	private: System::Windows::Forms::Panel^ panel1;
 	private: System::Windows::Forms::Button^ button1;
+	private: System::Windows::Forms::Label^ label1;
 
 	protected:
 
@@ -65,7 +66,9 @@ namespace ProjectSprv {
 			this->âÌåíþToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->panel1 = (gcnew System::Windows::Forms::Panel());
 			this->button1 = (gcnew System::Windows::Forms::Button());
+			this->label1 = (gcnew System::Windows::Forms::Label());
 			this->menuStrip1->SuspendLayout();
+			this->panel1->SuspendLayout();
 			this->SuspendLayout();
 			// 
 			// menuStrip1
@@ -95,27 +98,30 @@ namespace ProjectSprv {
 			// êÏðèìåðàìToolStripMenuItem
 			// 
 			this->êÏðèìåðàìToolStripMenuItem->Name = L"êÏðèìåðàìToolStripMenuItem";
-			this->êÏðèìåðàìToolStripMenuItem->Size = System::Drawing::Size(224, 28);
+			this->êÏðèìåðàìToolStripMenuItem->Size = System::Drawing::Size(191, 28);
 			this->êÏðèìåðàìToolStripMenuItem->Text = L"Ê ïðèìåðàì";
 			this->êÏðèìåðàìToolStripMenuItem->Click += gcnew System::EventHandler(this, &Example1Form::êÏðèìåðàìToolStripMenuItem_Click);
 			// 
 			// âÌåíþToolStripMenuItem
 			// 
 			this->âÌåíþToolStripMenuItem->Name = L"âÌåíþToolStripMenuItem";
-			this->âÌåíþToolStripMenuItem->Size = System::Drawing::Size(224, 28);
+			this->âÌåíþToolStripMenuItem->Size = System::Drawing::Size(191, 28);
 			this->âÌåíþToolStripMenuItem->Text = L"Â ìåíþ";
 			this->âÌåíþToolStripMenuItem->Click += gcnew System::EventHandler(this, &Example1Form::âÌåíþToolStripMenuItem_Click);
 			// 
 			// panel1
 			// 
-			this->panel1->Location = System::Drawing::Point(34, 85);
+			this->panel1->AutoScroll = true;
+			this->panel1->Controls->Add(this->label1);
+			this->panel1->Location = System::Drawing::Point(12, 66);
 			this->panel1->Name = L"panel1";
-			this->panel1->Size = System::Drawing::Size(1082, 740);
+			this->panel1->Size = System::Drawing::Size(1152, 740);
 			this->panel1->TabIndex = 1;
 			// 
 			// button1
 			// 
-			this->button1->Location = System::Drawing::Point(1210, 56);
+			this->button1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10.2F));
+			this->button1->Location = System::Drawing::Point(1215, 66);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(210, 96);
 			this->button1->TabIndex = 2;
@@ -123,21 +129,38 @@ namespace ProjectSprv {
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &Example1Form::button1_Click);
 			// 
+			// label1
+			// 
+			this->label1->AutoSize = true;
+			this->label1->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 12, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label1->Location = System::Drawing::Point(14, 16);
+			this->label1->Name = L"label1";
+			this->label1->Size = System::Drawing::Size(956, 2300);
+			this->label1->TabIndex = 0;
+			this->label1->Text = resources->GetString(L"label1.Text");
+			// 
 			// Example1Form
 			// 
 			this->AutoScaleDimensions = System::Drawing::SizeF(8, 16);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
-			this->ClientSize = System::Drawing::Size(1482, 953);
+			this->ClientSize = System::Drawing::Size(1482, 838);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->menuStrip1);
 			this->Icon = (cli::safe_cast<System::Drawing::Icon^>(resources->GetObject(L"$this.Icon")));
 			this->MainMenuStrip = this->menuStrip1;
+			this->MaximizeBox = false;
+			this->MaximumSize = System::Drawing::Size(1500, 885);
+			this->MinimumSize = System::Drawing::Size(1500, 885);
 			this->Name = L"Example1Form";
-			this->Text = L"Example1Form";
+			this->StartPosition = System::Windows::Forms::FormStartPosition::CenterScreen;
+			this->Text = L"Ñòàòè÷íûå ôèãóðû";
 			this->menuStrip1->ResumeLayout(false);
 			this->menuStrip1->PerformLayout();
+			this->panel1->ResumeLayout(false);
+			this->panel1->PerformLayout();
 			this->ResumeLayout(false);
 			this->PerformLayout();
 

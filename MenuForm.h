@@ -186,7 +186,7 @@ namespace ProjectSprv {
 			this->label2->Name = L"label2";
 			this->label2->Size = System::Drawing::Size(110, 19);
 			this->label2->TabIndex = 6;
-			this->label2->Text = L"Version: 0.3.3";
+			this->label2->Text = L"Version: 0.3.5";
 			// 
 			// buttonPrimeri
 			// 

@@ -65,31 +65,35 @@ namespace ProjectSprv {
 			// 
 			// buttonExample1
 			// 
-			this->buttonExample1->Location = System::Drawing::Point(150, 108);
+			this->buttonExample1->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10.2F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->buttonExample1->Location = System::Drawing::Point(155, 142);
 			this->buttonExample1->Name = L"buttonExample1";
-			this->buttonExample1->Size = System::Drawing::Size(264, 83);
+			this->buttonExample1->Size = System::Drawing::Size(265, 80);
 			this->buttonExample1->TabIndex = 0;
-			this->buttonExample1->Text = L"Пример 1";
+			this->buttonExample1->Text = L"Пример №1\r\nСтатичные фигуры";
 			this->buttonExample1->UseVisualStyleBackColor = true;
 			this->buttonExample1->Click += gcnew System::EventHandler(this, &ExamplesAsmForm::buttonExample1_Click);
 			// 
 			// buttonExample2
 			// 
-			this->buttonExample2->Location = System::Drawing::Point(150, 221);
+			this->buttonExample2->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10.2F));
+			this->buttonExample2->Location = System::Drawing::Point(155, 262);
 			this->buttonExample2->Name = L"buttonExample2";
-			this->buttonExample2->Size = System::Drawing::Size(264, 92);
+			this->buttonExample2->Size = System::Drawing::Size(265, 80);
 			this->buttonExample2->TabIndex = 1;
-			this->buttonExample2->Text = L"Пример 2";
+			this->buttonExample2->Text = L"Пример №2\r\nАнимация фигур\r\n";
 			this->buttonExample2->UseVisualStyleBackColor = true;
 			this->buttonExample2->Click += gcnew System::EventHandler(this, &ExamplesAsmForm::buttonExample2_Click);
 			// 
 			// buttonExample3
 			// 
-			this->buttonExample3->Location = System::Drawing::Point(150, 345);
+			this->buttonExample3->Font = (gcnew System::Drawing::Font(L"Segoe UI", 10.2F));
+			this->buttonExample3->Location = System::Drawing::Point(155, 382);
 			this->buttonExample3->Name = L"buttonExample3";
-			this->buttonExample3->Size = System::Drawing::Size(264, 72);
+			this->buttonExample3->Size = System::Drawing::Size(265, 105);
 			this->buttonExample3->TabIndex = 2;
-			this->buttonExample3->Text = L"Пример 3";
+			this->buttonExample3->Text = L"Пример №3\r\nАнимация + перемещение фигуры с помощью клавиатуры";
 			this->buttonExample3->UseVisualStyleBackColor = true;
 			this->buttonExample3->Click += gcnew System::EventHandler(this, &ExamplesAsmForm::buttonExample3_Click);
 			// 

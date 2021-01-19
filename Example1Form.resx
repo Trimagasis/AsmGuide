@@ -120,6 +120,101 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="label1.Text" xml:space="preserve">
+    <value>.386
+.model stdcall, flat
+option casemap:none
+
+includelib C:\masm32\lib\kernel32.lib
+include C:\masm32\include\kernel32.inc
+includelib C:\masm32\lib\user32.lib
+include C:\masm32\include\user32.inc
+include C:\masm32\include\windows.inc
+include C:\masm32\include\gdi32.inc
+
+.data
+
+	hwnd        dd  0
+	hInst       dd  0
+	szTitleName db  'Демо Асм Вст', 0
+	szClassName db  'Demo Win32', 0
+	            msg MONMSGSTRUCT &lt;?&gt;
+	            wc  WNDCLASS &lt;?&gt;
+	            ps  PAINTSTRUCT &lt;?&gt;
+
+.code
+
+Main PROC
+	          invoke GetModuleHandle, 0                                          	;получение значения баз. адреса,
+	          mov    hInst, eax                                                  	;по которому загружен модуль.
+	          mov    wc.style, CS_HREDRAW + CS_VREDRAW + CS_GLOBALCLASS
+	          mov    wc.lpfnWndProc, offset WndProc                              	;адрес оконной процедуры
+	          mov    wc.cbClsExtra, 0
+	          mov    wc.cbWndExtra, 0
+	          mov    eax, hInst                                                  	;дескриптор приложения
+	          mov    wc.hInstance, eax                                           	;в поле hInstance
+	          invoke LoadIcon, 0, IDI_APPLICATION
+	          mov    wc.hIcon, eax                                               	;дескриптор значка в поле hIcon
+	          invoke LoadCursorA, 0, IDC_ARROW
+	          mov    wc.hCursor, eax                                             	;дескриптор курсора в поле hCursor
+	          mov    wc.hbrBackground, WHITE_BRUSH                               	;цвет бекграунда окна белый
+	          mov    dword ptr wc.lpszMenuName, 0                                	;главного меню нет
+	          mov    dword ptr wc.lpszClassName, offset szClassName              	;имя класса окна
+	          invoke RegisterClassA, offset wc                                   	;регистрация класас окна
+	          invoke CreateWindowEx, 0, offset szClassName, offset szTitleName, \
+WS_OVERLAPPEDWINDOW, CW_USEDEFAULT, CW_USEDEFAULT, \
+CW_USEDEFAULT, CW_USEDEFAULT, 0, 0, hInst, 0
+	          mov    hwnd, eax                                                   	;создание окна
+	          invoke ShowWindow, hwnd, SW_SHOWNORMAL                             	;показ окна
+	          invoke UpdateWindow, hwnd                                          	;перерисовывка содержимого окна
+	cycle1:                                                                      	;цикл сообщений
+	          invoke GetMessage, offset msg, 0, 0, 0
+	          cmp    ax, 0
+	          je     end_c
+	          invoke TranslateMessage, offset msg                                	;трансляция ввода с клавиатуры
+	          invoke DispatchMessage, offset msg                                 	;отправляем сообщение
+	;оконной процедуре
+	          jmp    cycle1
+	end_c:    
+	          invoke ExitProcess, 0                                              	;выход из приложения
+Main ENDP
+
+WndProc PROC USES ebx edi esi, _hwnd:DWORD, _wmsg:DWORD, _wparam:DWORD, _lparam:DWORD
+	          local  _hdc:DWORD
+	          cmp    _wmsg, WM_DESTROY
+	          je     wmdestroy
+	          cmp    _wmsg, WM_PAINT
+	          je     wmpaint
+	          invoke DefWindowProcA, _hwnd, _wmsg, _wparam, _lparam              	;обраб. по умолчанию
+	          jmp    exit_proc
+	wmpaint:  
+	          invoke BeginPaint, _hwnd, offset ps                                	;получаем контекст устройства
+	          mov    _hdc, eax
+
+	          invoke Rectangle, _hdc, 170, 120, 310, 260                         	;тело
+	          invoke Rectangle, _hdc, 120, 120, 170, 140                         	;левая лапа
+	          invoke Rectangle, _hdc, 310, 120, 360, 140                         	;правая лапа
+	          invoke Rectangle, _hdc, 170, 260, 190, 310                         	;левая ноголапа
+	          invoke Rectangle, _hdc, 290, 260, 310, 310                         	;правая ноголапа
+	          invoke Rectangle, _hdc, 210, 80, 270, 120                          	;башка
+	          invoke Rectangle, _hdc, 220, 85, 225, 90                           	;левый глаз
+	          invoke Rectangle, _hdc, 250, 85, 255, 90                           	;правый глаз
+	          invoke Rectangle, _hdc, 225, 105, 255, 120                         	;рот
+
+	          invoke EndPaint, _hdc, offset ps                                   	;освобождаем контекст
+	          mov    eax, 0                                                      	;возвращаемое значение - 0
+	          jmp    exit_proc
+	wmdestroy:
+	          invoke PostQuitMessage, 0                                          	;послать сообщение WM_QUIT
+	          mov    eax, 0                                                      	;возвращаемое значение - 0
+	exit_proc:
+	          ret
+WndProc ENDP
+END Main
+
+
+</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>78</value>
   </metadata>
