@@ -117,11 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
   <data name="label1.Text" xml:space="preserve">
-    <value>.686
+    <value>В данной программе представленны простейшие примеры анимации, такие как:
+Вращение фигуры (на самом деле - перепостроение фигуры в каждом фрейме), 
+иилюзия бесконечной ленты (на самом деле - 6 одних и тех же прямоугольников) и 
+реализация управления фигуры пользователем с помощью клавиш(стрелок) клавиатуры.
+
+
+.686
 .model flat, stdcall                      ;необходимая модел памяти под Windows
 option casemap:none                       ;чтобы различать большие и малые буковки
 WinMain proto :DWORD,:DWORD,:DWORD,:DWORD ;прототип используемой функции
@@ -463,6 +466,12 @@ end start
 
 </value>
   </data>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>83</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>

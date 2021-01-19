@@ -121,7 +121,10 @@
     <value>17, 17</value>
   </metadata>
   <data name="label1.Text" xml:space="preserve">
-    <value>.386
+    <value>В данной программе реализован простейший графический примитив.
+
+
+.386
 .model stdcall, flat
 option casemap:none
 

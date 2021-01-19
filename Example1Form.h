@@ -136,7 +136,7 @@ namespace ProjectSprv {
 				static_cast<System::Byte>(204)));
 			this->label1->Location = System::Drawing::Point(14, 16);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(956, 2300);
+			this->label1->Size = System::Drawing::Size(956, 2375);
 			this->label1->TabIndex = 0;
 			this->label1->Text = resources->GetString(L"label1.Text");
 			// 

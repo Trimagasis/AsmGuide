@@ -42,6 +42,7 @@ namespace ProjectSprv {
 	private: System::Windows::Forms::ToolStripMenuItem^ кПримерамToolStripMenuItem;
 	private: System::Windows::Forms::ToolStripMenuItem^ вМенюToolStripMenuItem;
 	private: System::Windows::Forms::Label^ label1;
+	private: System::Windows::Forms::Label^ label2;
 
 	private:
 		/// <summary>
@@ -64,6 +65,7 @@ namespace ProjectSprv {
 			this->кПримерамToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->вМенюToolStripMenuItem = (gcnew System::Windows::Forms::ToolStripMenuItem());
 			this->label1 = (gcnew System::Windows::Forms::Label());
+			this->label2 = (gcnew System::Windows::Forms::Label());
 			this->panel1->SuspendLayout();
 			this->menuStrip1->SuspendLayout();
 			this->SuspendLayout();
@@ -134,9 +136,22 @@ namespace ProjectSprv {
 				static_cast<System::Byte>(204)));
 			this->label1->Location = System::Drawing::Point(14, 16);
 			this->label1->Name = L"label1";
-			this->label1->Size = System::Drawing::Size(1438, 8500);
+			this->label1->Size = System::Drawing::Size(1438, 8650);
 			this->label1->TabIndex = 2;
 			this->label1->Text = resources->GetString(L"label1.Text");
+			// 
+			// label2
+			// 
+			this->label2->AutoSize = true;
+			this->label2->Font = (gcnew System::Drawing::Font(L"Segoe UI", 7.8F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point,
+				static_cast<System::Byte>(204)));
+			this->label2->Location = System::Drawing::Point(1170, 165);
+			this->label2->Name = L"label2";
+			this->label2->Size = System::Drawing::Size(278, 95);
+			this->label2->TabIndex = 6;
+			this->label2->Text = L"                   !!!Временный баг!!!\r\nПриложение может работать некоректно!\r\nЕс"
+				L"ли анимация фигур отсутствует, то\r\nстоит перезапускать приложение \r\nдо тех пор, "
+				L"пока оно не заработает.\r\n";
 			// 
 			// Example3Form
 			// 
@@ -144,6 +159,7 @@ namespace ProjectSprv {
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
 			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^>(resources->GetObject(L"$this.BackgroundImage")));
 			this->ClientSize = System::Drawing::Size(1482, 838);
+			this->Controls->Add(this->label2);
 			this->Controls->Add(this->button1);
 			this->Controls->Add(this->panel1);
 			this->Controls->Add(this->menuStrip1);
